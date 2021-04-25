@@ -56,6 +56,30 @@ sudo apt install nginx
 sudo service nginx start
 You can check by entering ip address or just 'localhost' in a browser, it should return a ngnix welcome message
 
+Graphical env
+-------------
+1. Setup an X server (display manager) in Windows like VcXsrv. Run it with defaults but make private and public is set for firewall.
+2. Tell WSL how to connect to the X server by setting the DISPLAY variable to be the nameserver + ':0'
+    (nameserver = virtual address of hyper v server for this distro)
+    export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
+    (put this in ~/.bashrc if you want this to be executed each time you start up this WSL distro)
+3. Load up the changed .bashrc file:  source .bashrc
+3. Install Linux pacage to support drawing GUI like x11-apps: 
+    sudo apt install x11-apps
+4. Now test it by running a graphical program like xeyes
+    xeyes &    (& means it runs it as a separate process while the prompt is retained)
+   You should now see a small windows with two eyes following the mouse pointer. Close that window to close the process.
+
+Export and import WSL distribution
+----------------------------------
+In CMD:
+Show existing distro's:  wsl --list
+export:  wsl --export <distro name> <path + filename.tar>
+        example: wsl --export Ubuntu d:\ubuntu.tar
+
+import:  wsl --import <new distro name> <target path> <source path + file>
+        example: wsl --import UbuntuCopy d:\LinuxImages d:\ubuntu.tar
+
 
 
 
