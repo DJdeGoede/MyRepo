@@ -1,0 +1,67 @@
+Info about WSL:
+
+User management
+---------------
+Login as root with:  sudo -i
+Logoff as root user:  exit
+
+Using bash
+----------
+- Editing
+    editors: vi, nano
+    You can also use native windows tools: notepad.exe <filename>
+
+    cmd as admin: sudo <command> and enter admin password
+
+- bash settings in:
+~/.bashrc    : your personal settings
+/etc/profile
+/bash.bashrc
+
+Packages
+--------
+sudo apt update
+sudo apt upgrade
+sudo apt search <packege name>
+sudo apt show <package name>
+sudo apt list --installed    : show installed Packages
+sudo apt list                : show all available Packages
+
+Processes and services
+----------------------
+ps -ejH  : show all processes with tree in this "sandbox"
+tasklist.exe : show all windows processes (no relation with your session)
+tmux: open a new bash session and do something, you can close it
+tmux attach: from the main shell you can run this to open up the previous closed session
+
+service --status-all  : show all WSL services (+ = started, - = not started, ? = unknown)
+service <service name> start/stop : start or stop a service
+service <service name> status : check status of a service
+
+Start a service automatically in WSL:
+add 'service <service name> start' to your ~/.bashrc file
+
+schedule tasks
+--------------
+crontab -e : edit your crontab file
+sudo service cron start     : to start the cron service (scheduler)
+sudo service rsyslog start  : to start the system logger
+tail -f /var/log/syslog     : show the content of the syslog
+
+Networking
+----------
+find ip address:  ip a
+install and start network service:
+sudo apt install nginx
+sudo service nginx start
+You can check by entering ip address or just 'localhost' in a browser, it should return a ngnix welcome message
+
+
+
+
+
+
+
+
+
+
