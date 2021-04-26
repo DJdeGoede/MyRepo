@@ -1,0 +1,28 @@
+Docker
+======
+ ________                   ____________
+|        |                 |            |
+| Images |   -- run -----> | Containers |
+|________|  <-- commit --  |____________|
+
+List images:			docker images
+List containers:		docker ps -a  (or --all)
+Show active/running containers	docker ps -f status=running
+Show exited containers:		docker ps -f status=exited
+
+Start/create a docker container based on image:
+(-ti = terminal interactive)
+	docker run -ti <image>:<version> <command>
+	example:  docker run -ti ubuntu:latest bash
+
+To start a temporary container: docker run --rm -ti <image> <command>
+
+Create an image based on a changed container:
+	- exit the container / make sure it is not running.
+	- docker commit <container id>
+          Image has now been created with a long sha id and no name. Copy this id.
+	  We now need to tag the new image with a readable name:
+	- docker tag <created sha id> <image name>
+	  Now your new image (copy of the container) is available.
+
+Or in one go:  docker commit <container name> <new image name>
