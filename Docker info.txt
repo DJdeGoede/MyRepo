@@ -1,0 +1,14 @@
+Docker
+======
+List images:			docker images
+List containers:		docker ps -a  (or --all)
+Show active/running containers	docker ps -f status=running
+Show exited containers:		docker ps -f status=exited
+
+Start/create a docker container based on image:
+(-ti = terminal interactive)
+	docker run -ti <image>:<version> <command>
+	example:  docker run -ti ubuntu:latest bash
+
+
+
