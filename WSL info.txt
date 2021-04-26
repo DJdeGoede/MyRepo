@@ -56,8 +56,8 @@ sudo apt install nginx
 sudo service nginx start
 You can check by entering ip address or just 'localhost' in a browser, it should return a ngnix welcome message
 
-Graphical env
--------------
+Using graphical programs
+------------------------
 1. Setup an X server (display manager) in Windows like VcXsrv. Run it with defaults but make private and public is set for firewall.
 2. Tell WSL how to connect to the X server by setting the DISPLAY variable to be the nameserver + ':0'
     (nameserver = virtual address of hyper v server for this distro)
@@ -69,6 +69,12 @@ Graphical env
 4. Now test it by running a graphical program like xeyes
     xeyes &    (& means it runs it as a separate process while the prompt is retained)
    You should now see a small windows with two eyes following the mouse pointer. Close that window to close the process.
+
+Using desktop GUI
+-----------------
+Install a desktop package like xfce4:
+    sudo apt install xfce4
+Start this GUI with:  startxfce4
 
 Export and import WSL distribution
 ----------------------------------
