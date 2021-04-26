@@ -4,6 +4,9 @@ User management
 ---------------
 Login as root with:  sudo -i
 Logoff as root user:  exit
+Change user: su <user name>
+Change root password (in WSL distro): sudo passwd  (then supply and retype new password)
+Edit file with users that can use sudo:  nano /etc/sudoers
 
 Using bash
 ----------
