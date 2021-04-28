@@ -1,5 +1,42 @@
 Docker
 ======
+
+Install on Linux ubuntu (via repository, preferred)
+---------------------------------------------------
+1. Uninstall older versions:
+     sudo apt-get remove docker docker-engine docker.io containerd runc
+
+2. Install packages to allow apt to use a repository over https:
+     sudo apt-get update
+     sudo apt-get install \
+     apt-transport-https ca-certificates curl gnupg lsb-release
+
+3. Add Docker's official GPG key:
+     curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+4. Set up a repository to install from:
+     echo \
+     "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+     $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+5. Install Docker engine:
+     sudo apt-get update
+     sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+6. List available Docker engine versions in your repo and install a specific version of Docker engine:
+     apt-cache madison docker-ce
+     (the versions are listed, you need to pick one and copy string in second column)
+     
+     sudo apt-get install \
+     docker-ce="5:20.10.6~3-0~ubuntu-focal" \
+     docker-ce-cli="5:20.10.6~3-0~ubuntu-focal" \
+     containerd.io     
+
+The install is now done.
+
+7. Test Docker by running an image:
+     sudo docker run hello-world
+
  ________                   ____________
 |        |                 |            |
 | Images |   -- run -----> | Containers |
