@@ -1,5 +1,11 @@
 Info about WSL:
 
+Check version
+-------------
+In Powershell or CMD                      : wsl -l -v
+Set distro to WSL 2                       : wsl --set-version <distro name> 2
+Set deafult version for new distro's to 2 : wsl --set-default-version 2
+
 User management
 ---------------
 Login as root with:  sudo -i
