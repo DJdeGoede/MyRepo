@@ -37,6 +37,8 @@ The install is now done.
 7. Test Docker by running an image:
      sudo docker run hello-world
 
+
+HOW DOES IT WORK?
  ________                   ____________
 |        |                 |            |
 | Images |   -- run -----> | Containers |
@@ -63,3 +65,46 @@ Create an image based on a changed container:
 	  Now your new image (copy of the container) is available.
 
 Or in one go:  docker commit <container name> <new image name>
+
+Using ports
+-----------
+The hostname of the host running docker = host.docker.internal (or: gateway.docker.internal)
+Resolved in Windows hosts file: C:\Windows\System32\drivers\etc\hosts
+
+Example of linking containers via ports using netcast program:
+1. Start an instance an link two ports from localhost to the running container:
+docker run  --rm -ti -p 45678:45678 -p 45679:45679 --name echo-server ubuntu:14.04 bash
+2. Start netcast and listen to port 45678, pipe the output to port 45679:
+nc -lp 45678 | nc -lp 45679
+Leave it running..
+
+3. Start a new container and start netcast linking to port 45678 of docker host to this host:
+docker run --rm -ti ubuntu:14.04 bash
+nc host.docker.internal 45678
+Leave it running..
+
+4. Start a new container and start netcast linking to port 45679 of docker host to this host:
+docker run --rm -ti ubuntu:14.04 bash
+nc host.docker.internal 45679
+Leave it running..
+
+5. Now when you type something in the first container session it will (after enter) automatically 
+be shown in the second container session :)
+
+You don't have to force a port mapping, you can also only provide the server ports.
+Docker will then assign automatically a chosen free port itself:
+  docker run  --rm -ti -p 45678 -p 45679 --name echo-server ubuntu:14.04 bash
+Now where do these ports map to?
+  docker port echo-server
+Answer:
+  45678/tcp -> 0.0.0.0:63716
+  45679/tcp -> 0.0.0.0:63717
+So they are mapped to ports 63716 and 63717
+
+
+
+
+
+
+
+
