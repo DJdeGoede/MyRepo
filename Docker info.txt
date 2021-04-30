@@ -101,9 +101,19 @@ Answer:
   45679/tcp -> 0.0.0.0:63717
 So they are mapped to ports 63716 and 63717
 
+Networking
+----------
+1. create network
+  docker network create <name>
+2. create two containers and link them to the network:
+  docker run --rm -ti --net learning --name catserver ubuntu:14.04 bash
+  docker run --rm -ti --net learning --name dogserver ubuntu:14.04 bash
 
+3. From each container verify the name scan be resolved via ping (from both containers):
+  ping catserver
+  ping dogserver
 
-
+4. 
 
 
 
