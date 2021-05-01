@@ -1,0 +1,14 @@
+Git
+---
+
+sudo apt install git
+git clone git://github.com/DJdeGoede/MyRepo.git
+git remote set-url origin https://github.com/DJdeGoede/MyRepo.git
+git config credential.helper store
+git push https://github.com/DJdeGoede/MyRepo.git
+  Then supply username and password to store
+
+To keep active for 2 hours:
+   git config --global credential.helper 'cache --timeout 7200'
+
+
