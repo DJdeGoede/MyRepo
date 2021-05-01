@@ -1,0 +1,14 @@
+Oracle VirtualBox
+-----------------
+
+default host key = right ctrl  (can be changed)
+
+host + f = full screen
+host + m = minimize
+host + s = scaled in window
+
+Ubuntu
+------
+ctrl + alt + t = open terminal
+ctrl + shift + +  = increase font size terminal
+ctrl + -  = decrease font size terminal
