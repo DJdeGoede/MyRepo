@@ -6,6 +6,12 @@ History
 -------
 Released by Linus Torvalds in 1991 (based on Unix/Minix)
 
+Philosophy(UNIX): 
+- programs should do one thing
+- use text interfaces (take in text and output text)
+- many modular tools instead of one big one
+- GNU tools commit to this pattern
+
 Ubuntu
 ------
 Install extra codecs for playing videos:
@@ -31,8 +37,8 @@ rmdir <folder>
 
 Copy file       : cp <orgfile> <destfile>
 Move/rename file: mv <orgfile> <destfile>
-Remove file     : rm <file> or rm -r <directory/ies> to remove everything recursively
-
+Remove file     : rm <file> or rm -rf <directory/ies> to remove everything recursively
+ (-f skips the prompt for each folder that is beeing removed)
 . = current dir, .. = parent dir
 wildcards: * = multiple chars, ? = one char
 
@@ -43,8 +49,8 @@ find <location> -name <search pattern>
 users
 -----
 sudo <command> : do things as root temporarily
-sudo -k : go back to normal user
 sudo -s : login as root user
+exit    : go back to normal user
 sudo !! : repeat last command as root user (if you forgot to type sudo ..)
 
 change file access:/rights:
@@ -64,11 +70,76 @@ change group    : sudo chgrp <new owner> <file>
 Links
 -----
 - hard link : point to data on the disk (inodes)
+    ln <file to link to>
+    This will create a pointer to the same hard file location / inode
 - soft (symbolic) link : points to a file on the disk (relative path)
+	ln -s <file to link to> <link file name>
+	- ln -s poems.txt writing.txt                : symlink will break when moved
+	- ln -s /home/djdegoed/poems.txt writing.txt : symlink will still work when moved
+	
+Standard locations
+------------------
+/ = highest level (root)
+  /root = root home dir
+  /home = user home folders
+  /bin = binaries (programs)
+  /sbin = binaries (programs)
+  /etc = config files
+  /lib = libraries and shared modules
+  /dev = devices on the system
+  /mnt = local and remote filesystem mounts
+  /media = removable storage
+  /proc = virtual filesystem representing processes
+  /sys = virtual filesystem representing kernel values
+  
+Pipes
+-----
+cat <file> | wc : count the lines, words and characters in <file>
+head -n<x> <file>: show first x lines
+tail -n<x> <file>: show last x lines
 
+cat <file> | cat -n : show file with line nrs
 
+Check difference between:
+cat <file> | cat -n | tail n<x>  : show file, nr the lines and show last x lines
+cat <file> | tail n<x> | cat -n  : show file, show last x lines and nr them
 
+View text files
+---------------
+<file> less/more : show page of text, use PgUp, PgDown, arrow up/down to scroll
+                   Use q to quit (same as man)
 
+Grep (search in files)
+----
+grep -n "<pattern/string>" <file> : search for pattern/string and output the results with line nrs
+-i : case insensative
+-v : show file without the lines that contain the pattern/string
 
+grep -E "\w{6,}" <file> : search for all lines with words with length 6 or more
+grep -E "[hjk]" <file> : search for all lines where there is an h,j or k in it
+
+Manipulating text
+-----------------
+- awk for extracting data
+
+    awk '{print $2}' simple_data.txt  : show second column of this file
+    awk '{print $2 "\t" $1}' simple_data.txt : show 2nd column then tab then 1st column
+
+- sed for changing data
+
+    sed  "s/Orange/Red/" simple_data.txt : change word Orange in Red in file
+      (s = substitute)
+    
+- sort for sorting data
+  
+    sort -k2 -n simple_data.txt : sort file on 2nd column numeric
+    sort -u simple_data.txt : show unique lines
+        
+- rev for reversing text
+    echo Hello | rev  gives: olleH
+    
+- tac for reversing lines in a file (cat reversed ;-))
+    cat words.txt | tac
+    
 
 
