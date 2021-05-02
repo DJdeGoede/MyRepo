@@ -7,10 +7,5 @@ host + f = full screen
 host + m = minimize
 host + s = scaled in window
 
-Ubuntu
-------
-ctrl + alt + t = open terminal
-ctrl + shift + +  = increase font size terminal
-ctrl + -  = decrease font size terminal
-ctrl + a = move to begin of line
+
 
