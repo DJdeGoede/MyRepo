@@ -7,8 +7,14 @@ git remote set-url origin https://github.com/DJdeGoede/MyRepo.git
 git config credential.helper store
 git push https://github.com/DJdeGoede/MyRepo.git
   Then supply username and password to store
+  Use generated OAuth token (via Github.com/Settings/Developer)
 
 To keep active for 2 hours:
    git config --global credential.helper 'cache --timeout 7200'
+
+Pulling remote changes:    git pull
+Adding changes to local:   git add .
+Commiting local changes:   git commit
+Pushing changes to remote: git push
 
 
