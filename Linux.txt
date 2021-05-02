@@ -141,5 +141,19 @@ Manipulating text
 - tac for reversing lines in a file (cat reversed ;-))
     cat words.txt | tac
     
+Vi/ViM
+------
+to install: sudo apt install vim
+After start press i to go to insert mode, esc to go back to command mode
+in command mode:  :w <filename> to save file
+:wq! to save changes and quit
+
+
+
+
+
+
+
+
 
 
