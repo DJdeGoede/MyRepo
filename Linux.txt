@@ -8,6 +8,11 @@ Released by Linus Torvalds in 1991 (based on Unix/Minix)
 
 Ubuntu
 ------
+Install extra codecs for playing videos:
+  sudo apt-get install ubuntu-restricted-extras
+
+Terminal
+--------
 ctrl + alt + t = open terminal
 ctrl + shift + +  = increase font size terminal
 ctrl + -  = decrease font size terminal
@@ -24,13 +29,42 @@ Creating and removing directories:
 mkdir <folder>   -p for recursing
 rmdir <folder>
 
-Copying and moving/renaming:
-cp <orgfile> <destfile>
-mv <orgfile> <destfile>
+Copy file       : cp <orgfile> <destfile>
+Move/rename file: mv <orgfile> <destfile>
+Remove file     : rm <file> or rm -r <directory/ies> to remove everything recursively
 
 . = current dir, .. = parent dir
 wildcards: * = multiple chars, ? = one char
 
+finding files
+-------------
+find <location> -name <search pattern>
+
+users
+-----
+sudo <command> : do things as root temporarily
+sudo -k : go back to normal user
+sudo -s : login as root user
+sudo !! : repeat last command as root user (if you forgot to type sudo ..)
+
+change file access:/rights:
+chmod <user priv digit><group priv digit><other priv digit>
+read = 4, write = 2, execute = 1
+x=1, w=2, xw=3, r=4, xr=5, rw=6, xrw=7
+Example: chmod 664 poems.txt means:
+- user:rw, group:rw, others: r only
+Also possible notation with +, - and = for user, group, others or all.
+chmod 777 = a+rwx              full access for everyone
+chmod 755 = u+rwx,g=rx,o=rx    owners full access, group only rx, others only rx
+chmod 700 = u=rwx,g-rwx,o-rwx  owners full access, rest none
+
+change ownership: sudo chown <new owner> <file>
+change group    : sudo chgrp <new owner> <file>
+
+Links
+-----
+- hard link : point to data on the disk (inodes)
+- soft (symbolic) link : points to a file on the disk (relative path)
 
 
 
