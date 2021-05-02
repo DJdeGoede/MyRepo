@@ -13,3 +13,28 @@ ctrl + shift + +  = increase font size terminal
 ctrl + -  = decrease font size terminal
 ctrl + a = move to begin of line
 
+Bash
+----
+File info: file <filename>, stat <filename>
+
+cd ~ or just cd: go to home folder
+cd - : go to previous used folder
+
+Creating and removing directories:
+mkdir <folder>   -p for recursing
+rmdir <folder>
+
+Copying and moving/renaming:
+cp <orgfile> <destfile>
+mv <orgfile> <destfile>
+
+. = current dir, .. = parent dir
+wildcards: * = multiple chars, ? = one char
+
+
+
+
+
+
+
+
