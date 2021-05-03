@@ -116,6 +116,11 @@ View text files
 <file> less/more : show page of text, use PgUp, PgDown, arrow up/down to scroll
                    Use q to quit (same as man)
 
+Edit text files
+---------------
+For easy editing use gedit (graphical shell)
+For CLI editors use: vi(m) or nano
+
 Grep (search in files)
 ----
 grep -n "<pattern/string>" <file> : search for pattern/string and output the results with line nrs
