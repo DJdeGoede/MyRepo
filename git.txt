@@ -1,17 +1,24 @@
 Git
 ---
 
-sudo apt install git
-git clone git://github.com/DJdeGoede/MyRepo.git
-git remote set-url origin https://github.com/DJdeGoede/MyRepo.git
-git config credential.helper store
-git push https://github.com/DJdeGoede/MyRepo.git
-  Then supply username and password to store
-  Use generated OAuth token (via Github.com/Settings/Developer)
+Install GIT: 
+   sudo apt install git
 
-To keep active for 2 hours:
-   git config --global credential.helper 'cache --timeout 7200'
+Clone you remote repo to local and set the correct url:
+   git clone git://github.com/DJdeGoede/MyRepo.git
+   git remote set-url origin https://github.com/DJdeGoede/MyRepo.git
 
+Save your user and password:
+   git config --global credential.helper store
+   git push https://github.com/DJdeGoede/MyRepo.git
+      Then supply username and password to store
+      Use current pwd or generated OAuth token (via Github.com/Settings/Developer)
+      Last one is safer (also has scopes) and required soon!
+      To keep active for 2 hours:
+        git config --global credential.helper 'cache --timeout 7200'
+
+Make sure you are in the correct directory (needs to have the hidden .git file)
+Check current status:      git status
 Pulling remote changes:    git pull
 Adding changes to local:   git add .
 Commiting local changes:   git commit
