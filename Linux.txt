@@ -137,6 +137,10 @@ Manipulating text
     sed  "s/Orange/Red/" simple_data.txt : change word Orange in Red in file
       (s = substitute)
     
+    sed -i 's/foo/bar/g' hello.txt
+      Replace text (foo by bar) in file hello.txt without editing it / from the CLI
+      (-i = replace in file, s/ = substitute, /g = for all found values)
+    
 - sort for sorting data
   
     sort -k2 -n simple_data.txt : sort file on 2nd column numeric
