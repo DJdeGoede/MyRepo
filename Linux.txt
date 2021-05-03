@@ -2,8 +2,8 @@ Learning Linux command line
 ===========================
 Get training files: git clone git://github.com/scottsimpson/commandlinebasics
 
-History
--------
+History of Linux
+----------------
 Released by Linus Torvalds in 1991 (based on Unix/Minix)
 
 Philosophy(UNIX): 
