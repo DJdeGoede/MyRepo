@@ -1,0 +1,1 @@
+(du -sh ./*; ls -lh --color=no) | awk '{ if($1 == "total") {X = 1} else if (!X) {SIZES[$2] = $1} else { sub($5 "[ ]*", sprintf("%-7s ", SIZES["./" $9]), $0); print $0} }'
