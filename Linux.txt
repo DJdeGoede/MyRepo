@@ -19,8 +19,10 @@ Install extra codecs for playing videos:
 
 Removed files?
 -------------
-Normally after a rm they are gone but in Ubuntu Desktop you can go to
-~/.local/share/Trash/files   to find the deleted files :)
+After a rm files are gone.
+If you however remove files via the Files explorer in Ubuntu you can go to
+~/.local/share/Trash/files   to find/restore the deleted files :)
+In ~/.local/share/Trash/info you see exactly the original location and when it was removed.
 
 Terminal
 --------
@@ -151,7 +153,42 @@ Vi/ViM
 to install: sudo apt install vim
 After start press i to go to insert mode, esc to go back to command mode
 in command mode:  :w <filename> to save file
-:wq! to save changes and quit
+:qw    : save changes and quit
+:q!    : exit without saving changes
+
+[[ / ]] = jump to begin of text / end of text
+( = beginning of previous sentence
+) = beginning of next sentence
+
+Working with archives
+---------------------
+.tar files are a common way to package and distribute software.
+They put many files into one file
+
+With or without compression:
+.tar             = normal
+.tar.gz or .tgz  = with gzip compression
+.tar.bz2         = with bzip compression
+
+Create an uncompressed archive and output the added files:
+  tar cvf myfiles.tar Exercise\ Files
+    (c = create archive, v = verbose: show files added, f = output to a file)
+
+  tar caf myfiles.tar.gz Exercise\ Files
+    (a = choose compression based on extension of file, here .gz will use gzip;
+     we left out option v here as we do not need to show the added files always)
+
+Unpack files in local dir:    
+  tar xf <file>
+  
+Unpack files to specific dir:
+  tar xf <file> -C <target folder>
+
+
+
+
+
+ 
 
 
 
