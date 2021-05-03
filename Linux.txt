@@ -17,6 +17,11 @@ Ubuntu
 Install extra codecs for playing videos:
   sudo apt-get install ubuntu-restricted-extras
 
+Removed files?
+-------------
+Normally after a rm they are gone but in Ubuntu Desktop you can go to
+~/.local/share/Trash/files   to find the deleted files :)
+
 Terminal
 --------
 ctrl + alt + t = open terminal
