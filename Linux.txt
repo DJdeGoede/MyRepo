@@ -76,6 +76,9 @@ change group    : sudo chgrp <new owner> <file>
 
 Links
 -----
+Dont use ~ for home, but /home/<user>
+So: ~/Documents = /home/djdegoed/Documents
+
 - hard link : point to data on the disk (inodes)
     ln <file to link to>
     This will create a pointer to the same hard file location / inode
