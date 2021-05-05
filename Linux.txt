@@ -12,11 +12,6 @@ Philosophy(UNIX):
 - many modular tools instead of one big one
 - GNU tools commit to this pattern
 
-Ubuntu
-------
-Install extra codecs for playing videos:
-  sudo apt-get install ubuntu-restricted-extras
-
 Removed files?
 -------------
 After a rm files are gone.

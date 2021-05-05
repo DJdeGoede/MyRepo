@@ -1,4 +1,15 @@
 Ubuntu
 ------
+Install extra codecs for playing videos:
+  sudo apt-get install ubuntu-restricted-extras
+
+Install editor to edit Gnome (desktop env) settings: dconf Editor
+Here you can set/"hack" all kinds of Ubuntu gnome desktop features
+
+Moving around
+-------------
+ctrl+alt+down and up  = switch between workspaces
+
+
 
 
