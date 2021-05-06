@@ -1,3 +1,7 @@
 Bash scripting
 ==============
+bash --version  : check version
+echo $SHELL     : check current shell
+chsh            : change shell if you would like to (ksh, zsh etc)
+
 
