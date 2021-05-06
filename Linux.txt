@@ -26,6 +26,14 @@ ctrl + shift + +  = increase font size terminal
 ctrl + -  = decrease font size terminal
 ctrl + a = move to begin of line
 
+Version info
+------------
+for general : cat /etc/*release
+for kernel  : uname -a
+
+combine info and output: uname -on | echo $(awk '{print $1 " on " $2}')
+(o = host, n = OS)
+
 Bash
 ----
 File info: file <filename>, stat <filename>
