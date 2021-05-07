@@ -6,6 +6,43 @@ chsh            : change shell if you would like to (ksh, zsh etc)
 
 piping and redirecting
 ----------------------
-cat ls | wc   : counts the words as result from the directory listing
+ls | wc        : counts the words as result from the directory listing
+ls > list.txt  : writes listing to output file
+ls 1> list.txt : same
+cat < list.txt : show content from saved file
+
+ls oopsy 1> success.txt 2> error.txt  : write to file depending on fail/success
+ls oopsy 1> success.txt 2>> error.txt : append to error.txt, overwite success.txt
+
+'Here' document (to easy display multiple lines of text):
+cat << EndOfTag
+This is a 
+text over multiple lines
+without using echo or newline chars
+EndOfTag
+
+Bash builtins and other commands
+--------------------------------
+Bash has some builtin commands that can differ from the other versions
+command echo Hello  : run echo (separate program)
+builtin echo Hello  : run echo (Bash builtin)
+
+command -V echo : shows which version of echo is used / info about the command
+To disable using builtin version: enable -n echo
+Now command -V echo will tell you that you use the /usr/bin/echo
+To enable the builtin again just use: enable echo
+If there is only a builtin version like with command 'history' disabling it will cause that the command will not work anymore. Only use it when there is an extra
+version that you want to use to override the builtin version.
+
+
+
+
+
+
+
+
+
+
+
 
 
