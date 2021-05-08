@@ -34,6 +34,19 @@ To enable the builtin again just use: enable echo
 If there is only a builtin version like with command 'history' disabling it will cause that the command will not work anymore. Only use it when there is an extra
 version that you want to use to override the builtin version.
 
+enable -n : show all the disabled builtins
+
+Be aware that the help info for builtins is different:
+- for builtins     : help <command>
+- for non builtins : man <command> or another help option
+
+
+
+
+
+
+
+
 
 
 
