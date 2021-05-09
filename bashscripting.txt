@@ -4,6 +4,17 @@ bash --version  : check version
 echo $SHELL     : check current shell
 chsh            : change shell if you would like to (ksh, zsh etc)
 
+add locations to path:   export PATH="<path>:$PATH"
+if multiple separate them with a colon (:); always end with: :$PATH"
+
+for instance:
+    export PATH="$HOME/MyScripts:$PATH"
+    export PATH="/bin/foo:/usr/some:$PATH"
+
+Reload bash configuration
+-------------------------
+    source ~/.bashrc
+
 piping and redirecting
 ----------------------
 ls | wc        : counts the words as result from the directory listing
@@ -106,4 +117,5 @@ EndOfScript
 
 - chmod +x myscript.sh
 - . myscript.sh
+
 
