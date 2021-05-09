@@ -21,6 +21,17 @@ text over multiple lines
 without using echo or newline chars
 EndOfTag
 
+Create, write and save lines to a file in one go :)
+
+cat << EOF > outputfile
+Line1
+Line2
+Line3
+EOF
+
+This creates a file outputfile and writes the given lines to it.
+EOF is just a placeholder, can be any word as long as begin and end match.
+
 Bash builtins and other commands
 --------------------------------
 Bash has some builtin commands that can differ from the other versions
@@ -79,6 +90,23 @@ How to bash
 ----------
 - multiple commands separated by semicolons
 - create bash scripts and make them executable
+
+Bash script:
+1. create a file starting with a 'shebang': #!/usr/bin/env bash
+   optional: give it .sh extension so you know it is a bash script
+2. make them executable with chmod +x <script>
+3. Then just execute with . <script>
+   - You need to supply the . here, without it the script won't be executed
+
+Example:
+cat << EndOfScript > myscript.sh
+#!/usr/bin/env bash
+echo Hello there, $(whoami) :-)
+EndOfScript
+
+- chmod +x myscript.sh
+- . myscript.sh
+
 
 
 
