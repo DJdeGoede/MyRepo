@@ -24,4 +24,5 @@ Adding changes to local:   git add .
 Commiting local changes:   git commit
 Pushing changes to remote: git push
 
-
+Add, commit and push in one:
+    alias gacp='echo "commit message : " && read MSG && git add . && git commit -m "$MSG" && git push'
