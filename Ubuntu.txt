@@ -14,11 +14,10 @@ Add and change resolution
 -------------------------
 Steps to add 1920x1080 for Virtual1:
 Use the xrandr tool to do this.
-Check current output: sudo xrandr -q
+Check current output: sudo xrandr -q (you will see the Virtual1 as monitor here)
 
 1. Calculate the values for a required resolution and refresh rate.
     Use command cvt or gtf (cvt is newer than gtf)
-
     cvt 1920 1080 60
     
     Output:
@@ -37,7 +36,16 @@ Check current output: sudo xrandr -q
     
 4. Switch to that resolution:
     sudo xrandr --output Virtual1 --mode 1920x1080_60.00
+
+5. Make sure the mesa-utils are installed (including OpenGL support/HW acceleration):
+    sudo apt install mesa-utils
     
+6. Now to check all your graphics info use: glxinfo
+   (for quick info/basic info use: glxinfo -B)
+   Check if HW rendering/acceleration is used: glxinfo | grep "direct rendering"
+   You can also quickly see this in the overview from glxinfo -B
+   Output should be: direct rendering: Yes
+
 
 
 
