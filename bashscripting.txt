@@ -25,6 +25,8 @@ cat < list.txt : show content from saved file
 ls oopsy 1> success.txt 2> error.txt  : write to file depending on fail/success
 ls oopsy 1> success.txt 2>> error.txt : append to error.txt, overwite success.txt
 
+To run a command but don't show it you can redirect to /dev/null.
+
 'Here' document (to easy display multiple lines of text):
 cat << EndOfTag
 This is a 
