@@ -140,6 +140,93 @@ Variables are case sensitive, alphanumeric
 
 <varname>=<value> to declare, no 'declare' needed
 declare -r <varname> : declare a read-only variable within script/session
+declare -l <var> : var = always lowercase
+declare -u <var> : var = always uppercase
+
+env        : show env variables
+declare -p : show all variables in current session
+
+Using numbers
+-------------
+In bash only integers allowed and you need to declare them.
+Bash is NOT designed for doing complexer calculations. If really needed use bc (see below).
+
+Use: $((..))
+operators: +, -, *, /, %, **
+a+=3  same as:  a=a+3
+a-=3  same as:  a=a-3  and so on
+
+Be aware that variables are always strings by default
+    a=8          : assign 8 to a
+    a=$((a+=2))  : take a, add 2 to it and assign back to a
+    echo $a      : result 10
+
+To make them work as integer, declare them with -i
+    declare -i a=8
+    a=$a+2
+    echo $a   result 10
+    
+For using non integer calculations use bc to pipe a calculation to like this:
+    declare -i a=1
+    declare -i b=3
+    e=$(echo "scale=<nr of decimals>; $a/$b" | bc)
+        Example: e=$(echo "scale=3; $a/$b" | bc)
+                 echo $e   : gives .333
+               
+Random numbers: echo $RANDOM   gives f.i.: 27108
+Random nr between 1 and <x>:
+    echo $((1 + $RANDOM % <x> ))
+
+Comparing values with test (test builtin)
+-----------------------------------------
+Using [..] with switch options to test a value
+
+[ -d ~ ] : do a test on/check if ~ is a directory (-d)
+To verify give: echo $?   which returns 0 for true and 1 for false
+
+Compare strings:
+[ "cat" = "dog" ]; echo $?   : 1
+[ "dog" = "dog" ]; echo $?   : 0
+
+Check help test to see the possibilities.
+
+
+
+
+
+
+
+
+
+
+
+               
+               
+                 
+
+
+
+
+
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
