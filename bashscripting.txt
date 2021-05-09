@@ -180,6 +180,8 @@ Random nr between 1 and <x>:
 Comparing values with test (test builtin)
 -----------------------------------------
 Using [..] with switch options to test a value
+Using [[..]] with switch options to test multiple values and use regular expr
+Testing is considered an important functionality in bash scripts.
 
 [ -d ~ ] : do a test on/check if ~ is a directory (-d)
 To verify give: echo $?   which returns 0 for true and 1 for false
@@ -188,8 +190,29 @@ Compare strings:
 [ "cat" = "dog" ]; echo $?   : 1
 [ "dog" = "dog" ]; echo $?   : 0
 
-Check help test to see the possibilities.
+Compare numbers:
+[ 4 -lt 5 ]; echo $?   : 0
+[ 4 -lt 3 ]; echo $?   : 1
 
+Check 'help test' to see the possibilities.
+
+Extended test (multiple tests in one):
+Example:
+  Test if homedir is a dir and if /bin/xxxx exists:
+    [[ -d ~ && -a /bin/bash ]]; echo $?   : 1   (because one of the tests is false)
+  Test if homedir is a dir and if /bin/bash exists:
+    [[ -d ~ || -a /bin/bash ]]; echo $?   : 0   (because the first test is true)
+
+Using && and || between two commands: 
+
+  [[ -d ~ ]] && echo ~ is a directory
+    If the first statement is true then the second statement is executed
+  
+Using regular expressions to test:
+  [[ "cat" =~ c.* ]]; echo $?   : true because cat matches the c.* expression
+  
+
+  
 
 
 
