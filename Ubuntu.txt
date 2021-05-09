@@ -16,9 +16,29 @@ Steps to add 1920x1080 for Virtual1:
 Use the xrandr tool to do this.
 Check current output: sudo xrandr -q
 
-- sudo cvt 1920 1080 60
-- sudo xrandr --newmode "1920x1080_60.00" 173.00 1920 2048 2248 2576 1080 1083 1088 1120 -hsync +vsync
-- sudo xrandr --addmode Virtual1 1920x1080_60.00
+1. Calculate the values for a required resolution and refresh rate.
+    Use command cvt or gtf (cvt is newer than gtf)
+
+    cvt 1920 1080 60
+    
+    Output:
+    # 1920x1080 59.96 Hz (CVT 2.07M9) hsync: 67.16 kHz; pclk: 173.00 MHz
+    Modeline "1920x1080_60.00"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync
+
+    Copy everything after Modeline:
+    "1920x1080_60.00"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync
+
+2. sudo xrandr --newmode <the copied value>
+    Here that would be:
+    sudo xrand --newmode "1920x1080_60.00"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync
+
+3. Add the added mode to the display:
+    sudo xrandr --addmode Virtual1 1920x1080_60.00  (use the modeline name string)
+    
+4. Switch to that resolution:
+    sudo xrandr --output Virtual1 --mode 1920x1080_60.00
+    
+
 
 
 
