@@ -203,7 +203,7 @@ Example:
   Test if homedir is a dir and if /bin/bash exists:
     [[ -d ~ || -a /bin/bash ]]; echo $?   : 0   (because the first test is true)
 
-Using && and || between two commands: 
+Using && and || between two commands : 
 
   [[ -d ~ ]] && echo ~ is a directory
     If the first statement is true then the second statement is executed
