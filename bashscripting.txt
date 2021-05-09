@@ -11,6 +11,8 @@ for instance:
     export PATH="$HOME/MyScripts:$PATH"
     export PATH="/bin/foo:/usr/some:$PATH"
 
+Set shell options with: shopt or set command
+
 Reload bash configuration
 -------------------------
     source ~/.bashrc
@@ -119,5 +121,31 @@ EndOfScript
 
 - chmod +x myscript.sh
 - . myscript.sh
+
+Using echo
+----------
+echo Hello
+echo this; echo and that
+echo "The kernel is $(uname -r)"    : will resolve the $-command
+echo 'The kernel is $(uname -r)'    : will literally print all, also $(uname -r)
+
+-n: stay one the same line (don't use \n)
+    echo -n 'This '; echo -n ' is on one line'
+
+Use \ character to escape, that is take literal char following it
+
+Variables
+---------
+Variables are case sensitive, alphanumeric
+
+<varname>=<value> to declare, no 'declare' needed
+declare -r <varname> : declare a read-only variable within script/session
+
+
+
+
+
+
+
 
 
