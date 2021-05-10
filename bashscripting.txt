@@ -214,5 +214,45 @@ true && echo 'Success!'
 Using regular expressions to test:
   [[ "cat" =~ c.* ]]; echo $?   : true because cat matches the c.* expression
   
+Formatting
+----------
+use -e switch for echo to use escape codes:
+    echo -e "Name\tNumber"; echo -e "Scott\t123"    : \t tab
+    echo -e "Line1\nLine2"                          : \n newline
+    echo -e "\aDing!"                               : \a sound/bell
+    
+color codes:
+    Use special code in the string to use colors:
+    '\033[' = switch on color coding
+    followed by fgcolor;bgcolor
+    end with a 'm'
+
+    Color       FG  BG      Color           FG  BG
+    -----------------       ----------------------
+    Black       30  40      Bright Black    90  100       
+    Red         31  41      Bright Red      91  101
+    Green       32  42      Bright Green    92  102   
+    Yellow      33  43      Bright Yellow   93  103
+    Blue        34  44      Bright Blue     94  104
+    Magenta     35  45      Bright Magenta  95  105
+    Cyan        36  46      Bright Cyan     96  106
+    White       37  47      Bright White    97  107
+    
+    Example:   
+    Yellow on blue: echo -e "\033[33;44mColored\033[m"
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
 
 
