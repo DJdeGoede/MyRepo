@@ -1,0 +1,62 @@
+<!--
+
+Copyright (C) 2013 Christopher K. Horton
+Author: Christopher K. Horton <christhehorton@gmail.com>
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Library General Public
+License as published by the Free Software Foundation; either
+version 2 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+Library General Public License for more details.
+
+You should have received a copy of the GNU Library General Public
+License along with this library; if not, write to the
+Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+Boston, MA 02111-1307, USA.
+
+-->
+
+<style-scheme name="Ubuntu" id="ubuntu" version="1.0">
+  <author>Christopher K. Horton</author>
+  <description>Dark color scheme based on Oblivion, using Ubuntu colors</description>
+
+  <style name="text"	foreground="#dedede" background="#5e2750" />
+  <style name="selection"	foreground="#eeeeec" background="#dd4713" />
+  <style name="cursor"	foreground="#d3d7cf" />
+  <style name="current-line"	background="#77216e" />
+  <style name="line-numbers"	foreground="#aea79f" background="#2c001d" />
+  <style name="draw-spaces"	foreground="#888a85" />
+  <style name="bracket-match"	foreground="#dd4713" bold="true" />
+  <style name="bracket-mismatch"	foreground="#eeeeec" background="#cc0000" bold="true" />
+  <style name="right-margin"	foreground="#eeeeec" background="#888a85" />
+  <style name="search-match"	foreground="#eeeeec" background="#4e9a06" />
+  <style name="def:comment"	foreground="#aea79f" />
+  <style name="def:shebang"	foreground="#888a85" bold="true" />
+  <style name="def:doc-comment-element"	italic="true" />
+  <style name="def:constant"	foreground="#edd400" />
+  <style name="def:string"	foreground="#edd400" />
+  <style name="def:special-char"	foreground="#ce5c00" />
+  <style name="def:special-constant"	foreground="#ce5c00" />
+  <style name="def:floating-point"	foreground="#ce5c00" />
+  <style name="def:identifier"	foreground="#729fcf" />
+  <style name="def:statement"	foreground="#ffffff" bold="true" />
+  <style name="def:type"	foreground="#8ae234" bold="true" />
+  <style name="def:preprocessor"	foreground="#ad7fa8" />
+  <style name="def:error"	foreground="#eeeeec" background="#cc0000" bold="true" />
+  <style name="def:warning"	foreground="#eeeeec" background="#ad7fa8" />
+  <style name="def:note"	foreground="#888a85" background="#fce94f" bold="true" />
+  <style name="def:underlined"	italic="true" underline="true" />
+  <style name="diff:added-line"	foreground="#edd400" />
+  <style name="diff:removed-line"	foreground="#729fcf" />
+  <style name="diff:changed-line"	foreground="#ad7fa8" />
+  <style name="diff:diff-file"	foreground="#8ae234" bold="true" />
+  <style name="diff:location"	foreground="#8ae234" />
+  <style name="diff:special-case"	foreground="#ffffff" bold="true" />
+  <style name="latex:display-math"	foreground="#5c3566" />
+  <style name="latex:command"	foreground="#8ae234" bold="true" />
+  <style name="latex:include"	foreground="#ad7fa8" />
+</style-scheme>
