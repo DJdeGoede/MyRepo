@@ -223,9 +223,8 @@ use -e switch for echo to use escape codes:
     
 color codes:
     Use special code in the string to use colors:
-    '\033[' = switch on color coding
-    followed by fgcolor;bgcolor
-    end with a 'm'
+    start: '\033[' + fgcolor;bgcolor + 'm'
+    end  : '\033[0m'
 
     Color       FG  BG      Color           FG  BG
     -----------------       ----------------------
@@ -239,7 +238,7 @@ color codes:
     White       37  47      Bright White    97  107
     
     Example:   
-    Yellow on blue: echo -e "\033[33;44mColored\033[m"
+    Yellow on blue: echo -e "\033[33;44mColored Text\033[0m"
     
     
     
