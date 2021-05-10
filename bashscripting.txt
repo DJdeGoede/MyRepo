@@ -226,21 +226,23 @@ color codes:
     start: '\033[' + fgcolor;bgcolor + 'm'
     end  : '\033[0m'
 
-    Color       FG  BG      Color           FG  BG
-    -----------------       ----------------------
-    Black       30  40      Bright Black    90  100       
-    Red         31  41      Bright Red      91  101
-    Green       32  42      Bright Green    92  102   
-    Yellow      33  43      Bright Yellow   93  103
-    Blue        34  44      Bright Blue     94  104
-    Magenta     35  45      Bright Magenta  95  105
-    Cyan        36  46      Bright Cyan     96  106
-    White       37  47      Bright White    97  107
+    Color       FG  BG      Color           FG  BG      Style      Code
+    -----------------       -----------------------     -----------------
+    Black       30  40      Bright Black    90  100     Reset           0
+    Red         31  41      Bright Red      91  101     Bright          1  
+    Green       32  42      Bright Green    92  102     Dim             2
+    Yellow      33  43      Bright Yellow   93  103     Italic          3
+    Blue        34  44      Bright Blue     94  104     Underlined      4
+    Magenta     35  45      Bright Magenta  95  105     Blinking        5
+    Cyan        36  46      Bright Cyan     96  106     Inverted        7
+    White       37  47      Bright White    97  107     Strikethrough   9
     
     Example:   
-    Yellow on blue: echo -e "\033[33;44mColored Text\033[0m"
+    Yellow on blue: 
+        echo -e "\033[33;44mColored Text\033[0m"
     
-    
+    Combine it (blinking, italic, white on cyan):
+        echo -e "\033[97;106m\033[3m\033[5mLook at me!\033[0m"
     
     
     
