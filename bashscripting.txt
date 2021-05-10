@@ -207,10 +207,17 @@ Using && and || between two commands :
 
   [[ -d ~ ]] && echo ~ is a directory
     If the first statement is true then the second statement is executed
+
+true && echo 'Success!'
+    Outputs Success; if you change the first check to false, it will not output due to the &&
   
 Using regular expressions to test:
   [[ "cat" =~ c.* ]]; echo $?   : true because cat matches the c.* expression
   
+
+  
+
+
 
   
 
