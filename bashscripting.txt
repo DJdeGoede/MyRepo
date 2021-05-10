@@ -215,7 +215,9 @@ Using regular expressions to test:
   [[ "cat" =~ c.* ]]; echo $?   : true because cat matches the c.* expression
   
 Formatting
-----------
+==========
+Using echo -e
+-------------
 use -e switch for echo to use escape codes:
 - be aware of special characters like !; use a space in between
 
