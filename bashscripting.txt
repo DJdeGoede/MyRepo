@@ -254,7 +254,7 @@ You can use variables to store often used codes and use them like this:
     
     echo -e "This is $underline"special"$none to me."
     
-    
+    Schlosser01!2766
     
     
     
