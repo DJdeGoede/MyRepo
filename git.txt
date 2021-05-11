@@ -28,7 +28,7 @@ Add, commit and push in one:
     alias gacp='echo "commit message : " && read MSG && git add . && git commit -m "$MSG" && git push'
     
 Conditional commit:
-    alias gitcheck='git commit | grep -q nothing && echo "No commit needed" || ( echo -n "Commit msg: " && read c && git commit -am "$c" && git push )'
+    alias gitcheck='git commit | grep -q nothing && echo "No commit needed" || ( echo -n "Commit msg: " && read c && git commit -am "$c" && git push && echo "\nDone." )'
 
 
 
