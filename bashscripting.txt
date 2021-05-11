@@ -134,6 +134,11 @@ echo 'The kernel is $(uname -r)'    : will literally print all, also $(uname -r)
 
 Use \ character to escape, that is take literal char following it
 
+Read input and use it in an echo in one go:
+------------------------------------------
+    echo -n "Who are you? " && read w && echo "Hello $w, nice to meet you."
+
+
 Variables
 ---------
 Variables are case sensitive, alphanumeric
@@ -256,8 +261,38 @@ You can use variables to store often used codes and use them like this:
     
     echo -e "This is $underline"special"$none to me."
     
+Using printf
+------------
+    echo "The results are: $((2+2)) and $((3+3))"
+    printf "The results are: %d and %d\n" $((2+2)) $((3+3))
+    
+%d is a decimal nr placeholder and after the statement come the variables/values to insert at %d. %s can be used for strings.
+
+%<nr> reserves space, a positive nr means right aligned, a negative one left aligned. 
+    %-10s  = a 10-char space for a left aligned string
+    %5d    = a  5 char space for a right alined decimal
+    %0<nr> = fill up the char space with 0's
+Example:
+    printf "%-10s: %5d\n" "Waarde 1" 123 "Waarde 2" 2315
+    printf "%-10s: %05d\n" "Waarde 1" 123 "Waarde 2" 2315   (fill up the nrs with 0's)
+    
 
     
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+ 
+
+ 
     
     
     
