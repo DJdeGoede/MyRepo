@@ -1,0 +1,1 @@
+echo -n "Change city name (<old> <new>)   : " && read old new && find . -type f -exec sed -i "s/$old/$new/g" {} + && echo -n "Change operator id (<old> <new>) : " && read old new && find . -type f -exec sed -i "s/$old/$new/g" {} +

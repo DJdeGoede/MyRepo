@@ -1,0 +1,1 @@
+echo -n 'Update file city name (<old> <new>): ' && read old new && find -name "*.sql" -exec rename "s/$old/$new/" {} ";"
