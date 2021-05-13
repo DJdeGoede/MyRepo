@@ -455,6 +455,26 @@ Or us a command or array:
     numberthing $(ls /)        : gives a numbered output of the root dir content
     numberthing ${fruits[@]}   : gives a numbered output of the values in array fruits
     
+define local variables inside functions with local <variable>
+
+Reading and writing text files
+==============================
+- Write to files using output redirectors '>' (overwrite) and '>>' (append)
+- Read from files using input redirector '<' and 'read' command
+
+Example:
+    ls > ~/data.txt
+    while read f; do echo $f; done < ~/data.txt
+    
+Working with arguments
+======================
+
+   
+    
+    
+    
+
+
 
     
 
