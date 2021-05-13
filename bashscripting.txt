@@ -343,24 +343,87 @@ Example:
     fi
 
 Loops
------
-Two kinds of:
+=====
+Three kinds of:
 - While 
 - Until
+- For
 
+While loop
+----------
 while ...
 do
     ...
 done
 
-declare -i n=0
-while (( n <10 ))
+Example:
+    declare -i n=0
+    while (( n <10 ))
+    do
+        echo "n:$n"
+        (( n ++ ))
+    done
+
+Until loop
+----------
+until ...
 do
-    echo "n:$n"
-    (( n ++ ))
+    ...
 done
 
+Example:
+    declare -i m=0
+    until (( m == 10 ))
+    do
+        echo -ne "$m\b"
+        (( m++ ))
+        sleep 1
+    done
 
+Example oneliner, one second-counter by using -n and \b:
+    declare -i m=0; until (( m == 10 )); do echo -ne "$m\b"; (( m++ )); sleep 1; done
+
+For-loop
+--------
+for i in ...
+do
+    ...
+done
+
+Examples:
+    for i in {1..100}; do echo $i; done
+    for (( i=1; i<=100; i++ )); do echo $i; done
+
+Example looping through array:
+    declare -a fruits=("apple" "banana" "cherry")
+    for i in ${fruits[@]}; do echo "Today's fruit is: $i"; done
+    
+Or using command output to loop through (like dir output via ls):
+    for i in $(ls); do echo "Found file: $i"; done
+    
+Using case
+==========
+Easy to use when multiple tests have to be done.
+
+Example:
+    animal="dog"
+    case $animal in
+        cat) echo "Feline";;
+        dog|puppy) echo "Canine";;
+        *) echo "No match!"
+    esac
+    
+As oneliner (easy for testing directly in CLI):
+    animal="dog"; case $animal in cat) echo "Feline";; dog|puppy) echo "Canine";; *) echo "No match!"; esac
+    
+
+    
+    
+
+
+    
+    
+        
 
 
 
