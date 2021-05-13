@@ -276,5 +276,19 @@ Example:
     printf "%-10s: %5d\n" "Waarde 1" 123 "Waarde 2" 2315
     printf "%-10s: %05d\n" "Waarde 1" 123 "Waarde 2" 2315   (fill up the nrs with 0's)
    
+Arrays
+======
+two types: Indexed and associative/
+
+Indexed:
+    declare -a fruits=("apple" "banana" "pear")
+    echo fruits[2]   : pear
+    
+ 
+
+
+
+
+
 
 
