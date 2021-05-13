@@ -86,6 +86,11 @@ brace expansion: creates sets or ranges ({..})
 - echo {1..10..2} output: 1 3 5 7 9
 - echo {cat,dog,fox}_{1..2} : cat_1, dog_1, fox_1, cat_2, dog_2 and fox_2
 
+Printing nrs 1 to 10 horizontally:  echo {1..10}
+    
+Note that these give the same result:
+
+
 parameter expansion: retrieves and transforms stored values (${..})
 - g="Hello there!"; echo Output\: ${g}     : Output: Hello there!
 - g="Hello there!"; echo Output\: ${g:6}   : Output: there!   (position 6)
@@ -336,4 +341,34 @@ Example:
     else
         echo "$a is not greater than 4."        
     fi
+
+Loops
+-----
+Two kinds of:
+- While 
+- Until
+
+while ...
+do
+    ...
+done
+
+declare -i n=0
+while (( n <10 ))
+do
+    echo "n:$n"
+    (( n ++ ))
+done
+
+
+
+
+
+
+
+
+
+
+
+
 
