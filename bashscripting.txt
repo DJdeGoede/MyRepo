@@ -415,4 +415,47 @@ Example:
     
 As oneliner (easy for testing directly in CLI):
     animal="dog"; case $animal in cat) echo "Feline";; dog|puppy) echo "Canine";; *) echo "No match!"; esac
-   
+
+Using functions
+===============
+- Allow us to repeatedly call a piece of code. (old version: function fname { ... })
+- Most put them in top of the script right after the shebang before the main code.
+- The arguments you give with the function are called $1, $2, etc.
+- $FUNCNAME recturns the name of the function.
+
+fn(){
+    ...
+}
+
+Example function 1:
+    greet() { 
+        echo "Hi there, $1. What a nice $2" 
+    }
+    
+Call the function:
+    greet Dick evening    : Hi there, Dick. What a nice evening
+    
+Example function 2:
+    numberthing() {
+        declare -i i=1
+        for f in $@; do
+            echo "$i: $f"
+            (( i ++ ))
+        done
+        echo "Brought to you by $FUNCNAME."
+    }
+
+Call the function:
+    numberthing dick piet kees   :  
+        1: dick
+        2: piet
+        3: kees
+        
+Or us a command or array:
+    numberthing $(ls /)        : gives a numbered output of the root dir content
+    numberthing ${fruits[@]}   : gives a numbered output of the values in array fruits
+    
+
+    
+
+
