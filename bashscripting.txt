@@ -279,10 +279,43 @@ Example:
 Arrays
 ======
 two types: Indexed and associative/
+Array index starts with 0.
+
+${<arrayname[@]}   : shows all values
+${!<arrayname[@]}  : shows all indexes/array nrs
+${#<arrayname[@]}  : shows nr of array values
 
 Indexed:
-    declare -a fruits=("apple" "banana" "pear")
-    echo fruits[2]   : pear
+-------
+declare -a fruits=("apple" "banana" "pear")
+echo fruits[2]          : pear
+fruits[5]="mango"       : add mango to 5th array index
+fruits+=("jackfruit")   : 
+
+Three ways to print the array:
+- output each array value (skip empty ones) on one line
+    echo ${fruits[@]}  : apple banana pear mango
+
+- output each array value (skip empty ones) on multiple lines
+    printf '%s\n' "${fruits[@]}"
+
+- output each array value (including empty ones)
+    for i in {0..5}; do echo ${fruits[$i]}; done
+    
+- output array nidex nrs + values:
+    for i in ${!fruits[@]}; do echo "$i - ${fruits[$i]}"; done
+        
+Associative
+-----------
+
+
+
+
+
+
+
+
+
     
  
 
