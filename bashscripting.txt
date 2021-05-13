@@ -415,23 +415,4 @@ Example:
     
 As oneliner (easy for testing directly in CLI):
     animal="dog"; case $animal in cat) echo "Feline";; dog|puppy) echo "Canine";; *) echo "No match!"; esac
-    
-
-    
-    
-
-
-    
-    
-        
-
-
-
-
-
-
-
-
-
-
-
+   
