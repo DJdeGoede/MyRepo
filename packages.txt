@@ -1,0 +1,1733 @@
+accountsservice;query and manipulate user account information
+acl;access control list - utilities
+acpi-support;scripts for handling many ACPI events
+acpid;Advanced Configuration and Power Interface event daemon
+adduser;add and remove users and groups
+adwaita-icon-theme;default icon theme of GNOME (small subset)
+aisleriot;GNOME solitaire card game collection
+alsa-base;ALSA driver configuration files
+alsa-topology-conf;ALSA topology configuration files
+alsa-ucm-conf;ALSA Use Case Manager configuration files
+alsa-utils;Utilities for configuring and using ALSA
+amd64-microcode;Processor microcode firmware for AMD CPUs
+anacron;cron-like program that doesn't go by time
+apg;Automated Password Generator - Standalone version
+app-install-data-partner;Application Installer (data files for partner applications/repositories)
+apparmor;user-space parser utility for AppArmor
+apport;automatically generate crash reports for debugging
+apport-gtk;GTK+ frontend for the apport crash report system
+apport-symptoms;symptom scripts for apport
+appstream;Software component metadata management
+apt;commandline package manager
+apt-config-icons;APT configuration snippet to enable icon downloads
+apt-config-icons-hidpi;APT configuration snippet to enable HiDPI icon downloads
+apt-utils;package management related utility programs
+aptdaemon;transaction based package management service
+aptdaemon-data;data files for clients
+apturl;install packages using the apt protocol - GTK+ frontend
+apturl-common;install packages using the apt protocol - common data
+aspell;GNU Aspell spell-checker
+aspell-en;English dictionary for GNU Aspell
+at-spi2-core;Assistive Technology Service Provider Interface (dbus core)
+avahi-autoipd;Avahi IPv4LL network address configuration daemon
+avahi-daemon;Avahi mDNS/DNS-SD daemon
+avahi-utils;Avahi browsing, publishing and discovery utilities
+baobab;GNOME disk usage analyzer
+base-files;Debian base system miscellaneous files
+base-passwd;Debian base system master password and group files
+bash;GNU Bourne Again SHell
+bash-completion;programmable completion for the bash shell
+bc;GNU bc arbitrary precision calculator language
+bind9-dnsutils;Clients provided with BIND 9
+bind9-host;DNS Lookup Utility
+bind9-libs:amd64;Shared Libraries used by BIND 9
+binfmt-support;Support for extra binary formats
+bluez;Bluetooth tools and daemons
+bluez-cups;Bluetooth printer driver for CUPS
+bluez-obexd;bluez obex daemon
+bolt;system daemon to manage thunderbolt 3 devices
+branding-ubuntu;Replacement artwork with Ubuntu branding
+brltty;Access software for a blind person using a braille display
+bsdmainutils;collection of more utilities from FreeBSD
+bsdutils;basic utilities from 4.4BSD-Lite
+bubblewrap;setuid wrapper for unprivileged chroot and namespace manipulation
+busybox-initramfs;Standalone shell setup for initramfs
+busybox-static;Standalone rescue shell with tons of builtin utilities
+bzip2;high-quality block-sorting file compressor - utilities
+ca-certificates;Common CA certificates
+cabextract;Microsoft Cabinet file unpacker
+cheese;tool to take pictures and videos from your webcam
+cheese-common;Common files for the Cheese tool to take pictures and videos
+chromium-codecs-ffmpeg-extra;Transitional package - chromium-codecs-ffmpeg-extra -> chromium-ffmpeg snap
+colord;system service to manage device colour profiles -- system daemon
+colord-data;system service to manage device colour profiles -- data files
+command-not-found;Suggest installation of packages in interactive bash sessions
+console-setup;console font and keymap setup program
+console-setup-linux;Linux specific part of console-setup
+coreutils;GNU core utilities
+cowsay;configurable talking cow
+cpio;GNU cpio -- a program to manage archives of files
+cpp;GNU C preprocessor (cpp)
+cpp-9;GNU C preprocessor
+cracklib-runtime;runtime support for password checker library cracklib2
+crda;wireless Central Regulatory Domain Agent
+cron;process scheduling daemon
+cups;Common UNIX Printing System(tm) - PPD/driver support, web interface
+cups-browsed;OpenPrinting CUPS Filters - cups-browsed
+cups-bsd;Common UNIX Printing System(tm) - BSD commands
+cups-client;Common UNIX Printing System(tm) - client programs (SysV)
+cups-common;Common UNIX Printing System(tm) - common files
+cups-core-drivers;Common UNIX Printing System(tm) - driverless printing
+cups-daemon;Common UNIX Printing System(tm) - daemon
+cups-filters;OpenPrinting CUPS Filters - Main Package
+cups-filters-core-drivers;OpenPrinting CUPS Filters - Driverless printing
+cups-ipp-utils;Common UNIX Printing System(tm) - IPP developer/admin utilities
+cups-pk-helper;PolicyKit helper to configure cups with fine-grained privileges
+cups-ppdc;Common UNIX Printing System(tm) - PPD manipulation utilities
+cups-server-common;Common UNIX Printing System(tm) - server common files
+dash;POSIX-compliant shell
+dbus;simple interprocess messaging system (daemon and utilities)
+dbus-user-session;simple interprocess messaging system (systemd --user integration)
+dbus-x11;simple interprocess messaging system (X11 deps)
+dc;GNU dc arbitrary precision reverse-polish calculator
+dconf-cli;simple configuration storage system - utilities
+dconf-editor;simple configuration storage system - graphical editor
+dconf-gsettings-backend:amd64;simple configuration storage system - GSettings back-end
+dconf-service;simple configuration storage system - D-Bus service
+debconf;Debian configuration management system
+debconf-i18n;full internationalization support for debconf
+debianutils;Miscellaneous utilities specific to Debian
+deja-dup;Backup utility
+desktop-file-utils;Utilities for .desktop files
+dictionaries-common;spelling dictionaries - common utilities
+diffutils;File comparison utilities
+dirmngr;GNU privacy guard - network certificate management service
+distro-info-data;information about the distributions' releases (data files)
+dmidecode;SMBIOS/DMI table decoder
+dmsetup;Linux Kernel Device Mapper userspace library
+dmz-cursor-theme;Style neutral, scalable cursor theme
+dns-root-data;DNS root data including root zone and DNSSEC key
+dnsmasq-base;Small caching DNS proxy and DHCP/TFTP server
+docbook-xml;standard XML documentation system for software and systems
+dosfstools;utilities for making and checking MS-DOS FAT filesystems
+dpkg;Debian package management system
+duplicity;encrypted bandwidth-efficient backup
+e2fsprogs;ext2/ext3/ext4 file system utilities
+ed;classic UNIX line editor
+eject;ejects CDs and operates CD-Changers under Linux
+emacs-bin-common;GNU Emacs editor's shared, architecture dependent files
+emacs-common;GNU Emacs editor's shared, architecture independent infrastructure
+emacs-el;GNU Emacs LISP (.el) files
+emacs-gtk;GNU Emacs editor (with GTK+ GUI support)
+emacsen-common;Common facilities for all emacsen
+enchant-2;Wrapper for various spell checker engines (binary programs)
+eog;Eye of GNOME graphics viewer program
+espeak-ng-data:amd64;Multi-lingual software speech synthesizer: speech data files
+ethtool;display or change Ethernet device settings
+evince;Document (PostScript, PDF) viewer
+evince-common;Document (PostScript, PDF) viewer - common files
+evolution-data-server;evolution database backend server
+evolution-data-server-common;architecture independent files for Evolution Data Server
+fdisk;collection of partitioning utilities
+file;Recognize the type of data in a file using "magic" numbers
+file-roller;archive manager for GNOME
+findutils;utilities for finding files--find, xargs
+firefox;Safe and easy web browser from Mozilla
+firefox-locale-en;English language pack for Firefox
+fontconfig;generic font configuration library - support binaries
+fontconfig-config;generic font configuration library - configuration
+fonts-beng;Metapackage to install Bengali and Assamese fonts
+fonts-beng-extra;TrueType fonts for Bengali language
+fonts-dejavu-core;Vera font family derivate with additional characters
+fonts-deva;Meta package to install all Devanagari fonts
+fonts-deva-extra;Free fonts for Devanagari script
+fonts-droid-fallback;handheld device font with extensive style and language support (fallback)
+fonts-freefont-ttf;Freefont Serif, Sans and Mono Truetype fonts
+fonts-gargi;OpenType Devanagari font
+fonts-gubbi;Gubbi free font for Kannada script
+fonts-gujr;Meta package to install all Gujarati fonts
+fonts-gujr-extra;Free fonts for Gujarati script
+fonts-guru;Meta package to install all Punjabi fonts
+fonts-guru-extra;Free fonts for Punjabi language
+fonts-indic;Meta package to install all Indian language fonts
+fonts-kacst;KACST free TrueType Arabic fonts
+fonts-kacst-one;TrueType font designed for Arabic language
+fonts-kalapi;Kalapi Gujarati Unicode font
+fonts-khmeros-core;KhmerOS Unicode fonts for the Khmer language of Cambodia
+fonts-knda;Meta package for Kannada fonts
+fonts-lao;TrueType font for Lao language
+fonts-lato;sans-serif typeface family font
+fonts-liberation;Fonts with the same metrics as Times, Arial and Courier
+fonts-liberation2;Fonts with the same metrics as Times, Arial and Courier (v2)
+fonts-lklug-sinhala;Unicode Sinhala font by Lanka Linux User Group
+fonts-lohit-beng-assamese;Lohit TrueType font for Assamese Language
+fonts-lohit-beng-bengali;Lohit TrueType font for Bengali Language
+fonts-lohit-deva;Lohit TrueType font for Devanagari script
+fonts-lohit-gujr;Lohit TrueType font for Gujarati Language
+fonts-lohit-guru;Lohit TrueType font for Punjabi Language
+fonts-lohit-knda;Lohit TrueType font for Kannada Language
+fonts-lohit-mlym;Lohit TrueType font for Malayalam Language
+fonts-lohit-orya;Lohit TrueType font for Oriya Language
+fonts-lohit-taml;Lohit TrueType font for Tamil Language
+fonts-lohit-taml-classical;Lohit Tamil TrueType fonts for Tamil script
+fonts-lohit-telu;Lohit TrueType font for Telugu Language
+fonts-mlym;Meta package to install all Malayalam fonts
+fonts-nakula;Free Unicode compliant Devanagari font
+fonts-navilu;Handwriting font for Kannada
+fonts-noto-cjk;"No Tofu" font families with large Unicode coverage (CJK regular and bold)
+fonts-noto-color-emoji;color emoji font from Google
+fonts-noto-mono;"No Tofu" monospaced font family with large Unicode coverage
+fonts-opensymbol;OpenSymbol TrueType font
+fonts-orya;Meta package to install all Oriya fonts
+fonts-orya-extra;Free fonts for Odia script
+fonts-pagul;Free TrueType font for the Sourashtra language
+fonts-sahadeva;Free Unicode compliant Devanagari font
+fonts-samyak-deva;Samyak TrueType font for Devanagari script
+fonts-samyak-gujr;Samyak TrueType font for Gujarati language
+fonts-samyak-mlym;Samyak TrueType font for Malayalam language
+fonts-samyak-taml;Samyak TrueType font for Tamil language
+fonts-sarai;truetype font for devanagari script
+fonts-sil-abyssinica;Unicode font for the Ethiopic script
+fonts-sil-padauk;Burmese Unicode TrueType font with OpenType and Graphite support
+fonts-smc;Metapackage for various TrueType fonts for Malayalam Language
+fonts-smc-anjalioldlipi;AnjaliOldLipi malayalam font
+fonts-smc-chilanka;Chilanka malayalam font
+fonts-smc-dyuthi;Dyuthi malayalam font
+fonts-smc-gayathri;Gayathri Malayalam font
+fonts-smc-karumbi;Karumbi malayalam font
+fonts-smc-keraleeyam;Keraleeyam malayalam font
+fonts-smc-manjari;Manjari malayalam font
+fonts-smc-meera;Meera malayalam font
+fonts-smc-rachana;Rachana malayalam font
+fonts-smc-raghumalayalamsans;RaghuMalayalamSans malayalam font
+fonts-smc-suruma;Suruma malayalam font
+fonts-smc-uroob;Uroob malayalam font
+fonts-taml;Meta package to install all Tamil fonts
+fonts-telu;Meta package to install all Telugu fonts
+fonts-telu-extra;Free fonts for Telugu script
+fonts-thai-tlwg;Thai fonts maintained by TLWG (metapackage)
+fonts-tibetan-machine;font for Tibetan, Dzongkha and Ladakhi (OpenType Unicode)
+fonts-tlwg-garuda;Thai Garuda font (dependency package)
+fonts-tlwg-garuda-ttf;Thai Garuda TrueType font
+fonts-tlwg-kinnari;Thai Kinnari font (dependency package)
+fonts-tlwg-kinnari-ttf;Thai Kinnari TrueType font
+fonts-tlwg-laksaman;Thai Laksaman font (dependency package)
+fonts-tlwg-laksaman-ttf;Thai Laksaman TrueType font
+fonts-tlwg-loma;Thai Loma font (dependency package)
+fonts-tlwg-loma-ttf;Thai Loma TrueType font
+fonts-tlwg-mono;Thai TlwgMono font (dependency package)
+fonts-tlwg-mono-ttf;Thai TlwgMono TrueType font
+fonts-tlwg-norasi;Thai Norasi font (dependency package)
+fonts-tlwg-norasi-ttf;Thai Norasi TrueType font
+fonts-tlwg-purisa;Thai Purisa font (dependency package)
+fonts-tlwg-purisa-ttf;Thai Purisa TrueType font
+fonts-tlwg-sawasdee;Thai Sawasdee font (dependency package)
+fonts-tlwg-sawasdee-ttf;Thai Sawasdee TrueType font
+fonts-tlwg-typewriter;Thai TlwgTypewriter font (dependency package)
+fonts-tlwg-typewriter-ttf;Thai TlwgTypewriter TrueType font
+fonts-tlwg-typist;Thai TlwgTypist font (dependency package)
+fonts-tlwg-typist-ttf;Thai TlwgTypist TrueType font
+fonts-tlwg-typo;Thai TlwgTypo font (dependency package)
+fonts-tlwg-typo-ttf;Thai TlwgTypo TrueType font
+fonts-tlwg-umpush;Thai Umpush font (dependency package)
+fonts-tlwg-umpush-ttf;Thai Umpush TrueType font
+fonts-tlwg-waree;Thai Waree font (dependency package)
+fonts-tlwg-waree-ttf;Thai Waree TrueType font
+fonts-ubuntu;sans-serif font set from Ubuntu
+fonts-urw-base35;font set metric-compatible with the 35 PostScript Level 2 Base Fonts
+fonts-yrsa-rasa;Open-source, libre fonts for Latin + Gujarati
+foomatic-db-compressed-ppds;OpenPrinting printer support - Compressed PPDs derived from the database
+fortune-mod;provides fortune cookies on demand
+fortunes-min;Data files containing selected fortune cookies
+fprintd;D-Bus daemon for fingerprint reader access
+friendly-recovery;Make recovery boot mode more user-friendly
+ftp;classical file transfer client
+fuse;Filesystem in Userspace
+fwupd;Firmware update daemon
+fwupd-signed;Linux Firmware Updater EFI signed binary
+gamemode;Optimise Linux system performance on demand
+gcc-10-base:amd64;GCC, the GNU Compiler Collection (base package)
+gcc-9-base:amd64;GCC, the GNU Compiler Collection (base package)
+gcr;GNOME crypto services (daemon and tools)
+gdb;GNU Debugger
+gdbserver;GNU Debugger (remote server)
+gdisk;GPT fdisk text-mode partitioning tool
+gdm3;GNOME Display Manager
+gedit;official text editor of the GNOME desktop environment
+gedit-common;official text editor of the GNOME desktop environment (support files)
+genisoimage;Creates ISO-9660 CD-ROM filesystem images
+geoclue-2.0;geoinformation service
+gettext-base;GNU Internationalization utilities for the base system
+ghostscript;interpreter for the PostScript language and for PDF
+ghostscript-x;interpreter for the PostScript language and for PDF - X11 support
+gir1.2-accountsservice-1.0;GObject introspection data for AccountService
+gir1.2-atk-1.0:amd64;ATK accessibility toolkit (GObject introspection)
+gir1.2-atspi-2.0:amd64;Assistive Technology Service Provider (GObject introspection)
+gir1.2-dbusmenu-glib-0.4:amd64;typelib file for libdbusmenu-glib4
+gir1.2-dee-1.0;GObject introspection data for the Dee library
+gir1.2-freedesktop:amd64;Introspection data for some FreeDesktop components
+gir1.2-gck-1:amd64;GObject introspection data for the GCK library
+gir1.2-gcr-3:amd64;GObject introspection data for the GCR library
+gir1.2-gdesktopenums-3.0:amd64;GObject introspection for GSettings desktop-wide schemas
+gir1.2-gdkpixbuf-2.0:amd64;GDK Pixbuf library - GObject-Introspection
+gir1.2-gdm-1.0:amd64;GObject introspection data for the GNOME Display Manager
+gir1.2-geoclue-2.0:amd64;convenience library to interact with geoinformation service (introspection)
+gir1.2-glib-2.0:amd64;Introspection data for GLib, GObject, Gio and GModule
+gir1.2-gmenu-3.0:amd64;GObject introspection data for the GNOME menu library
+gir1.2-gnomebluetooth-1.0:amd64;Introspection data for GnomeBluetooth
+gir1.2-gnomedesktop-3.0:amd64;Introspection data for GnomeDesktop
+gir1.2-goa-1.0:amd64;Introspection data for GNOME Online Accounts
+gir1.2-graphene-1.0:amd64;library of graphic data types (introspection files)
+gir1.2-gst-plugins-base-1.0:amd64;GObject introspection data for the GStreamer Plugins Base library
+gir1.2-gstreamer-1.0:amd64;GObject introspection data for the GStreamer library
+gir1.2-gtk-3.0:amd64;GTK graphical user interface library -- gir bindings
+gir1.2-gtksource-4:amd64;gir files for the GTK+ syntax highlighting widget
+gir1.2-gudev-1.0:amd64;libgudev-1.0 introspection data
+gir1.2-gweather-3.0:amd64;GObject introspection data for the GWeather library
+gir1.2-ibus-1.0:amd64;Intelligent Input Bus - introspection data
+gir1.2-javascriptcoregtk-4.0:amd64;JavaScript engine library from WebKitGTK - GObject introspection data
+gir1.2-json-1.0:amd64;GLib JSON manipulation library (introspection data)
+gir1.2-mutter-6:amd64;GObject introspection data for Mutter
+gir1.2-nm-1.0:amd64;GObject introspection data for the libnm library
+gir1.2-nma-1.0:amd64;GObject introspection data for libnma
+gir1.2-notify-0.7:amd64;sends desktop notifications to a notification daemon (Introspection files)
+gir1.2-packagekitglib-1.0;GObject introspection data for the PackageKit GLib library
+gir1.2-pango-1.0:amd64;Layout and rendering of internationalized text - gir bindings
+gir1.2-peas-1.0:amd64;Application plugin library (introspection files)
+gir1.2-polkit-1.0;GObject introspection data for PolicyKit
+gir1.2-rb-3.0:amd64;GObject introspection data for the rhythmbox music player
+gir1.2-rsvg-2.0:amd64;gir files for renderer library for SVG files
+gir1.2-secret-1:amd64;Secret store (GObject-Introspection)
+gir1.2-snapd-1:amd64;Typelib file for libsnapd-glib1
+gir1.2-soup-2.4:amd64;GObject introspection data for the libsoup HTTP library
+gir1.2-totem-1.0:amd64;GObject introspection data for Totem media player
+gir1.2-totemplparser-1.0:amd64;GObject introspection data for the Totem Playlist Parser library
+gir1.2-udisks-2.0:amd64;GObject based library to access udisks2 - introspection data
+gir1.2-unity-5.0:amd64;GObject introspection data for the Unity library
+gir1.2-upowerglib-1.0:amd64;GObject introspection data for upower
+gir1.2-vte-2.91:amd64;GObject introspection data for the VTE library
+gir1.2-webkit2-4.0:amd64;Web content engine library for GTK - GObject introspection data
+gir1.2-wnck-3.0:amd64;GObject introspection data for the WNCK library
+git;fast, scalable, distributed revision control system
+git-man;fast, scalable, distributed revision control system (manual pages)
+gjs;Mozilla-based javascript bindings for the GNOME platform
+gkbd-capplet;GNOME control center tools for libgnomekbd
+glib-networking:amd64;network-related giomodules for GLib
+glib-networking-common;network-related giomodules for GLib - data files
+glib-networking-services;network-related giomodules for GLib - D-Bus services
+gnome-accessibility-themes;High Contrast GTK+ 2 theme and icons
+gnome-bluetooth;GNOME Bluetooth tools
+gnome-calculator;GNOME desktop calculator
+gnome-calendar;Calendar application for GNOME
+gnome-characters;character map application
+gnome-control-center;utilities to configure the GNOME desktop
+gnome-control-center-data;configuration applets for GNOME - data files
+gnome-control-center-faces;utilities to configure the GNOME desktop - faces images
+gnome-desktop3-data;Common files for GNOME desktop apps
+gnome-disk-utility;manage and configure disk drives and media
+gnome-font-viewer;font viewer for GNOME
+gnome-getting-started-docs;Help a new user get started in GNOME
+gnome-initial-setup;Initial GNOME system setup helper
+gnome-keyring;GNOME keyring services (daemon and tools)
+gnome-keyring-pkcs11:amd64;GNOME keyring module for the PKCS#11 module loading library
+gnome-logs;viewer for the systemd journal
+gnome-mahjongg;classic Eastern tile game for GNOME
+gnome-menus;GNOME implementation of the freedesktop menu specification
+gnome-mines;popular minesweeper puzzle game for GNOME
+gnome-online-accounts;service to manage online accounts for the GNOME desktop
+gnome-power-manager;power management tool for the GNOME desktop
+gnome-screenshot;screenshot application for GNOME
+gnome-session-bin;GNOME Session Manager - Minimal runtime
+gnome-session-canberra;GNOME session log in and log out sound events
+gnome-session-common;GNOME Session Manager - common files
+gnome-settings-daemon;daemon handling the GNOME session settings
+gnome-settings-daemon-common;daemon handling the GNOME session settings - common files
+gnome-shell;graphical shell for the GNOME desktop
+gnome-shell-common;common files for the GNOME graphical shell
+gnome-shell-extension-appindicator;AppIndicator/KStatusNotifierItem support for GNOME Shell
+gnome-shell-extension-desktop-icons;desktop icon support for GNOME Shell
+gnome-shell-extension-ubuntu-dock;Ubuntu Dock for GNOME Shell
+gnome-startup-applications;Startup Applications manager for GNOME
+gnome-sudoku;Sudoku puzzle game for GNOME
+gnome-system-monitor;Process viewer and system resource monitor for GNOME
+gnome-terminal;GNOME terminal emulator application
+gnome-terminal-data;Data files for the GNOME terminal emulator
+gnome-themes-extra:amd64;Adwaita GTK+ 2 theme — engine
+gnome-themes-extra-data;Adwaita GTK+ 2 theme — common files
+gnome-todo;minimalistic personal task manager designed to fit GNOME desktop
+gnome-todo-common;common files for GNOME To Do
+gnome-user-docs;GNOME user docs
+gnome-video-effects;Collection of GStreamer effects
+gnupg;GNU privacy guard - a free PGP replacement
+gnupg-l10n;GNU privacy guard - localization files
+gnupg-utils;GNU privacy guard - utility programs
+gpg;GNU Privacy Guard -- minimalist public key operations
+gpg-agent;GNU privacy guard - cryptographic agent
+gpg-wks-client;GNU privacy guard - Web Key Service client
+gpg-wks-server;GNU privacy guard - Web Key Service server
+gpgconf;GNU privacy guard - core configuration utilities
+gpgsm;GNU privacy guard - S/MIME version
+gpgv;GNU privacy guard - signature verification tool
+grep;GNU grep, egrep and fgrep
+grilo-plugins-0.3-base:amd64;Framework for discovering and browsing media - Plugins
+groff-base;GNU troff text-formatting system (base system components)
+grub-common;GRand Unified Bootloader (common files)
+grub-gfxpayload-lists;GRUB gfxpayload blacklist
+grub-pc;GRand Unified Bootloader, version 2 (PC/BIOS version)
+grub-pc-bin;GRand Unified Bootloader, version 2 (PC/BIOS modules)
+grub2-common;GRand Unified Bootloader (common files for version 2)
+gsettings-desktop-schemas;GSettings desktop-wide schemas
+gsettings-ubuntu-schemas;GSettings deskop-wide schemas for Ubuntu
+gsfonts;Fonts for the Ghostscript interpreter(s)
+gstreamer1.0-alsa:amd64;GStreamer plugin for ALSA
+gstreamer1.0-clutter-3.0:amd64;Clutter PLugin for GStreamer 1.0
+gstreamer1.0-gl:amd64;GStreamer plugins for GL
+gstreamer1.0-gtk3:amd64;GStreamer plugin for GTK+3
+gstreamer1.0-libav:amd64;ffmpeg plugin for GStreamer
+gstreamer1.0-packagekit;GStreamer plugin to install codecs using PackageKit
+gstreamer1.0-plugins-base:amd64;GStreamer plugins from the "base" set
+gstreamer1.0-plugins-base-apps;GStreamer helper programs from the "base" set
+gstreamer1.0-plugins-good:amd64;GStreamer plugins from the "good" set
+gstreamer1.0-plugins-ugly:amd64;GStreamer plugins from the "ugly" set
+gstreamer1.0-pulseaudio:amd64;GStreamer plugin for PulseAudio
+gstreamer1.0-tools;Tools for use with GStreamer
+gstreamer1.0-vaapi:amd64;VA-API plugins for GStreamer
+gstreamer1.0-x:amd64;GStreamer plugins for X11 and Pango
+gtk-update-icon-cache;icon theme caching utility
+gtk2-engines-murrine:amd64;cairo-based gtk+-2.0 theme engine
+gtk2-engines-pixbuf:amd64;pixbuf-based theme for GTK 2
+guile-2.2-libs:amd64;Core Guile libraries
+gvfs:amd64;userspace virtual filesystem - GIO module
+gvfs-backends;userspace virtual filesystem - backends
+gvfs-bin;userspace virtual filesystem - deprecated command-line tools
+gvfs-common;userspace virtual filesystem - common data files
+gvfs-daemons;userspace virtual filesystem - servers
+gvfs-fuse;userspace virtual filesystem - fuse server
+gvfs-libs:amd64;userspace virtual filesystem - private libraries
+gzip;GNU compression utilities
+hdparm;tune hard disk parameters for high performance
+hicolor-icon-theme;default fallback theme for FreeDesktop.org icon themes
+hostname;utility to set/show the host name or domain name
+hplip;HP Linux Printing and Imaging System (HPLIP)
+hplip-data;HP Linux Printing and Imaging - data files
+humanity-icon-theme;Humanity Icon theme
+hunspell-en-us;English_american dictionary for hunspell
+hwinfo;Hardware identification system
+hyphen-en-us;English (US) hyphenation patterns
+i965-va-driver:amd64;VAAPI driver for Intel G45 & HD Graphics family
+ibus;Intelligent Input Bus - core
+ibus-data;Intelligent Input Bus - data files
+ibus-gtk:amd64;Intelligent Input Bus - GTK2 support
+ibus-gtk3:amd64;Intelligent Input Bus - GTK3 support
+ibus-table;table engine for IBus
+iio-sensor-proxy;IIO sensors to D-Bus proxy
+im-config;Input method configuration framework
+imagemagick-6-common;image manipulation programs -- infrastructure
+info;Standalone GNU Info documentation browser
+init;metapackage ensuring an init system is installed
+init-system-helpers;helper tools for all init systems
+initramfs-tools;generic modular initramfs generator (automation)
+initramfs-tools-bin;binaries used by initramfs-tools
+initramfs-tools-core;generic modular initramfs generator (core tools)
+inputattach;utility to connect serial-attached peripherals to the input subsystem
+install-info;Manage installed documentation in info format
+intel-media-va-driver:amd64;VAAPI driver for the Intel GEN8+ Graphics family
+intel-microcode;Processor microcode firmware for Intel CPUs
+ippusbxd;Daemon for IPP USB printer support
+iproute2;networking and traffic control tools
+iptables;administration tools for packet filtering and NAT
+iputils-ping;Tools to test the reachability of network hosts
+iputils-tracepath;Tools to trace the network path to a remote host
+irqbalance;Daemon to balance interrupts for SMP systems
+isc-dhcp-client;DHCP client for automatically obtaining an IP address
+isc-dhcp-common;common manpages relevant to all of the isc-dhcp packages
+iso-codes;ISO language, territory, currency, script codes and their translations
+iucode-tool;Intel processor microcode tool
+iw;tool for configuring Linux wireless devices
+javascript-common;Base support for JavaScript library packages
+kbd;Linux console font and keytable utilities
+kerneloops;kernel oops tracker
+keyboard-configuration;system-wide keyboard preferences
+klibc-utils;small utilities built with klibc for early boot
+kmod;tools for managing Linux kernel modules
+krb5-locales;internationalization support for MIT Kerberos
+ksh;2020 version of the AT&T Korn Shell
+language-pack-en;translation updates for language English
+language-pack-en-base;translations for language English
+language-pack-gnome-en;GNOME translation updates for language English
+language-pack-gnome-en-base;GNOME translations for language English
+language-selector-common;Language selector for Ubuntu
+language-selector-gnome;Language selector for Ubuntu
+laptop-detect;system chassis type checker
+less;pager program similar to more
+liba52-0.7.4:amd64;library for decoding ATSC A/52 streams
+libaa1:amd64;ASCII art library
+libaacs0:amd64;free-and-libre implementation of AACS
+libabw-0.1-1:amd64;library for reading and writing AbiWord(tm) documents
+libaccountsservice0:amd64;query and manipulate user account information - shared libraries
+libacl1:amd64;access control list - shared library
+libaio1:amd64;Linux kernel AIO access library - shared library
+libamtk-5-0:amd64;Actions, Menus and Toolbars Kit for GTK+
+libamtk-5-common;Actions, Menus and Toolbars Kit for GTK+ - architecture-independent files
+libao-common;Cross Platform Audio Output Library (Common files)
+libao4:amd64;Cross Platform Audio Output Library
+libaom0:amd64;AV1 Video Codec Library
+libapparmor1:amd64;changehat AppArmor library
+libappindicator3-1;Application Indicators
+libappstream4:amd64;Library to access AppStream services
+libapt-pkg6.0:amd64;package management runtime library
+libarchive13:amd64;Multi-format archive and compression library (shared library)
+libargon2-1:amd64;memory-hard hashing function - runtime library
+libaribb24-0:amd64;library for ARIB STD-B24 decoding (runtime files)
+libasn1-8-heimdal:amd64;Heimdal Kerberos - ASN.1 library
+libasound2:amd64;shared library for ALSA applications
+libasound2-data;Configuration files and profiles for ALSA drivers
+libasound2-plugins:amd64;ALSA library additional plugins
+libaspell15:amd64;GNU Aspell spell-checker runtime library
+libass9:amd64;library for SSA/ASS subtitles rendering
+libassuan0:amd64;IPC library for the GnuPG components
+libasyncns0:amd64;Asynchronous name service query library
+libatasmart4:amd64;ATA S.M.A.R.T. reading and parsing library
+libatk-adaptor:amd64;AT-SPI 2 toolkit bridge
+libatk-bridge2.0-0:amd64;AT-SPI 2 toolkit bridge - shared library
+libatk1.0-0:amd64;ATK accessibility toolkit
+libatk1.0-data;Common files for the ATK accessibility toolkit
+libatkmm-1.6-1v5:amd64;C++ wrappers for ATK accessibility toolkit (shared libraries)
+libatm1:amd64;shared library for ATM (Asynchronous Transfer Mode)
+libatopology2:amd64;shared library for handling ALSA topology definitions
+libatspi2.0-0:amd64;Assistive Technology Service Provider Interface - shared library
+libattr1:amd64;extended attribute handling - shared library
+libaudit-common;Dynamic library for security auditing - common files
+libaudit1:amd64;Dynamic library for security auditing
+libauthen-sasl-perl;Authen::SASL - SASL Authentication framework
+libavahi-client3:amd64;Avahi client library
+libavahi-common-data:amd64;Avahi common data files
+libavahi-common3:amd64;Avahi common library
+libavahi-core7:amd64;Avahi's embeddable mDNS/DNS-SD library
+libavahi-glib1:amd64;Avahi GLib integration library
+libavahi-ui-gtk3-0:amd64;Avahi GTK+ User interface library for GTK3
+libavc1394-0:amd64;control IEEE 1394 audio/video devices
+libavcodec-extra:amd64;FFmpeg library with extra codecs (metapackage)
+libavcodec-extra58:amd64;FFmpeg library with additional de/encoders for audio/video codecs
+libavfilter7:amd64;FFmpeg library containing media filters - runtime files
+libavformat58:amd64;FFmpeg library with (de)muxers for multimedia containers - runtime files
+libavutil56:amd64;FFmpeg library with functions for simplifying programming - runtime files
+libbabeltrace1:amd64;Babeltrace conversion libraries
+libbdplus0:amd64;implementation of BD+ for reading Blu-ray Discs
+libblkid1:amd64;block device ID library
+libblockdev-crypto2:amd64;Crypto plugin for libblockdev
+libblockdev-fs2:amd64;file system plugin for libblockdev
+libblockdev-loop2:amd64;Loop device plugin for libblockdev
+libblockdev-part-err2:amd64;Partition error utility functions for libblockdev
+libblockdev-part2:amd64;Partitioning plugin for libblockdev
+libblockdev-swap2:amd64;Swap plugin for libblockdev
+libblockdev-utils2:amd64;Utility functions for libblockdev
+libblockdev2:amd64;Library for manipulating block devices
+libbluetooth3:amd64;Library to use the BlueZ Linux Bluetooth stack
+libbluray2:amd64;Blu-ray disc playback support library (shared library)
+libboost-date-time1.71.0:amd64;set of date-time libraries based on generic programming concepts
+libboost-filesystem1.71.0:amd64;filesystem operations (portable paths, iteration over directories, etc) in C++
+libboost-iostreams1.71.0:amd64;Boost.Iostreams Library
+libboost-locale1.71.0:amd64;C++ facilities for localization
+libboost-thread1.71.0:amd64;portable C++ multi-threading
+libbrlapi0.7:amd64;braille display access via BRLTTY - shared library
+libbrotli1:amd64;library implementing brotli encoder and decoder (shared libraries)
+libbs2b0:amd64;Bauer stereophonic-to-binaural DSP library
+libbsd0:amd64;utility functions from BSD systems - shared library
+libbz2-1.0:amd64;high-quality block-sorting file compressor library - runtime
+libc-bin;GNU C Library: Binaries
+libc6:amd64;GNU C Library: Shared libraries
+libc6-dbg:amd64;GNU C Library: detached debugging symbols
+libcaca0:amd64;colour ASCII art library
+libcairo-gobject-perl;integrate Cairo into the Glib type system in Perl
+libcairo-gobject2:amd64;Cairo 2D vector graphics library (GObject library)
+libcairo-perl;Perl interface to the Cairo graphics library
+libcairo2:amd64;Cairo 2D vector graphics library
+libcairomm-1.0-1v5:amd64;C++ wrappers for Cairo (shared libraries)
+libcamel-1.2-62:amd64;Evolution MIME message handling library
+libcanberra-gtk3-0:amd64;GTK+ 3.0 helper for playing widget event sounds with libcanberra
+libcanberra-gtk3-module:amd64;translates GTK3 widgets signals to event sounds
+libcanberra-pulse:amd64;PulseAudio backend for libcanberra
+libcanberra0:amd64;simple abstract interface for playing event sounds
+libcap-ng0:amd64;An alternate POSIX capabilities library
+libcap2:amd64;POSIX 1003.1e capabilities (library)
+libcap2-bin;POSIX 1003.1e capabilities (utilities)
+libcbor0.6:amd64;library for parsing and generating CBOR (RFC 7049)
+libcc1-0:amd64;GCC cc1 plugin for GDB
+libcdio-cdda2:amd64;library to read and control digital audio CDs
+libcdio-paranoia2:amd64;library to read digital audio CDs with error correction
+libcdio18:amd64;library to read and control CD-ROM
+libcdparanoia0:amd64;audio extraction tool for sampling CDs (library)
+libcdr-0.1-1:amd64;library for reading and converting Corel DRAW files
+libcgi-fast-perl;CGI subclass for work with FCGI
+libcgi-pm-perl;module for Common Gateway Interface applications
+libcheese-gtk25:amd64;tool to take pictures and videos from your webcam - widgets
+libcheese8:amd64;tool to take pictures and videos from your webcam - base library
+libchromaprint1:amd64;audio fingerprint library
+libclucene-contribs1v5:amd64;language specific text analyzers (runtime)
+libclucene-core1v5:amd64;core library for full-featured text search engine (runtime)
+libclutter-1.0-0:amd64;Open GL based interactive canvas library
+libclutter-1.0-common;Open GL based interactive canvas library (common files)
+libclutter-gst-3.0-0:amd64;Open GL based interactive canvas library GStreamer elements
+libclutter-gtk-1.0-0:amd64;Open GL based interactive canvas library GTK+ widget
+libcmis-0.5-5v5;CMIS protocol client library
+libcodec2-0.9:amd64;Codec2 runtime library
+libcogl-common;Object oriented GL/GLES Abstraction/Utility Layer (common files)
+libcogl-pango20:amd64;Object oriented GL/GLES Abstraction/Utility Layer
+libcogl-path20:amd64;Object oriented GL/GLES Abstraction/Utility Layer
+libcogl20:amd64;Object oriented GL/GLES Abstraction/Utility Layer
+libcolamd2:amd64;column approximate minimum degree ordering library for sparse matrices
+libcolord-gtk1:amd64;GTK+ convenience library for interacting with colord
+libcolord2:amd64;system service to manage device colour profiles -- runtime
+libcolorhug2:amd64;library to access the ColorHug colourimeter -- runtime
+libcom-err2:amd64;common error description library
+libcrack2:amd64;pro-active password checker library
+libcrypt1:amd64;libcrypt shared library
+libcryptsetup12:amd64;disk encryption support - shared library
+libcue2:amd64;CUE Sheet Parser Library
+libcups2:amd64;Common UNIX Printing System(tm) - Core library
+libcupsfilters1:amd64;OpenPrinting CUPS Filters - Shared library
+libcupsimage2:amd64;Common UNIX Printing System(tm) - Raster image library
+libcurl3-gnutls:amd64;easy-to-use client-side URL transfer library (GnuTLS flavour)
+libcurl4:amd64;easy-to-use client-side URL transfer library (OpenSSL flavour)
+libdaemon0:amd64;lightweight C library for daemons - runtime library
+libdata-dump-perl;Perl module to help dump data structures
+libdatrie1:amd64;Double-array trie library
+libdazzle-1.0-0:amd64;feature-filled library for GTK+ and GObject
+libdb5.3:amd64;Berkeley v5.3 Database Libraries [runtime]
+libdbus-1-3:amd64;simple interprocess messaging system (library)
+libdbus-glib-1-2:amd64;deprecated library for D-Bus IPC
+libdbusmenu-glib4:amd64;library for passing menus over DBus
+libdbusmenu-gtk3-4:amd64;library for passing menus over DBus - GTK+ version
+libdconf1:amd64;simple configuration storage system - runtime library
+libdebconfclient0:amd64;Debian Configuration Management System (C-implementation library)
+libdee-1.0-4:amd64;Model to synchronize multiple instances over DBus - shared lib
+libdevmapper1.02.1:amd64;Linux Kernel Device Mapper userspace library
+libdjvulibre-text;Linguistic support files for libdjvulibre
+libdjvulibre21:amd64;Runtime support for the DjVu image format
+libdmapsharing-3.0-2:amd64;DMAP client and server library - runtime
+libdns-export1109;Exported DNS Shared Library
+libdotconf0:amd64;Configuration file parser library - runtime files
+libdpkg-perl;Dpkg perl modules
+libdrm-amdgpu1:amd64;Userspace interface to amdgpu-specific kernel DRM services -- runtime
+libdrm-common;Userspace interface to kernel DRM services -- common files
+libdrm-intel1:amd64;Userspace interface to intel-specific kernel DRM services -- runtime
+libdrm-nouveau2:amd64;Userspace interface to nouveau-specific kernel DRM services -- runtime
+libdrm-radeon1:amd64;Userspace interface to radeon-specific kernel DRM services -- runtime
+libdrm2:amd64;Userspace interface to kernel DRM services -- runtime
+libdv4:amd64;software library for DV format digital video (runtime lib)
+libdvdnav4:amd64;DVD navigation library
+libdvdread7:amd64;library for reading DVDs
+libdw1:amd64;library that provides access to the DWARF debug information
+libe-book-0.1-1:amd64;library for reading and converting various  e-book formats
+libebackend-1.2-10:amd64;Utility library for evolution data servers
+libebook-1.2-20:amd64;Client library for evolution address books
+libebook-contacts-1.2-3:amd64;Client library for evolution contacts books
+libecal-2.0-1:amd64;Client library for evolution calendars
+libedata-book-1.2-26:amd64;Backend library for evolution address books
+libedata-cal-2.0-1:amd64;Backend library for evolution calendars
+libedataserver-1.2-24:amd64;Utility library for evolution data servers
+libedataserverui-1.2-2:amd64;Utility library for evolution data servers
+libedit2:amd64;BSD editline and history libraries
+libefiboot1:amd64;Library to manage UEFI variables
+libefivar1:amd64;Library to manage UEFI variables
+libegl-mesa0:amd64;free implementation of the EGL API -- Mesa vendor library
+libegl1:amd64;Vendor neutral GL dispatch library -- EGL support
+libelf1:amd64;library to read and write ELF files
+libenchant-2-2:amd64;Wrapper library for various spell checker engines (runtime libs)
+libencode-locale-perl;utility to determine the locale encoding
+libeot0:amd64;Library for parsing/converting Embedded OpenType files
+libepoxy0:amd64;OpenGL function pointer management library
+libepubgen-0.1-1:amd64;EPUB generator library
+liberror-perl;Perl module for error/exception handling in an OO-ish way
+libespeak-ng1:amd64;Multi-lingual software speech synthesizer: shared library
+libestr0:amd64;Helper functions for handling strings (lib)
+libetonyek-0.1-1:amd64;library for reading and converting Apple Keynote presentations
+libevdev2:amd64;wrapper library for evdev devices
+libevdocument3-4:amd64;Document (PostScript, PDF) rendering library
+libevent-2.1-7:amd64;Asynchronous event notification library
+libevent-core-2.1-7:amd64;Asynchronous event notification library (core)
+libevent-pthreads-2.1-7:amd64;Asynchronous event notification library (pthreads)
+libevview3-3:amd64;Document (PostScript, PDF) rendering library - Gtk+ widgets
+libexempi8:amd64;library to parse XMP metadata (Library)
+libexif12:amd64;library to parse EXIF files
+libexiv2-27:amd64;EXIF/IPTC/XMP metadata manipulation library
+libexpat1:amd64;XML parsing C library - runtime library
+libext2fs2:amd64;ext2/ext3/ext4 file system libraries
+libexttextcat-2.0-0:amd64;Language detection library
+libexttextcat-data;Language detection library - data files
+libextutils-depends-perl;Perl module for building extensions that depend on other extensions
+libextutils-pkgconfig-perl;Perl interface to the pkg-config utility
+libfastjson4:amd64;fast json library for C
+libfcgi-perl;helper module for FastCGI
+libfdisk1:amd64;fdisk partitioning library
+libffi7:amd64;Foreign Function Interface library runtime
+libfftw3-double3:amd64;Library for computing Fast Fourier Transforms - Double precision
+libfftw3-single3:amd64;Library for computing Fast Fourier Transforms - Single precision
+libfido2-1:amd64;library for generating and verifying FIDO 2.0 objects
+libfile-basedir-perl;Perl module to use the freedesktop basedir specification
+libfile-desktopentry-perl;Perl module to handle freedesktop .desktop files
+libfile-fcntllock-perl;Perl module for file locking with fcntl(2)
+libfile-listing-perl;module to parse directory listings
+libfile-mimeinfo-perl;Perl module to determine file types
+libflac8:amd64;Free Lossless Audio Codec - runtime C library
+libflite1:amd64;Small run-time speech synthesis engine - shared libraries
+libfont-afm-perl;Font::AFM - Interface to Adobe Font Metrics files
+libfontconfig1:amd64;generic font configuration library - runtime
+libfontembed1:amd64;OpenPrinting CUPS Filters - Font Embed Shared library
+libfontenc1:amd64;X11 font encoding library
+libfprint-2-2:amd64;async fingerprint library of fprint project, shared libraries
+libfprint-2-tod1:amd64;async fingerprint library of fprint project, drivers shared libraries
+libfreehand-0.1-1;Library for parsing the FreeHand file format structure
+libfreerdp-client2-2:amd64;Free Remote Desktop Protocol library (client library)
+libfreerdp2-2:amd64;Free Remote Desktop Protocol library (core library)
+libfreetype6:amd64;FreeType 2 font engine, shared library files
+libfribidi0:amd64;Free Implementation of the Unicode BiDi algorithm
+libfuse2:amd64;Filesystem in Userspace (library)
+libfwupd2:amd64;Firmware update daemon library
+libfwupdplugin1:amd64;Firmware update daemon plugin library
+libgail-common:amd64;GNOME Accessibility Implementation Library -- common modules
+libgail18:amd64;GNOME Accessibility Implementation Library -- shared libraries
+libgamemode0;Optimise Linux system performance on demand (libraries)
+libgamemodeauto0;Automatically optimise Linux system performance on demand
+libgbm1:amd64;generic buffer management API -- runtime
+libgc1c2:amd64;conservative garbage collector for C and C++
+libgcab-1.0-0:amd64;Microsoft Cabinet file manipulation library
+libgcc-s1:amd64;GCC support library
+libgck-1-0:amd64;Glib wrapper library for PKCS#11 - runtime
+libgcr-base-3-1:amd64;Library for Crypto related tasks
+libgcr-ui-3-1:amd64;Library for Crypto UI related tasks
+libgcrypt20:amd64;LGPL Crypto library - runtime library
+libgd3:amd64;GD Graphics Library
+libgdata-common;Library for accessing GData webservices - common data files
+libgdata22:amd64;Library for accessing GData webservices - shared libraries
+libgdbm-compat4:amd64;GNU dbm database routines (legacy support runtime version) 
+libgdbm6:amd64;GNU dbm database routines (runtime version) 
+libgdk-pixbuf2.0-0:amd64;GDK Pixbuf library
+libgdk-pixbuf2.0-bin;GDK Pixbuf library (thumbnailer)
+libgdk-pixbuf2.0-common;GDK Pixbuf library - data files
+libgdm1;GNOME Display Manager (shared library)
+libgee-0.8-2:amd64;GObject based collection and utility library
+libgeoclue-2-0:amd64;convenience library to interact with geoinformation service
+libgeocode-glib0:amd64;geocoding and reverse geocoding GLib library using Nominatim
+libgexiv2-2:amd64;GObject-based wrapper around the Exiv2 library
+libgif7:amd64;library for GIF images (library)
+libgirepository-1.0-1:amd64;Library for handling GObject introspection data (runtime library)
+libgjs0g:amd64;Mozilla-based javascript bindings for the GNOME platform
+libgl1:amd64;Vendor neutral GL dispatch library -- legacy GL support
+libgl1-mesa-dri:amd64;free implementation of the OpenGL API -- DRI modules
+libglapi-mesa:amd64;free implementation of the GL API -- shared library
+libgles2:amd64;Vendor neutral GL dispatch library -- GLESv2 support
+libglib-object-introspection-perl;Perl bindings for gobject-introspection libraries
+libglib-perl:amd64;interface to the GLib and GObject libraries
+libglib2.0-0:amd64;GLib library of C routines
+libglib2.0-bin;Programs for the GLib library
+libglib2.0-data;Common files for GLib library
+libglibmm-2.4-1v5:amd64;C++ wrapper for the GLib toolkit (shared libraries)
+libglu1-mesa:amd64;Mesa OpenGL utility library (GLU)
+libglvnd0:amd64;Vendor neutral GL dispatch library
+libglx-mesa0:amd64;free implementation of the OpenGL API -- GLX vendor library
+libglx0:amd64;Vendor neutral GL dispatch library -- GLX support
+libgme0:amd64;Playback library for video game music files - shared library
+libgmp10:amd64;Multiprecision arithmetic library
+libgnome-autoar-0-0:amd64;Archives integration support for GNOME
+libgnome-bluetooth13:amd64;GNOME Bluetooth tools - support library
+libgnome-desktop-3-19:amd64;Utility library for loading .desktop files - runtime files
+libgnome-games-support-1-3:amd64;library for common functions of GNOME games
+libgnome-games-support-common;library for common functions of GNOME games (common files)
+libgnome-menu-3-0:amd64;GNOME implementation of the freedesktop menu specification
+libgnome-todo;library data for GNOME To Do
+libgnomekbd-common;GNOME library to manage keyboard configuration - common files
+libgnomekbd8:amd64;GNOME library to manage keyboard configuration - shared library
+libgnutls30:amd64;GNU TLS library - main runtime library
+libgoa-1.0-0b:amd64;library for GNOME Online Accounts
+libgoa-1.0-common;library for GNOME Online Accounts - common files
+libgoa-backend-1.0-1:amd64;backend library for GNOME Online Accounts
+libgom-1.0-0:amd64;Object mapper from GObjects to SQLite
+libgomp1:amd64;GCC OpenMP (GOMP) support library
+libgpg-error0:amd64;GnuPG development runtime library
+libgpgme11:amd64;GPGME - GnuPG Made Easy (library)
+libgpgmepp6:amd64;C++ wrapper library for GPGME
+libgphoto2-6:amd64;gphoto2 digital camera library
+libgphoto2-l10n;gphoto2 digital camera library - localized messages
+libgphoto2-port12:amd64;gphoto2 digital camera port library
+libgpm2:amd64;General Purpose Mouse - shared library
+libgpod-common;common files for libgpod
+libgpod4:amd64;library to read and write songs and artwork to an iPod
+libgraphene-1.0-0:amd64;library of graphic data types
+libgraphite2-3:amd64;Font rendering engine for Complex Scripts -- library
+libgrilo-0.3-0:amd64;Framework for discovering and browsing media - Shared libraries
+libgs9:amd64;interpreter for the PostScript language and for PDF - Library
+libgs9-common;interpreter for the PostScript language and for PDF - common files
+libgsf-1-114:amd64;Structured File Library - runtime version
+libgsf-1-common;Structured File Library - common files
+libgsm1:amd64;Shared libraries for GSM speech compressor
+libgsound0:amd64;small library for playing system sounds
+libgspell-1-2:amd64;spell-checking library for GTK+ applications
+libgspell-1-common;libgspell architecture-independent files
+libgssapi-krb5-2:amd64;MIT Kerberos runtime libraries - krb5 GSS-API Mechanism
+libgssapi3-heimdal:amd64;Heimdal Kerberos - GSSAPI support library
+libgssdp-1.2-0:amd64;GObject-based library for SSDP
+libgstreamer-gl1.0-0:amd64;GStreamer GL libraries
+libgstreamer-plugins-bad1.0-0:amd64;GStreamer libraries from the "bad" set
+libgstreamer-plugins-base1.0-0:amd64;GStreamer libraries from the "base" set
+libgstreamer-plugins-good1.0-0:amd64;GStreamer development files for libraries from the "good" set
+libgstreamer1.0-0:amd64;Core GStreamer libraries and elements
+libgtk-3-0:amd64;GTK graphical user interface library
+libgtk-3-bin;programs for the GTK graphical user interface library
+libgtk-3-common;common files for the GTK graphical user interface library
+libgtk2.0-0:amd64;GTK graphical user interface library - old version
+libgtk2.0-bin;programs for the GTK graphical user interface library
+libgtk2.0-common;common files for the GTK graphical user interface library
+libgtk3-perl;Perl bindings for the GTK+ graphical user interface library
+libgtkmm-3.0-1v5:amd64;C++ wrappers for GTK+ (shared libraries)
+libgtksourceview-4-0:amd64;shared libraries for the GTK+ syntax highlighting widget
+libgtksourceview-4-common;common files for the GTK+ syntax highlighting widget
+libgtop-2.0-11:amd64;gtop system monitoring library (shared)
+libgtop2-common;gtop system monitoring library (common)
+libgudev-1.0-0:amd64;GObject-based wrapper library for libudev
+libgupnp-1.2-0:amd64;GObject-based library for UPnP
+libgupnp-av-1.0-2;Audio/Visual utility library for GUPnP
+libgupnp-dlna-2.0-3;DLNA utility library for GUPnP
+libgusb2:amd64;GLib wrapper around libusb1
+libgweather-3-16:amd64;GWeather shared library
+libgweather-common;GWeather common files
+libgxps2:amd64;handling and rendering XPS documents (library)
+libhandy-0.0-0:amd64;Library with GTK widgets for mobile phones
+libharfbuzz-icu0:amd64;OpenType text shaping engine ICU backend
+libharfbuzz0b:amd64;OpenType text shaping engine (shared library)
+libhcrypto4-heimdal:amd64;Heimdal Kerberos - crypto library
+libhd21:amd64;Hardware identification system library
+libheimbase1-heimdal:amd64;Heimdal Kerberos - Base library
+libheimntlm0-heimdal:amd64;Heimdal Kerberos - NTLM support library
+libhogweed5:amd64;low level cryptographic library (public-key cryptos)
+libhpmud0:amd64;HP Multi-Point Transport Driver (hpmud) run-time libraries
+libhtml-form-perl;module that represents an HTML form element
+libhtml-format-perl;module for transforming HTML into various formats
+libhtml-parser-perl;collection of modules that parse HTML text documents
+libhtml-tagset-perl;data tables pertaining to HTML
+libhtml-template-perl;module for using HTML templates with Perl
+libhtml-tree-perl;Perl module to represent and create HTML syntax trees
+libhttp-cookies-perl;HTTP cookie jars
+libhttp-daemon-perl;simple http server class
+libhttp-date-perl;module of date conversion routines
+libhttp-message-perl;perl interface to HTTP style messages
+libhttp-negotiate-perl;implementation of content negotiation
+libhunspell-1.7-0:amd64;spell checker and morphological analyzer (shared library)
+libhx509-5-heimdal:amd64;Heimdal Kerberos - X509 support library
+libhyphen0:amd64;ALTLinux hyphenation library - shared library
+libibus-1.0-5:amd64;Intelligent Input Bus - shared library
+libical3:amd64;iCalendar library implementation in C (runtime)
+libice6:amd64;X11 Inter-Client Exchange library
+libicu66:amd64;International Components for Unicode
+libidn11:amd64;GNU Libidn library, implementation of IETF IDN specifications
+libidn2-0:amd64;Internationalized domain names (IDNA2008/TR46) library
+libiec61883-0:amd64;partial implementation of IEC 61883 (shared lib)
+libieee1284-3:amd64;cross-platform library for parallel port access
+libigdgmm11:amd64;Intel Graphics Memory Management Library -- shared library
+libijs-0.35:amd64;IJS raster image transport protocol: shared library
+libimagequant0:amd64;palette quantization library
+libimobiledevice6:amd64;Library for communicating with iPhone and other Apple devices
+libinput-bin;input device management and event handling library - udev quirks
+libinput10:amd64;input device management and event handling library - shared library
+libio-html-perl;open an HTML file with automatic charset detection
+libio-socket-ssl-perl;Perl module implementing object oriented interface to SSL sockets
+libio-stringy-perl;modules for I/O on in-core objects (strings/arrays)
+libip4tc2:amd64;netfilter libip4tc library
+libip6tc2:amd64;netfilter libip6tc library
+libipc-system-simple-perl;Perl module to run commands simply, with detailed diagnostics
+libisc-export1105:amd64;Exported ISC Shared Library
+libisl22:amd64;manipulating sets and relations of integer points bounded by linear constraints
+libiw30:amd64;Wireless tools - library
+libjack-jackd2-0:amd64;JACK Audio Connection Kit (libraries)
+libjansson4:amd64;C library for encoding, decoding and manipulating JSON data
+libjavascriptcoregtk-4.0-18:amd64;JavaScript engine library from WebKitGTK
+libjbig0:amd64;JBIGkit libraries
+libjbig2dec0:amd64;JBIG2 decoder library - shared libraries
+libjpeg-turbo8:amd64;IJG JPEG compliant runtime library.
+libjpeg8:amd64;Independent JPEG Group's JPEG runtime library (dependency package)
+libjs-jquery;JavaScript library for dynamic web applications
+libjson-c4:amd64;JSON manipulation library - shared library
+libjson-glib-1.0-0:amd64;GLib JSON manipulation library
+libjson-glib-1.0-common;GLib JSON manipulation library (common files)
+libjuh-java;LibreOffice UNO runtime environment -- Java Uno helper
+libjurt-java;LibreOffice UNO runtime environment -- Java Uno Runtime
+libk5crypto3:amd64;MIT Kerberos runtime libraries - Crypto Library
+libkeyutils1:amd64;Linux Key Management Utilities (library)
+libklibc:amd64;minimal libc subset for use with initramfs
+libkmod2:amd64;libkmod shared library
+libkpathsea6:amd64;TeX Live: path search library for TeX (runtime part)
+libkrb5-26-heimdal:amd64;Heimdal Kerberos - libraries
+libkrb5-3:amd64;MIT Kerberos runtime libraries
+libkrb5support0:amd64;MIT Kerberos runtime libraries - Support library
+libksba8:amd64;X.509 and CMS support library
+liblangtag-common;library to access tags for identifying languages -- data
+liblangtag1:amd64;library to access tags for identifying languages
+liblcms2-2:amd64;Little CMS 2 color management library
+liblcms2-utils;Little CMS 2 color management library (utilities)
+libldap-2.4-2:amd64;OpenLDAP libraries
+libldap-common;OpenLDAP common files for libraries
+libldb2:amd64;LDAP-like embedded database - shared library
+liblilv-0-0:amd64;library for simple use of LV2 plugins
+liblirc-client0:amd64;infra-red remote control support - client library
+libllvm11:amd64;Modular compiler and toolchain technologies, runtime library
+libllvm9:amd64;Modular compiler and toolchain technologies, runtime library
+liblmdb0:amd64;Lightning Memory-Mapped Database shared library
+liblocale-gettext-perl;module using libc functions for internationalization in Perl
+liblouis-data;Braille translation library - data
+liblouis20:amd64;Braille translation library - shared libs
+liblouisutdml-bin;Braille UTDML translation utilities
+liblouisutdml-data;Braille UTDML translation library - data
+liblouisutdml9:amd64;Braille UTDML translation library - shared libs
+liblqr-1-0:amd64;converts plain array images into multi-size representation
+libltdl7:amd64;System independent dlopen wrapper for GNU libtool
+liblua5.3-0:amd64;Shared library for the Lua interpreter version 5.3
+liblwp-mediatypes-perl;module to guess media type for a file or a URL
+liblwp-protocol-https-perl;HTTPS driver for LWP::UserAgent
+liblz4-1:amd64;Fast LZ compression algorithm library - runtime
+liblzma5:amd64;XZ-format compression library
+liblzo2-2:amd64;data compression library
+libm17n-0:amd64;multilingual text processing library - runtime
+libmagic-mgc;File type determination library using "magic" numbers (compiled magic file)
+libmagic1:amd64;Recognize the type of data in a file using "magic" numbers - library
+libmagickcore-6.q16-6:amd64;low-level image manipulation library -- quantum depth Q16
+libmagickwand-6.q16-6:amd64;image manipulation library -- quantum depth Q16
+libmailtools-perl;modules to manipulate email in perl programs
+libmaxminddb0:amd64;IP geolocation database library
+libmbim-glib4:amd64;Support library to use the MBIM protocol
+libmbim-proxy;Proxy to communicate with MBIM ports
+libmecab2:amd64;Libraries of Mecab
+libmediaart-2.0-0:amd64;media art extraction and cache management library
+libmessaging-menu0:amd64;Messaging Menu - shared library
+libmhash2:amd64;Library for cryptographic hashing and message authentication
+libminiupnpc17:amd64;UPnP IGD client lightweight library
+libmm-glib0:amd64;D-Bus service for managing modems - shared libraries
+libmnl0:amd64;minimalistic Netlink communication library
+libmount1:amd64;device mounting library
+libmozjs-68-0:amd64;SpiderMonkey JavaScript library
+libmp3lame0:amd64;MP3 encoding library
+libmpc3:amd64;multiple precision complex floating-point library
+libmpdec2:amd64;library for decimal floating point arithmetic (runtime library)
+libmpeg2-4:amd64;MPEG1 and MPEG2 video decoder library
+libmpfr6:amd64;multiple precision floating-point computation
+libmpg123-0:amd64;MPEG layer 1/2/3 audio decoder (shared library)
+libmspack0:amd64;library for Microsoft compression formats (shared library)
+libmspub-0.1-1:amd64;library for parsing the mspub file structure
+libmtdev1:amd64;Multitouch Protocol Translation Library - shared library
+libmtp-common;Media Transfer Protocol (MTP) common files
+libmtp-runtime;Media Transfer Protocol (MTP) runtime tools
+libmtp9:amd64;Media Transfer Protocol (MTP) library
+libmutter-6-0:amd64;window manager library from the Mutter window manager
+libmwaw-0.3-3:amd64;import library for some old Mac text documents
+libmysofa1:amd64;library to read HRTFs stored in the AES69-2015 SOFA format
+libmysqlclient21:amd64;MySQL database client library
+libmythes-1.2-0:amd64;simple thesaurus library
+libnatpmp1:amd64;portable and fully compliant implementation of NAT-PMP
+libnautilus-extension1a:amd64;libraries for nautilus components - runtime version
+libncurses6:amd64;shared libraries for terminal handling
+libncursesw6:amd64;shared libraries for terminal handling (wide character support)
+libndp0:amd64;Library for Neighbor Discovery Protocol
+libneon27-gnutls:amd64;HTTP and WebDAV client library (GnuTLS enabled)
+libnet-dbus-perl;Perl extension for the DBus bindings
+libnet-http-perl;module providing low-level HTTP connection client
+libnet-smtp-ssl-perl;Perl module providing SSL support to Net::SMTP
+libnet-ssleay-perl;Perl module for Secure Sockets Layer (SSL)
+libnetfilter-conntrack3:amd64;Netfilter netlink-conntrack library
+libnetplan0:amd64;YAML network configuration abstraction runtime library
+libnettle7:amd64;low level cryptographic library (symmetric and one-way cryptos)
+libnewt0.52:amd64;Not Erik's Windowing Toolkit - text mode windowing with slang
+libnfnetlink0:amd64;Netfilter netlink library
+libnfs13:amd64;NFS client library (shared library)
+libnftnl11:amd64;Netfilter nftables userspace API library
+libnghttp2-14:amd64;library implementing HTTP/2 protocol (shared library)
+libnl-3-200:amd64;library for dealing with netlink sockets
+libnl-genl-3-200:amd64;library for dealing with netlink sockets - generic netlink
+libnl-route-3-200:amd64;library for dealing with netlink sockets - route interface
+libnm0:amd64;GObject-based client library for NetworkManager
+libnma0:amd64;library for wireless and mobile dialogs (libnm version)
+libnorm1:amd64;NACK-Oriented Reliable Multicast (NORM) library
+libnotify-bin;sends desktop notifications to a notification daemon (Utilities)
+libnotify4:amd64;sends desktop notifications to a notification daemon
+libnpth0:amd64;replacement for GNU Pth using system threads
+libnspr4:amd64;NetScape Portable Runtime Library
+libnss-mdns:amd64;NSS module for Multicast DNS name resolution
+libnss-systemd:amd64;nss module providing dynamic user and group name resolution
+libnss3:amd64;Network Security Service libraries
+libntfs-3g883;read/write NTFS driver for FUSE (runtime library)
+libnuma1:amd64;Libraries for controlling NUMA policy
+libodfgen-0.1-1:amd64;library to generate ODF documents
+libogg0:amd64;Ogg bitstream library
+libopencore-amrnb0:amd64;Adaptive Multi Rate speech codec - shared library
+libopencore-amrwb0:amd64;Adaptive Multi-Rate - Wideband speech codec - shared library
+libopenjp2-7:amd64;JPEG 2000 image compression/decompression library
+libopenmpt0:amd64;module music library based on OpenMPT -- shared library
+libopus0:amd64;Opus codec runtime library
+liborc-0.4-0:amd64;Library of Optimized Inner Loops Runtime Compiler
+liborcus-0.15-0:amd64;library for processing spreadsheet documents
+libotf0:amd64;Library for handling OpenType Font - runtime
+libp11-kit0:amd64;library for loading and coordinating access to PKCS#11 modules - runtime
+libpackagekit-glib2-18:amd64;Library for accessing PackageKit using GLib
+libpagemaker-0.0-0:amd64;Library for importing and converting PageMaker Documents
+libpam-cap:amd64;POSIX 1003.1e capabilities (PAM module)
+libpam-fprintd:amd64;PAM module for fingerprint authentication through fprintd
+libpam-gnome-keyring:amd64;PAM module to unlock the GNOME keyring upon login
+libpam-modules:amd64;Pluggable Authentication Modules for PAM
+libpam-modules-bin;Pluggable Authentication Modules for PAM - helper binaries
+libpam-runtime;Runtime support for the PAM library
+libpam-systemd:amd64;system and service manager - PAM module
+libpam0g:amd64;Pluggable Authentication Modules library
+libpango-1.0-0:amd64;Layout and rendering of internationalized text
+libpangocairo-1.0-0:amd64;Layout and rendering of internationalized text
+libpangoft2-1.0-0:amd64;Layout and rendering of internationalized text
+libpangomm-1.4-1v5:amd64;C++ Wrapper for pango (shared libraries)
+libpangoxft-1.0-0:amd64;Layout and rendering of internationalized text
+libpaper-utils;library for handling paper characteristics (utilities)
+libpaper1:amd64;library for handling paper characteristics
+libparted-fs-resize0:amd64;disk partition manipulator - shared FS resizing library
+libparted2:amd64;disk partition manipulator - shared library
+libpcap0.8:amd64;system interface for user-level packet capture
+libpcaudio0:amd64;C API to different audio devices - shared library
+libpci3:amd64;PCI utilities (shared library)
+libpciaccess0:amd64;Generic PCI access library for X
+libpcre2-32-0:amd64;New Perl Compatible Regular Expression Library - 32 bit runtime files
+libpcre2-8-0:amd64;New Perl Compatible Regular Expression Library- 8 bit runtime files
+libpcre3:amd64;Old Perl 5 Compatible Regular Expression Library - runtime files
+libpcsclite1:amd64;Middleware to access a smart card using PC/SC (library)
+libpeas-1.0-0:amd64;Application plugin library
+libpeas-common;Application plugin library (common files)
+libperl5.30:amd64;shared Perl library
+libpgm-5.2-0:amd64;OpenPGM shared library
+libphonenumber7:amd64;parsing/formatting/validating phone numbers
+libpipeline1:amd64;Unix process pipeline manipulation library
+libpixman-1-0:amd64;pixel-manipulation library for X and cairo
+libpkcs11-helper1:amd64;library that simplifies the interaction with PKCS#11
+libplist3:amd64;Library for handling Apple binary and XML property lists
+libplymouth5:amd64;graphical boot animation and logger - shared libraries
+libpng16-16:amd64;PNG library - runtime (version 1.6)
+libpolkit-agent-1-0:amd64;PolicyKit Authentication Agent API
+libpolkit-gobject-1-0:amd64;PolicyKit Authorization API
+libpoppler-cpp0v5:amd64;PDF rendering library (CPP shared library)
+libpoppler-glib8:amd64;PDF rendering library (GLib-based shared library)
+libpoppler97:amd64;PDF rendering library
+libpopt0:amd64;lib for parsing cmdline parameters
+libpostproc55:amd64;FFmpeg library for post processing - runtime files
+libprocps8:amd64;library for accessing process information from /proc
+libprotobuf17:amd64;protocol buffers C++ library
+libproxy1-plugin-gsettings:amd64;automatic proxy configuration management library (GSettings plugin)
+libproxy1-plugin-networkmanager:amd64;automatic proxy configuration management library (Network Manager plugin)
+libproxy1v5:amd64;automatic proxy configuration management library (shared)
+libpsl5:amd64;Library for Public Suffix List (shared libraries)
+libpulse-mainloop-glib0:amd64;PulseAudio client libraries (glib support)
+libpulse0:amd64;PulseAudio client libraries
+libpulsedsp:amd64;PulseAudio OSS pre-load library
+libpwquality-common;library for password quality checking and generation (data files)
+libpwquality1:amd64;library for password quality checking and generation
+libpython3-stdlib:amd64;interactive high-level object-oriented language (default python3 version)
+libpython3.8:amd64;Shared Python runtime library (version 3.8)
+libpython3.8-minimal:amd64;Minimal subset of the Python language (version 3.8)
+libpython3.8-stdlib:amd64;Interactive high-level object-oriented language (standard library, version 3.8)
+libqmi-glib5:amd64;Support library to use the Qualcomm MSM Interface (QMI) protocol
+libqmi-proxy;Proxy to communicate with QMI ports
+libqpdf26:amd64;runtime library for PDF transformation/inspection software
+libqqwing2v5:amd64;tool for generating and solving Sudoku puzzles (library)
+libraptor2-0:amd64;Raptor 2 RDF syntax library
+librasqal3:amd64;Rasqal RDF query library
+libraw1394-11:amd64;library for direct access to IEEE 1394 bus (aka FireWire)
+libraw19:amd64;raw image decoder library
+librdf0:amd64;Redland Resource Description Framework (RDF) library
+libreadline8:amd64;GNU readline and history libraries, run-time libraries
+librecode0:amd64;Shared library on which recode is based
+libreoffice-base-core;office productivity suite -- shared library
+libreoffice-calc;office productivity suite -- spreadsheet
+libreoffice-common;office productivity suite -- arch-independent files
+libreoffice-core;office productivity suite -- arch-dependent files
+libreoffice-draw;office productivity suite -- drawing
+libreoffice-gnome;office productivity suite -- GNOME integration
+libreoffice-gtk3;office productivity suite -- GTK+ 3 integration
+libreoffice-help-common;office productivity suite -- common files for LibreOffice help
+libreoffice-help-en-us;office productivity suite -- English_american help
+libreoffice-impress;office productivity suite -- presentation
+libreoffice-math;office productivity suite -- equation editor
+libreoffice-ogltrans;transitional package for libreoffice-ogltrans
+libreoffice-pdfimport;transitional package for PDF Import component for LibreOffice
+libreoffice-style-breeze;office productivity suite -- Breeze symbol style
+libreoffice-style-colibre;office productivity suite -- colibre symbol style
+libreoffice-style-elementary;office productivity suite -- Elementary symbol style
+libreoffice-style-tango;office productivity suite -- Tango symbol style
+libreoffice-writer;office productivity suite -- word processor
+librest-0.7-0:amd64;REST service access library
+librevenge-0.0-0:amd64;Base Library for writing document interface filters
+librhythmbox-core10:amd64;support library for the rhythmbox music player
+libridl-java;LibreOffice UNO runtime environment -- base types and types access library for the Java Uno typesystem
+libroken18-heimdal:amd64;Heimdal Kerberos - roken support library
+librsvg2-2:amd64;SAX-based renderer library for SVG files (runtime)
+librsvg2-common:amd64;SAX-based renderer library for SVG files (extra runtime)
+librsync2:amd64;rsync remote-delta algorithm library
+librtmp1:amd64;toolkit for RTMP streams (shared library)
+librubberband2:amd64;audio time-stretching and pitch-shifting library
+libruby2.7:amd64;Libraries necessary to run Ruby 2.7
+librygel-core-2.6-2:amd64;GNOME UPnP/DLNA services - core library
+librygel-db-2.6-2:amd64;GNOME UPnP/DLNA services - db library
+librygel-renderer-2.6-2:amd64;GNOME UPnP/DLNA services - renderer library
+librygel-server-2.6-2:amd64;GNOME UPnP/DLNA services - server library
+libsamplerate0:amd64;Audio sample rate conversion library
+libsane:amd64;API library for scanners
+libsane-common;API library for scanners -- documentation and support files
+libsane-hpaio:amd64;HP SANE backend for multi-function peripherals
+libsasl2-2:amd64;Cyrus SASL - authentication abstraction library
+libsasl2-modules:amd64;Cyrus SASL - pluggable authentication modules
+libsasl2-modules-db:amd64;Cyrus SASL - pluggable authentication modules (DB)
+libsbc1:amd64;Sub Band CODEC library - runtime
+libseccomp2:amd64;high level interface to Linux seccomp filter
+libsecret-1-0:amd64;Secret store
+libsecret-common;Secret store (common files)
+libselinux1:amd64;SELinux runtime shared libraries
+libsemanage-common;Common files for SELinux policy management libraries
+libsemanage1:amd64;SELinux policy management library
+libsensors-config;lm-sensors configuration files
+libsensors5:amd64;library to read temperature/voltage/fan sensors
+libsepol1:amd64;SELinux library for manipulating binary security policies
+libserd-0-0:amd64;lightweight RDF syntax library
+libsgutils2-2;utilities for devices using the SCSI command set (shared libraries)
+libshine3:amd64;Fixed-point MP3 encoding library - runtime files
+libshout3:amd64;MP3/Ogg Vorbis broadcast streaming library
+libsidplay1v5:amd64;SID (MOS 6581) emulation library
+libsigc++-2.0-0v5:amd64;type-safe Signal Framework for C++ - runtime
+libslang2:amd64;S-Lang programming library - runtime version
+libsm6:amd64;X11 Session Management library
+libsmartcols1:amd64;smart column output alignment library
+libsmbclient:amd64;shared library for communication with SMB/CIFS servers
+libsmbios-c2;Provide access to (SM)BIOS information -- dynamic library
+libsnapd-glib1:amd64;GLib snapd library
+libsnappy1v5:amd64;fast compression/decompression library
+libsndfile1:amd64;Library for reading/writing audio files
+libsnmp-base;SNMP configuration script, MIBs and documentation
+libsnmp35:amd64;SNMP (Simple Network Management Protocol) library
+libsodium23:amd64;Network communication, cryptography and signaturing library
+libsonic0:amd64;Simple library to speed up or slow down speech
+libsord-0-0:amd64;library for storing RDF data in memory
+libsoup-gnome2.4-1:amd64;HTTP library implementation in C -- GNOME support library
+libsoup2.4-1:amd64;HTTP library implementation in C -- Shared library
+libsoxr0:amd64;High quality 1D sample-rate conversion library
+libspectre1:amd64;Library for rendering PostScript documents
+libspeechd2:amd64;Speech Dispatcher: Shared libraries
+libspeex1:amd64;The Speex codec runtime library
+libspeexdsp1:amd64;The Speex extended runtime library
+libsqlite3-0:amd64;SQLite 3 shared library
+libsratom-0-0:amd64;library for serialising LV2 atoms to/from Turtle
+libss2:amd64;command-line interface parsing library
+libssh-4:amd64;tiny C SSH library (OpenSSL flavor)
+libssh-gcrypt-4:amd64;tiny C SSH library (gcrypt flavor)
+libssl1.1:amd64;Secure Sockets Layer toolkit - shared libraries
+libstartup-notification0:amd64;library for program launch feedback (shared library)
+libstdc++6:amd64;GNU Standard C++ Library v3
+libstemmer0d:amd64;Snowball stemming algorithms for use in Information Retrieval
+libsuitesparseconfig5:amd64;configuration routines for all SuiteSparse modules
+libswresample3:amd64;FFmpeg library for audio resampling, rematrixing etc. - runtime files
+libswscale5:amd64;FFmpeg library for image scaling and various conversions - runtime files
+libsynctex2:amd64;TeX Live: SyncTeX parser library
+libsysmetrics1:amd64;Report hardware and other collected metrics - shared lib
+libsystemd0:amd64;systemd utility library
+libtag1v5:amd64;audio meta-data library
+libtag1v5-vanilla:amd64;audio meta-data library - vanilla flavour
+libtalloc2:amd64;hierarchical pool based memory allocator
+libtasn1-6:amd64;Manage ASN.1 structures (runtime)
+libtdb1:amd64;Trivial Database - shared library
+libteamdctl0:amd64;library for communication with `teamd` process
+libtepl-4-0:amd64;Text editor library for GTK
+libtevent0:amd64;talloc-based event loop library - shared library
+libtext-charwidth-perl;get display widths of characters on the terminal
+libtext-iconv-perl;module to convert between character sets in Perl
+libtext-wrapi18n-perl;internationalized substitute of Text::Wrap
+libthai-data;Data files for Thai language support library
+libthai0:amd64;Thai language support library
+libtheora0:amd64;Theora Video Compression Codec
+libtie-ixhash-perl;Perl module to order associative arrays
+libtiff5:amd64;Tag Image File Format (TIFF) library
+libtimedate-perl;collection of modules to manipulate date/time information
+libtinfo6:amd64;shared low-level terminfo library for terminal handling
+libtotem-plparser-common;Totem Playlist Parser library - common files
+libtotem-plparser18:amd64;Totem Playlist Parser library - runtime files
+libtotem0:amd64;Main library for the Totem media player
+libtracker-control-2.0-0:amd64;library to control/monitor tracker miners
+libtracker-miner-2.0-0:amd64;tracker data miner library
+libtracker-sparql-2.0-0:amd64;metadata database, indexer and search tool - library
+libtry-tiny-perl;module providing minimalistic try/catch
+libtss2-esys0;TPM2 Software stack library - TSS and TCTI libraries
+libtwolame0:amd64;MPEG Audio Layer 2 encoding library
+libu2f-udev;Universal 2nd Factor (U2F) common files
+libuchardet0:amd64;universal charset detection library - shared library
+libudev1:amd64;libudev shared library
+libudisks2-0:amd64;GObject based library to access udisks2
+libunistring2:amd64;Unicode string library for C
+libunity-protocol-private0:amd64;binding to get places into the launcher - private library
+libunity-scopes-json-def-desktop;binding to get places into the launcher - desktop def file
+libunity9:amd64;binding to get places into the launcher - shared library
+libuno-cppu3;LibreOffice UNO runtime environment -- CPPU public library
+libuno-cppuhelpergcc3-3;LibreOffice UNO runtime environment -- CPPU helper library
+libuno-purpenvhelpergcc3-3;LibreOffice UNO runtime environment -- "purpose environment" helper
+libuno-sal3;LibreOffice UNO runtime environment -- SAL public library
+libuno-salhelpergcc3-3;LibreOffice UNO runtime environment -- SAL helpers for C++ library
+libunoloader-java;LibreOffice UNO runtime environment -- (Java) UNO loader
+libunwind8:amd64;library to determine the call-chain of a program - runtime
+libupower-glib3:amd64;abstraction for power management - shared library
+liburi-perl;module to manipulate and access URI strings
+libusb-1.0-0:amd64;userspace USB programming library
+libusbmuxd6:amd64;USB multiplexor daemon for iPhone and iPod Touch devices - library
+libutempter0:amd64;privileged helper for utmp/wtmp updates (runtime)
+libuuid1:amd64;Universally Unique ID library
+libuv1:amd64;asynchronous event notification library - runtime library
+libv4l-0:amd64;Collection of video4linux support libraries
+libv4lconvert0:amd64;Video4linux frame format conversion library
+libva-drm2:amd64;Video Acceleration (VA) API for Linux -- DRM runtime
+libva-wayland2:amd64;Video Acceleration (VA) API for Linux -- Wayland runtime
+libva-x11-2:amd64;Video Acceleration (VA) API for Linux -- X11 runtime
+libva2:amd64;Video Acceleration (VA) API for Linux -- runtime
+libvdpau1:amd64;Video Decode and Presentation API for Unix (libraries)
+libvidstab1.1:amd64;video stabilization library (shared library)
+libvisio-0.1-1:amd64;library for parsing the visio file structure
+libvisual-0.4-0:amd64;audio visualization framework
+libvncclient1:amd64;API to write one's own VNC server - client library
+libvo-amrwbenc0:amd64;VisualOn AMR-WB encoder library
+libvolume-key1;Library for manipulating storage encryption keys and passphrases
+libvorbis0a:amd64;decoder library for Vorbis General Audio Compression Codec
+libvorbisenc2:amd64;encoder library for Vorbis General Audio Compression Codec
+libvorbisfile3:amd64;high-level API for Vorbis General Audio Compression Codec
+libvpx6:amd64;VP8 and VP9 video codec (shared library)
+libvte-2.91-0:amd64;Terminal emulator widget for GTK+ 3.0 - runtime files
+libvte-2.91-common;Terminal emulator widget for GTK+ 3.0 - common files
+libvulkan1:amd64;Vulkan loader library
+libwacom-bin;Wacom model feature query library -- binaries
+libwacom-common;Wacom model feature query library (common files)
+libwacom2:amd64;Wacom model feature query library
+libwavpack1:amd64;audio codec (lossy and lossless) - library
+libwayland-client0:amd64;wayland compositor infrastructure - client library
+libwayland-cursor0:amd64;wayland compositor infrastructure - cursor library
+libwayland-egl1:amd64;wayland compositor infrastructure - EGL library
+libwayland-server0:amd64;wayland compositor infrastructure - server library
+libwbclient0:amd64;Samba winbind client library
+libwebkit2gtk-4.0-37:amd64;Web content engine library for GTK
+libwebp6:amd64;Lossy compression of digital photographic images.
+libwebpdemux2:amd64;Lossy compression of digital photographic images.
+libwebpmux3:amd64;Lossy compression of digital photographic images.
+libwebrtc-audio-processing1:amd64;AudioProcessing module from the WebRTC project.
+libwhoopsie-preferences0;Ubuntu error tracker submission settings - shared library
+libwhoopsie0:amd64;Ubuntu error tracker submission - shared library
+libwind0-heimdal:amd64;Heimdal Kerberos - stringprep implementation
+libwinpr2-2:amd64;Windows Portable Runtime library
+libwmf0.2-7:amd64;Windows metafile conversion library
+libwmf0.2-7-gtk;Windows metafile conversion library
+libwnck-3-0:amd64;Window Navigator Construction Kit - runtime files
+libwnck-3-common;Window Navigator Construction Kit - common files
+libwoff1:amd64;library for converting fonts to WOFF 2.0
+libwpd-0.10-10:amd64;Library for handling WordPerfect documents (shared library)
+libwpg-0.3-3:amd64;WordPerfect graphics import/convert library (shared library)
+libwps-0.4-4:amd64;Works text file format import filter library (shared library)
+libwrap0:amd64;Wietse Venema's TCP wrappers library
+libwww-perl;simple and consistent interface to the world-wide web
+libwww-robotrules-perl;database of robots.txt-derived permissions
+libx11-6:amd64;X11 client-side library
+libx11-data;X11 client-side library
+libx11-protocol-perl;Perl module for the X Window System Protocol, version 11
+libx11-xcb1:amd64;Xlib/XCB interface library
+libx264-155:amd64;x264 video coding library
+libx265-179:amd64;H.265/HEVC video stream encoder (shared library)
+libx86emu2:amd64;x86 emulation library
+libxatracker2:amd64;X acceleration library -- runtime
+libxau6:amd64;X11 authorisation library
+libxaw7:amd64;X11 Athena Widget library
+libxcb-dri2-0:amd64;X C Binding, dri2 extension
+libxcb-dri3-0:amd64;X C Binding, dri3 extension
+libxcb-glx0:amd64;X C Binding, glx extension
+libxcb-icccm4:amd64;utility libraries for X C Binding -- icccm
+libxcb-image0:amd64;utility libraries for X C Binding -- image
+libxcb-keysyms1:amd64;utility libraries for X C Binding -- keysyms
+libxcb-present0:amd64;X C Binding, present extension
+libxcb-randr0:amd64;X C Binding, randr extension
+libxcb-render-util0:amd64;utility libraries for X C Binding -- render-util
+libxcb-render0:amd64;X C Binding, render extension
+libxcb-res0:amd64;X C Binding, res extension
+libxcb-shape0:amd64;X C Binding, shape extension
+libxcb-shm0:amd64;X C Binding, shm extension
+libxcb-sync1:amd64;X C Binding, sync extension
+libxcb-util1:amd64;utility libraries for X C Binding -- atom, aux and event
+libxcb-xfixes0:amd64;X C Binding, xfixes extension
+libxcb-xkb1:amd64;X C Binding, XKEYBOARD extension
+libxcb-xv0:amd64;X C Binding, xv extension
+libxcb1:amd64;X C Binding
+libxcomposite1:amd64;X11 Composite extension library
+libxcursor1:amd64;X cursor management library
+libxdamage1:amd64;X11 damaged region extension library
+libxdmcp6:amd64;X11 Display Manager Control Protocol library
+libxext6:amd64;X11 miscellaneous extension library
+libxfixes3:amd64;X11 miscellaneous 'fixes' extension library
+libxfont2:amd64;X11 font rasterisation library
+libxft2:amd64;FreeType-based font drawing library for X
+libxi6:amd64;X11 Input extension library
+libxinerama1:amd64;X11 Xinerama extension library
+libxkbcommon-x11-0:amd64;library to create keymaps with the XKB X11 protocol
+libxkbcommon0:amd64;library interface to the XKB compiler - shared library
+libxkbfile1:amd64;X11 keyboard file manipulation library
+libxklavier16:amd64;X Keyboard Extension high-level API
+libxml-parser-perl;Perl module for parsing XML files
+libxml-twig-perl;Perl module for processing huge XML documents in tree mode
+libxml-xpathengine-perl;re-usable XPath engine for DOM-like trees
+libxml2:amd64;GNOME XML library
+libxmlb1:amd64;Binary XML library
+libxmlsec1:amd64;XML security library
+libxmlsec1-nss:amd64;Nss engine for the XML security library
+libxmlsec1-openssl:amd64;Openssl engine for the XML security library
+libxmu6:amd64;X11 miscellaneous utility library
+libxmuu1:amd64;X11 miscellaneous micro-utility library
+libxpm4:amd64;X11 pixmap library
+libxrandr2:amd64;X11 RandR extension library
+libxrender1:amd64;X Rendering Extension client library
+libxres1:amd64;X11 Resource extension library
+libxshmfence1:amd64;X shared memory fences - shared library
+libxslt1.1:amd64;XSLT 1.0 processing library - runtime library
+libxss1:amd64;X11 Screen Saver extension library
+libxt6:amd64;X11 toolkit intrinsics library
+libxtables12:amd64;netfilter xtables library
+libxtst6:amd64;X11 Testing -- Record extension library
+libxv1:amd64;X11 Video extension library
+libxvidcore4:amd64;Open source MPEG-4 video codec (library)
+libxvmc1:amd64;X11 Video extension library
+libxxf86dga1:amd64;X11 Direct Graphics Access extension library
+libxxf86vm1:amd64;X11 XFree86 video mode extension library
+libyajl2:amd64;Yet Another JSON Library
+libyaml-0-2:amd64;Fast YAML 1.1 parser and emitter library
+libyelp0:amd64;Library for the GNOME help browser
+libzmq5:amd64;lightweight messaging kernel (shared library)
+libzstd1:amd64;fast lossless compression algorithm
+libzvbi-common;Vertical Blanking Interval decoder (VBI) - common files
+libzvbi0:amd64;Vertical Blanking Interval decoder (VBI) - runtime files
+linux-base;Linux image base package
+linux-firmware;Firmware for Linux kernel drivers
+linux-generic-hwe-20.04;Complete Generic Linux kernel and headers
+linux-headers-5.8.0-50-generic;Linux kernel headers for version 5.8.0 on 64 bit x86 SMP
+linux-headers-5.8.0-53-generic;Linux kernel headers for version 5.8.0 on 64 bit x86 SMP
+linux-headers-generic-hwe-20.04;Generic Linux kernel headers
+linux-hwe-5.8-headers-5.8.0-50;Header files related to Linux kernel version 5.8.0
+linux-hwe-5.8-headers-5.8.0-53;Header files related to Linux kernel version 5.8.0
+linux-image-5.8.0-43-generic;Signed kernel image generic
+linux-image-5.8.0-50-generic;Signed kernel image generic
+linux-image-5.8.0-53-generic;Signed kernel image generic
+linux-image-generic-hwe-20.04;Generic Linux kernel image
+linux-modules-5.8.0-43-generic;Linux kernel extra modules for version 5.8.0 on 64 bit x86 SMP
+linux-modules-5.8.0-50-generic;Linux kernel extra modules for version 5.8.0 on 64 bit x86 SMP
+linux-modules-5.8.0-53-generic;Linux kernel extra modules for version 5.8.0 on 64 bit x86 SMP
+linux-modules-extra-5.8.0-43-generic;Linux kernel extra modules for version 5.8.0 on 64 bit x86 SMP
+linux-modules-extra-5.8.0-50-generic;Linux kernel extra modules for version 5.8.0 on 64 bit x86 SMP
+linux-modules-extra-5.8.0-53-generic;Linux kernel extra modules for version 5.8.0 on 64 bit x86 SMP
+linux-sound-base;base package for ALSA and OSS sound systems
+locales;GNU C Library: National Language (locale) data [support]
+login;system login tools
+logrotate;Log rotation utility
+logsave;save the output of a command in a log file
+lolcat;colorful `cat`
+lp-solve;Solve (mixed integer) linear programming problems
+lsb-base;Linux Standard Base init script functionality
+lsb-release;Linux Standard Base version reporting utility
+lshw;information about hardware configuration
+lsof;utility to list open files
+ltrace;Tracks runtime library calls in dynamically linked programs
+lz4;Fast LZ compression algorithm library - tool
+m17n-db;multilingual text processing library - database
+man-db;tools for reading manual pages
+manpages;Manual pages about using a GNU/Linux system
+mawk;Pattern scanning and text processing language
+mecab-ipadic;IPA dictionary compiled for Mecab
+mecab-ipadic-utf8;IPA dictionary encoded in UTF-8 compiled for Mecab
+mecab-utils;Support programs of Mecab
+media-player-info;Media player identification files
+memtest86+;thorough real-mode memory tester
+mesa-utils;Miscellaneous Mesa GL utilities
+mesa-va-drivers:amd64;Mesa VA-API video acceleration drivers
+mesa-vdpau-drivers:amd64;Mesa VDPAU video acceleration drivers
+mesa-vulkan-drivers:amd64;Mesa Vulkan graphics drivers
+mime-support;MIME files 'mime.types' & 'mailcap', and support programs
+mobile-broadband-provider-info;database of mobile broadband service providers
+modemmanager;D-Bus service for managing modems
+mount;tools for mounting and manipulating filesystems
+mousetweaks;mouse accessibility enhancements for the GNOME desktop
+mscompress;Microsoft "compress.exe/expand.exe" compatible (de)compressor
+mtools;Tools for manipulating MSDOS files
+mtr-tiny;Full screen ncurses traceroute tool
+mutter;Example window manager using GNOME's window manager library
+mutter-common;shared files for the Mutter window manager
+mysql-client-8.0;MySQL database client binaries
+mysql-client-core-8.0;MySQL database core client binaries
+mysql-common;MySQL database common files, e.g. /etc/mysql/my.cnf
+mysql-server;MySQL database server (metapackage depending on the latest version)
+mysql-server-8.0;MySQL database server binaries and system database setup
+mysql-server-core-8.0;MySQL database server binaries
+mythes-en-us;English (USA) Thesaurus for LibreOffice
+nano;small, friendly text editor inspired by Pico
+nautilus;file manager and graphical shell for GNOME
+nautilus-data;data files for nautilus
+nautilus-extension-gnome-terminal;GNOME terminal emulator application - Nautilus extension
+nautilus-sendto;easily send files via email from within Nautilus
+nautilus-share;Nautilus extension to share folder using Samba
+ncurses-base;basic terminal type definitions
+ncurses-bin;terminal-related programs and man pages
+net-tools;NET-3 networking toolkit
+netbase;Basic TCP/IP networking system
+netcat-openbsd;TCP/IP swiss army knife
+netplan.io;YAML network configuration abstraction for various backends
+network-manager;network management framework (daemon and userspace tools)
+network-manager-config-connectivity-ubuntu;NetworkManager configuration to enable connectivity checking
+network-manager-gnome;network management framework (GNOME frontend)
+network-manager-openvpn;network management framework (OpenVPN plugin core)
+network-manager-openvpn-gnome;network management framework (OpenVPN plugin GNOME GUI)
+network-manager-pptp;network management framework (PPTP plugin core)
+network-manager-pptp-gnome;network management framework (PPTP plugin GNOME GUI)
+networkd-dispatcher;Dispatcher service for systemd-networkd connection status changes
+ntfs-3g;read/write NTFS driver for FUSE
+ocl-icd-libopencl1:amd64;Generic OpenCL ICD Loader
+open-vm-tools;Open VMware Tools for virtual machines hosted on VMware (CLI)
+open-vm-tools-desktop;Open VMware Tools for virtual machines hosted on VMware (GUI)
+openprinting-ppds;OpenPrinting printer support - PostScript PPD files
+openssh-client;secure shell (SSH) client, for secure access to remote machines
+openssl;Secure Sockets Layer toolkit - cryptographic utility
+openvpn;virtual private network daemon
+orca;Scriptable screen reader
+os-prober;utility to detect other OSes on a set of drives
+p11-kit;p11-glue utilities
+p11-kit-modules:amd64;p11-glue proxy and trust modules
+packagekit;Provides a package management service
+packagekit-tools;Provides PackageKit command-line tools
+parted;disk partition manipulator
+passwd;change and administer password and group data
+patch;Apply a diff file to an original
+pci.ids;PCI ID Repository
+pciutils;PCI utilities
+pcmciautils;PCMCIA utilities for Linux 2.6
+perl;Larry Wall's Practical Extraction and Report Language
+perl-base;minimal Perl system
+perl-modules-5.30;Core Perl modules
+perl-openssl-defaults:amd64;version compatibility baseline for Perl OpenSSL packages
+pinentry-curses;curses-based PIN or pass-phrase entry dialog for GnuPG
+pinentry-gnome3;GNOME 3 PIN or pass-phrase entry dialog for GnuPG
+pkg-config;manage compile and link flags for libraries
+plymouth;boot animation, logger and I/O multiplexer
+plymouth-label;boot animation, logger and I/O multiplexer - label control
+plymouth-theme-spinner;boot animation, logger and I/O multiplexer - spinner theme
+plymouth-theme-ubuntu-text;boot animation, logger and I/O multiplexer - ubuntu text theme
+policykit-1;framework for managing administrative policies and privileges
+policykit-desktop-privileges;run common desktop actions without password
+poppler-data;encoding data for the poppler PDF rendering library
+poppler-utils;PDF utilities (based on Poppler)
+popularity-contest;Vote for your favourite packages automatically
+powermgmt-base;common utils for power management
+ppp;Point-to-Point Protocol (PPP) - daemon
+pptp-linux;Point-to-Point Tunneling Protocol (PPTP) Client
+printer-driver-brlaser;printer driver for (some) Brother laser printers
+printer-driver-c2esp;printer driver for Kodak ESP AiO color inkjet Series
+printer-driver-foo2zjs;printer driver for ZjStream-based printers
+printer-driver-foo2zjs-common;printer driver for ZjStream-based printers - common files
+printer-driver-hpcups;HP Linux Printing and Imaging - CUPS Raster driver (hpcups)
+printer-driver-m2300w;printer driver for Minolta magicolor 2300W/2400W color laser printers
+printer-driver-min12xxw;printer driver for KonicaMinolta PagePro 1[234]xxW
+printer-driver-pnm2ppa;printer driver for HP-GDI printers
+printer-driver-postscript-hp;HP Printers PostScript Descriptions
+printer-driver-ptouch;printer driver Brother P-touch label printers
+printer-driver-pxljr;printer driver for HP Color LaserJet 35xx/36xx
+printer-driver-sag-gdi;printer driver for Ricoh Aficio SP 1000s/SP 1100s
+printer-driver-splix;Driver for Samsung and Xerox SPL2 and SPLc laser printers
+procps;/proc file system utilities
+psmisc;utilities that use the proc file system
+publicsuffix;accurate, machine-readable list of domain name suffixes
+pulseaudio;PulseAudio sound server
+pulseaudio-module-bluetooth;Bluetooth module for PulseAudio sound server
+pulseaudio-utils;Command line tools for the PulseAudio sound server
+python-apt-common;Python interface to libapt-pkg (locales)
+python3;interactive high-level object-oriented language (default python3 version)
+python3-apport;Python 3 library for Apport crash report handling
+python3-apt;Python 3 interface to libapt-pkg
+python3-aptdaemon;Python 3 module for the server and client of aptdaemon
+python3-aptdaemon.gtk3widgets;Python 3 GTK+ 3 widgets to run an aptdaemon client
+python3-bcrypt;password hashing library for Python 3
+python3-blinker;fast, simple object-to-object and broadcast signaling library
+python3-brlapi:amd64;Braille display access via BRLTTY - Python3 bindings
+python3-cairo:amd64;Python3 bindings for the Cairo vector graphics library
+python3-certifi;root certificates for validating SSL certs and verifying TLS hosts (python3)
+python3-cffi-backend;Foreign Function Interface for Python 3 calling C code - runtime
+python3-chardet;universal character encoding detector for Python3
+python3-click;Wrapper around optparse for command line utilities - Python 3.x
+python3-colorama;Cross-platform colored terminal text in Python - Python 3.x
+python3-commandnotfound;Python 3 bindings for command-not-found.
+python3-cryptography;Python library exposing cryptographic recipes and primitives (Python 3)
+python3-cups;Python3 bindings for CUPS
+python3-cupshelpers;Python utility modules around the CUPS printing system
+python3-dateutil;powerful extensions to the standard Python 3 datetime module
+python3-dbus;simple interprocess messaging system (Python 3 interface)
+python3-debconf;interact with debconf from Python 3
+python3-debian;Python 3 modules to work with Debian-related data formats
+python3-defer;Small framework for asynchronous programming (Python 3)
+python3-distro;Linux OS platform information API
+python3-distro-info;information about distributions' releases (Python 3 module)
+python3-distupgrade;manage release upgrades
+python3-entrypoints;Discover and load entry points from installed packages (Python 3)
+python3-fasteners;provides useful locks - Python 3.x
+python3-future;Clean single-source support for Python 3 and 2 - Python 3.x
+python3-gdbm:amd64;GNU dbm database support for Python 3.x
+python3-gi;Python 3 bindings for gobject-introspection libraries
+python3-gi-cairo;Python 3 Cairo bindings for the GObject library
+python3-httplib2;comprehensive HTTP client library written for Python3
+python3-ibus-1.0;Intelligent Input Bus - introspection overrides for Python (Python 3)
+python3-idna;Python IDNA2008 (RFC 5891) handling (Python 3)
+python3-jwt;Python 3 implementation of JSON Web Token
+python3-keyring;store and access your passwords safely - Python 3 version of the package
+python3-launchpadlib;Launchpad web services client library (Python 3)
+python3-lazr.restfulclient;client for lazr.restful-based web services (Python 3)
+python3-lazr.uri;library for parsing, manipulating, and generating URIs
+python3-lib2to3;Interactive high-level object-oriented language (lib2to3)
+python3-lockfile;file locking library for Python — Python 3 library
+python3-louis;Python bindings for liblouis
+python3-macaroonbakery;Higher-level macaroon operations for Python 3
+python3-mako;fast and lightweight templating for the Python 3 platform
+python3-markupsafe;HTML/XHTML/XML string library for Python 3
+python3-minimal;minimal subset of the Python language (default python3 version)
+python3-monotonic;implementation of time.monotonic() - Python 3.x
+python3-nacl;Python bindings to libsodium (Python 3)
+python3-netifaces;portable network interface information - Python 3.x
+python3-oauthlib;generic, spec-compliant implementation of OAuth for Python3
+python3-olefile;Python module to read/write MS OLE2 files
+python3-paramiko;Make ssh v2 connections (Python 3)
+python3-pexpect;Python 3 module for automating interactive applications
+python3-pil:amd64;Python Imaging Library (Python3)
+python3-pkg-resources;Package Discovery and Resource Access using pkg_resources
+python3-problem-report;Python 3 library to handle problem reports
+python3-protobuf;Python 3 bindings for protocol buffers
+python3-ptyprocess;Run a subprocess in a pseudo terminal from Python 3
+python3-pyatspi;Assistive Technology Service Provider Interface - Python3 bindings
+python3-pymacaroons;Macaroon library for Python 3
+python3-renderpm:amd64;python low level render interface
+python3-reportlab;ReportLab library to create PDF documents using Python3
+python3-reportlab-accel:amd64;C coded extension accelerator for the ReportLab Toolkit
+python3-requests;elegant and simple HTTP library for Python3, built for human beings
+python3-requests-unixsocket;Use requests to talk HTTP via a UNIX domain socket - Python 3.x
+python3-rfc3339;parser and generator of RFC 3339-compliant timestamps (Python 3)
+python3-secretstorage;Python module for storing secrets - Python 3.x version
+python3-simplejson;simple, fast, extensible JSON encoder/decoder for Python 3.x
+python3-six;Python 2 and 3 compatibility library (Python 3 interface)
+python3-software-properties;manage the repositories that you install software from
+python3-speechd;Python interface to Speech Dispatcher
+python3-systemd;Python 3 bindings for systemd
+python3-talloc:amd64;hierarchical pool based memory allocator - Python3 bindings
+python3-tz;Python3 version of the Olson timezone database
+python3-uno;Python-UNO bridge
+python3-update-manager;python 3.x module for update-manager
+python3-urllib3;HTTP library with thread-safe connection pooling for Python3
+python3-wadllib;Python 3 library for navigating WADL files
+python3-xdg;Python 3 library to access freedesktop.org standards
+python3-xkit;library for the manipulation of xorg.conf files (Python 3)
+python3-yaml;YAML parser and emitter for Python3
+python3.8;Interactive high-level object-oriented language (version 3.8)
+python3.8-minimal;Minimal subset of the Python language (version 3.8)
+rake;ruby make-like utility
+readline-common;GNU readline and history libraries, common files
+remmina;GTK+ Remote Desktop Client
+remmina-common;Common files for Remmina
+remmina-plugin-rdp:amd64;RDP plugin for Remmina
+remmina-plugin-secret:amd64;Secret plugin for Remmina
+remmina-plugin-vnc:amd64;VNC plugin for Remmina
+rfkill;tool for enabling and disabling wireless devices
+rhythmbox;music player and organizer for GNOME
+rhythmbox-data;data files for rhythmbox
+rhythmbox-plugin-alternative-toolbar;Enhanced play controls and interface for Rhythmbox
+rhythmbox-plugins;plugins for rhythmbox music player
+rsync;fast, versatile, remote (and local) file-copying tool
+rsyslog;reliable system and kernel logging daemon
+rtkit;Realtime Policy and Watchdog Daemon
+ruby;Interpreter of object-oriented scripting language Ruby (default version)
+ruby-minitest;Ruby test tools supporting TDD, BDD, mocking, and benchmarking
+ruby-net-telnet;telnet client library
+ruby-paint;terminal paint library with 256 color and effect support
+ruby-power-assert;library showing values of variables and method calls in an expression
+ruby-test-unit;unit testing framework for Ruby
+ruby-trollop;command-line argument processing library
+ruby-xmlrpc;XMLRPC library for Ruby
+ruby2.7;Interpreter of object-oriented scripting language Ruby
+rubygems-integration;integration of Debian Ruby packages with Rubygems
+rygel;GNOME UPnP/DLNA services
+samba-libs:amd64;Samba core libraries
+sane-utils;API library for scanners -- utilities
+sbsigntool;Tools to manipulate signatures on UEFI binaries and drivers
+seahorse;GNOME front end for GnuPG
+secureboot-db;Secure Boot updates for DB and DBX
+sed;GNU stream editor for filtering/transforming text
+sensible-utils;Utilities for sensible alternative selection
+session-migration;Tool to migrate in user session settings
+sgml-base;SGML infrastructure and SGML catalog file support
+sgml-data;common SGML and XML data
+shared-mime-info;FreeDesktop.org shared MIME database and spec
+shotwell;digital photo organizer
+shotwell-common;digital photo organizer - common files
+simple-scan;Simple Scanning Utility
+slim;desktop-independent graphical login manager for X11
+snapd;Daemon and tooling that enable snap packages
+software-properties-common;manage the repositories that you install software from (common)
+software-properties-gtk;manage the repositories that you install software from (gtk)
+sound-icons;Sounds for speech enabled applications
+sound-theme-freedesktop;freedesktop.org sound theme
+speech-dispatcher;Common interface to speech synthesizers
+speech-dispatcher-audio-plugins:amd64;Speech Dispatcher: Audio output plugins
+speech-dispatcher-espeak-ng;Speech Dispatcher: Espeak-ng output module
+spice-vdagent;Spice agent for Linux
+squashfs-tools;Tool to create and append to squashfs filesystems
+ssl-cert;simple debconf wrapper for OpenSSL
+strace;System call tracer
+sudo;Provide limited super user privileges to specific users
+switcheroo-control;D-Bus service to check the availability of dual-GPU
+syslinux;collection of bootloaders (DOS FAT and NTFS bootloader)
+syslinux-common;collection of bootloaders (common)
+syslinux-legacy;Bootloader for Linux/i386 using MS-DOS floppies
+system-config-printer;graphical interface to configure the printing system
+system-config-printer-common;backend and the translation files for system-config-printer
+system-config-printer-udev;Utilities to detect and configure printers automatically
+systemd;system and service manager
+systemd-sysv;system and service manager - SysV links
+systemd-timesyncd;minimalistic service to synchronize local time with NTP servers
+sysvinit-utils;System-V-like utilities
+tar;GNU version of the tar archiving utility
+tcpdump;command-line network traffic analyzer
+telnet;basic telnet client
+thermald;Thermal monitoring and controlling daemon
+thunderbird;Email, RSS and newsgroup client with integrated spam filter
+thunderbird-gnome-support;Email, RSS and newsgroup client - GNOME support
+thunderbird-locale-en;English language pack for Thunderbird
+thunderbird-locale-en-us;Transitional English language pack for Thunderbird
+time;GNU time program for measuring CPU resource usage
+toilet;display large colourful characters in text mode
+toilet-fonts;collection of TOIlet fonts
+totem;Simple media player for the GNOME desktop based on GStreamer
+totem-common;Data files for the Totem media player
+totem-plugins;Plugins for the Totem media player
+tpm-udev;udev rules for TPM modules
+tracker;metadata database, indexer and search tool
+tracker-extract;metadata database, indexer and search tool - metadata extractors
+tracker-miner-fs;metadata database, indexer and search tool - filesystem indexer
+transmission-common;lightweight BitTorrent client (common files)
+transmission-gtk;lightweight BitTorrent client (GTK+ interface)
+tree;displays an indented directory tree, in color
+ttf-mscorefonts-installer;Installer for Microsoft TrueType core fonts
+tzdata;time zone and daylight-saving time data
+ubuntu-advantage-tools;management tools for Ubuntu Advantage
+ubuntu-desktop;The Ubuntu desktop system
+ubuntu-desktop-minimal;The Ubuntu desktop minimal system
+ubuntu-docs;Ubuntu Desktop Guide
+ubuntu-drivers-common;Detect and install additional Ubuntu driver packages
+ubuntu-keyring;GnuPG keys of the Ubuntu archive
+ubuntu-minimal;Minimal core of Ubuntu
+ubuntu-mono;Ubuntu Mono Icon theme
+ubuntu-release-upgrader-core;manage release upgrades
+ubuntu-release-upgrader-gtk;manage release upgrades
+ubuntu-report;Report hardware and other collected metrics
+ubuntu-restricted-addons;Commonly used restricted packages for Ubuntu
+ubuntu-restricted-extras;Commonly used media codecs and fonts for Ubuntu
+ubuntu-session;Ubuntu session with GNOME Shell
+ubuntu-settings;default settings for the Ubuntu desktop
+ubuntu-standard;The Ubuntu standard system
+ubuntu-wallpapers;Ubuntu Wallpapers
+ubuntu-wallpapers-focal;Ubuntu 20.04 Wallpapers
+ucf;Update Configuration File(s): preserve user changes to config files
+udev;/dev/ and hotplug management daemon
+udisks2;D-Bus service to access and manipulate storage devices
+ufw;program for managing a Netfilter firewall
+unattended-upgrades;automatic installation of security upgrades
+uno-libs-private;LibreOffice UNO runtime environment -- private libraries used by public ones
+unrar;Unarchiver for .rar files (non-free version)
+unzip;De-archiver for .zip files
+update-inetd;inetd configuration file updater
+update-manager;GNOME application that manages apt updates
+update-manager-core;manage release upgrades
+update-notifier;Daemon which notifies about package updates
+update-notifier-common;Files shared between update-notifier and other packages
+upower;abstraction for power management
+ure;LibreOffice UNO runtime environment
+usb-creator-common;create a startup disk using a CD or disc image (common files)
+usb-creator-gtk;create a startup disk using a CD or disc image (for GNOME)
+usb-modeswitch;mode switching tool for controlling "flip flop" USB devices
+usb-modeswitch-data;mode switching data for usb-modeswitch
+usb.ids;USB ID Repository
+usbmuxd;USB multiplexor daemon for iPhone and iPod Touch devices
+usbutils;Linux USB utilities
+util-linux;miscellaneous system utilities
+uuid-runtime;runtime components for the Universally Unique ID library
+va-driver-all:amd64;Video Acceleration (VA) API -- driver metapackage
+vdpau-driver-all:amd64;Video Decode and Presentation API for Unix (driver metapackage)
+vim;Vi IMproved - enhanced vi editor
+vim-common;Vi IMproved - Common files
+vim-runtime;Vi IMproved - Runtime files
+vim-tiny;Vi IMproved - enhanced vi editor - compact version
+vino;VNC server for GNOME
+wamerican;American English dictionary words for /usr/share/dict
+wbritish;British English dictionary words for /usr/share/dict
+wget;retrieves files from the web
+whiptail;Displays user-friendly dialog boxes from shell scripts
+whoopsie;Ubuntu error tracker submission
+whoopsie-preferences;System preferences for error reporting
+wireless-regdb;wireless regulatory database
+wireless-tools;Tools for manipulating Linux Wireless Extensions
+wpasupplicant;client support for WPA and WPA2 (IEEE 802.11i)
+x11-apps;X applications
+x11-common;X Window System (X.Org) infrastructure
+x11-session-utils;X session utilities
+x11-utils;X11 utilities
+x11-xkb-utils;X11 XKB utilities
+x11-xserver-utils;X server utilities
+xauth;X authentication utility
+xbitmaps;Base X bitmaps
+xbrlapi;Access software for a blind person using a braille display - xbrlapi
+xcursor-themes;Base X cursor themes
+xdg-dbus-proxy;filtering D-Bus proxy
+xdg-desktop-portal;desktop integration portal for Flatpak and Snap
+xdg-desktop-portal-gtk;GTK+/GNOME portal backend for xdg-desktop-portal
+xdg-user-dirs;tool to manage well known user directories
+xdg-user-dirs-gtk;tool to manage well known user directories (Gtk extension)
+xdg-utils;desktop integration utilities from freedesktop.org
+xfonts-base;standard fonts for X
+xfonts-encodings;Encodings for X.Org fonts
+xfonts-scalable;scalable fonts for X
+xfonts-utils;X Window System font utility programs
+xinit;X server initialisation tool
+xinput;Runtime configuration and test of XInput devices
+xkb-data;X Keyboard Extension (XKB) configuration data
+xml-core;XML infrastructure and XML catalog file support
+xorg;X.Org X Window System
+xorg-docs-core;Core documentation for the X.org X Window System
+xserver-common;common files used by various X servers
+xserver-xephyr;nested X server
+xserver-xorg;X.Org X server
+xserver-xorg-core;Xorg X server - core server
+xserver-xorg-input-all;X.Org X server -- input driver metapackage
+xserver-xorg-input-libinput;X.Org X server -- libinput input driver
+xserver-xorg-input-wacom;X.Org X server -- Wacom input driver
+xserver-xorg-legacy;setuid root Xorg server wrapper
+xserver-xorg-video-all;X.Org X server -- output driver metapackage
+xserver-xorg-video-amdgpu;X.Org X server -- AMDGPU display driver
+xserver-xorg-video-ati;X.Org X server -- AMD/ATI display driver wrapper
+xserver-xorg-video-fbdev;X.Org X server -- fbdev display driver
+xserver-xorg-video-intel;X.Org X server -- Intel i8xx, i9xx display driver
+xserver-xorg-video-nouveau;X.Org X server -- Nouveau display driver
+xserver-xorg-video-qxl;X.Org X server -- QXL display driver
+xserver-xorg-video-radeon;X.Org X server -- AMD/ATI Radeon display driver
+xserver-xorg-video-vesa;X.Org X server -- VESA display driver
+xserver-xorg-video-vmware;X.Org X server -- VMware display driver
+xterm;X terminal emulator
+xul-ext-ubufox;Ubuntu modifications for Firefox
+xwayland;Xwayland X server
+xxd;tool to make (or reverse) a hex dump
+xz-utils;XZ-format compression utilities
+yaru-theme-gnome-shell;Yaru GNOME Shell desktop theme from the Ubuntu Community
+yaru-theme-gtk;Yaru GTK theme from the Ubuntu Community
+yaru-theme-icon;Yaru icon theme from the Ubuntu Community
+yaru-theme-sound;Yaru sound theme from the Ubuntu Community
+yelp;Help browser for GNOME
+yelp-xsl;XSL stylesheets for the yelp help browser
+zenity;Display graphical dialog boxes from shell scripts
+zenity-common;Display graphical dialog boxes from shell scripts (common files)
+zerofree;zero free blocks from ext2, ext3 and ext4 file-systems
+zip;Archiver for .zip files
+zlib1g:amd64;compression library - runtime
