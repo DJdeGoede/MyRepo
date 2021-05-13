@@ -317,25 +317,27 @@ Control structures
 ==================
 if statement
 ------------
-    if condition    if condition    if [[...]]      if ((...))
-    then            then            then            then
-        script          script          script          script
-    fi              else            else            else
-                        script          script          script
-                    fi
+    if condition; then      if condition; then      if condition; then
+        script                  script                  script
+    fi                      else                    elif condition; then
+                                script                  script          
+                            fi                      else
+                                                        script
 
+For condition you can use [[...]] or ((..)) or a mix of them whatever you want :)
 Example:
     #!/usr/bin/env bash
     declare -i a=3
     
-    if [[ $a -gt 4 ]]   (or: (( $a > 4 )) )
-    then
+    if [[ $a -gt 4 ]]; then
         echo "$a is greater than 4."
+    elif (( $a > 2 )); then
+        echo "$a is greater than 2."
     else
         echo "$a is not greater than 4."        
     fi
 
-        
+
     
     
 
