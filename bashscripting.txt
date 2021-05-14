@@ -468,7 +468,16 @@ Example:
     
 Working with arguments
 ======================
+- Allows us to pass information into a script from the CLI
+- Are text that represent a string, a filename and so on
+- $0 is calling the script itself
 
+
+Example script test.sh:
+    #!/usr/bin/env bash
+    echo "Script $0 got the argument $1"
+    
+Run it: ./script.sh arg1    gives: 
    
     
     
