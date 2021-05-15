@@ -1,0 +1,6 @@
+Nano
+====
+Popular text editor on linux
+
+Start with line nrs: nano -l <file>
+
