@@ -470,14 +470,40 @@ Working with arguments
 ======================
 - Allows us to pass information into a script from the CLI
 - Are text that represent a string, a filename and so on
-- $0 is calling the script itself
+- $0 is calling the script itself, $1, $2 and so on are the arguments
+  (all arguments are separated by a space, if you want to have an argument with spaces then
+   surround it with double quotes).
+- $@ is the array for all arguments
 
 
 Example script test.sh:
-    #!/usr/bin/env bash
-    echo "Script $0 got the argument $1"
-    
-Run it: ./script.sh arg1    gives: 
+	echo "\$0 is the script itself: $0"
+	echo "There are $# arguments given:"
+
+	declare -i c=1
+	for i in $@; do
+		    echo "$c: $i"
+		    ((c++))
+	done
+   
+Options in bash scripting
+=========================
+- Allow us to pass information into a script from the CLI
+- Are a combination of a dash and a letter (like -u or -p)
+- Are accessed using the 'getopts' keyword
+- Can accept arguments of their own
+- Can be specified and used in any order
+
+Use: 
+	while getopts :u:p:ab option; do
+    	case $option in
+    		u) user=$OPTARG
+    		p) password=$OPTARG
+    		*) ......     <- when unknown
+
+
+
+
    
     
     
