@@ -17,6 +17,12 @@ Reload bash configuration
 -------------------------
     source ~/.bashrc
 
+Type special chars in terminal
+==============================
+Example: smart quotes (“”) = unicode 201c/201d
+- <Shift><Ctrl>+<u>, then type 201c followed by <space> for “ 
+  or 201d followed by <space> for ”.
+
 piping and redirecting
 ----------------------
 ls | wc        : counts the words as result from the directory listing
@@ -548,6 +554,8 @@ Force a certain format:
 Troubleshooting
 ===============
 - Read errors carefully
-
+- Observe line nrs in errors (nano -l or less -N to see line nrs)
+- Check quotes and escaping: '' are different than ""
+- Watch out for smart quotes (“”)
 
 
