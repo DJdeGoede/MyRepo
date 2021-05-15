@@ -19,3 +19,12 @@ done
 
 read -ep "Favourite colour? " -i "Blue" favcolour
 echo $favcolour
+
+read -ep "Favourite food? " favfood
+while [[ -z $favfood ]]; do
+	favfood="bread"
+	# read -ep "Favourite food? (I need an answer) " favfood
+done
+
+echo "Favourite food chosen: $favfood."
+

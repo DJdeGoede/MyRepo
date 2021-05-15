@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo "\$0 is the script itself: $0"
-
+echo "There are $# arguments given:"
 
 while getopts :u:p:ab option; do
 	case $option in
@@ -14,7 +14,6 @@ while getopts :u:p:ab option; do
 done
 
 echo "user: $user / password: $pass"
-echo "There are $# arguments given:"
 
 declare -i c=1
 for i in $@

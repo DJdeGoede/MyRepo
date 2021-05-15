@@ -519,6 +519,7 @@ Gathering input
 	read -p "<...>? " var   : read input into var on one line
 	read -e : read enire input as one var
 	read -ep "<...>? " -i "<default value>" var
+		example: read -ep "Favourite colour? " -i "Blue" favcolour
 
 - Use 'select' for a list of choices
 Examples:	
@@ -530,7 +531,14 @@ Examples:
 		break
 	done
 	
-	read -ep "Favourite colour? " -i "Blue" favcolour
+	read -p "Favourite animal? " fav
+	while [[ -z $fav ]]; do
+		read -p " I need an answer! " fav
+	done
+	
+	echo "$fav was selected."
+	
+	
 	
 
 
