@@ -494,12 +494,53 @@ Options in bash scripting
 - Can accept arguments of their own
 - Can be specified and used in any order
 
-Use: 
+Example: ./myscript -u Username -p password -a
+-u en -p get a value here
+-a and b don't get a value (switches)
+
+Script: 
+	#!/usr/bin/env bash
 	while getopts :u:p:ab option; do
     	case $option in
-    		u) user=$OPTARG
-    		p) password=$OPTARG
-    		*) ......     <- when unknown
+    		u) user=$OPTARG;;
+    		p) password=$OPTARG;;
+    		a) echo "got the a flag.";;
+    		b) echo "got the b flag.";;
+    		?) echo "I don't know what $OPTARG is!";;
+		esac
+	done
+	echo "user: $user / password: $password"
+	
+Gathering input
+===============
+- Use the 'read' keyword to store input in a variable
+	read var
+	read -s : hidden (you don't see the characters you typed)
+	read -p "<...>? " var   : read input into var on one line
+	read -e : read enire input as one var
+	read -ep "<...>? " -i "<default value>" var
+
+- Use 'select' for a list of choices
+Examples:	
+	#!/usr/bin/env bash
+	echo "Which animal"
+	select animal in "cat" "dog" "bird" "fish"
+	do
+		echo "You selected $animal!"
+		break
+	done
+	
+	read -ep "Favourite colour? " -i "Blue" favcolour
+	
+
+
+	
+
+
+
+
+
+
 
 
 
