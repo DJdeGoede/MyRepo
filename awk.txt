@@ -1,8 +1,61 @@
-
-
 AWK
 ===
 Designed for data filtering and manipulation tasks.
+Works best with (un)structured text files.
 Named after its inventors: Al Aho, Peter Weinberger and Brian Kernighan.
 
-This is a test
+Versions:
+- AWK (1978 - UNIX v7)
+- New AWK (nAWK) (1985 - UNIX System V)
+- GNU AWK (gAWK) (1990 and further - Linux)
+
+Logic:
+- awk sees each line as a record containing fields separated by a certain character (default space)
+- each field on a line is $n, so first word (field) is $1, second $2 and so on.
+- $0 is reserved for the full line (record)
+- awk contains of '<command>{<output>}' <file>
+
+Structure:
+awk <program>
+A program consists of a statement
+A statement consists of a pattern and/or action (must at least be one of the two)
+
+Examples:
+1. awk '/down/{print $2, $1}' names.txt
+2. awk -f swap.awk names.txt
+
+- in 1: '/down/{print $2, $1}' is the program; direct on the CLI
+- in 2: -f tells to read from a file, swap.awk is the program in a file called swap.awk
+- Both: /down/{print $2, $1}   is the statement
+- Both: /down/                 is the pattern
+- Both: {print $2, $1}         is the action (always enclosed in curly braces ({}))
+
+Examples:
+	awk '{print $2, $1}' names.txt      : print second then first field separated by a space from names.txt
+	awk '{print $2 ", " $1}' names.txt	: print second then first field separated by ", " from names.txt
+	awk '{print}' dukeofyork.txt        : print whole lines (also print $0 can be used)
+	awk '{print NF, $0}' dukeofyork.txt	: print number of fields followed by the whole line content
+
+Use filters:	
+	awk '/up/{print NF, $0}' dukeofyork.txt	 : show only the lines that have the word/field 'up'
+			(the // tell that the filter is a regular expression)
+	awk 'NF==6{print NF, $0}' dukeofyork.txt : show only the records that have 6 fields in them
+	awk 'NF==6' dukeofyork.txt               : show only records with 6 fields and print just the record
+
+Combine filters:
+	awk '/up/{print "UP: ", NF, $0} /down/{print "DOWN: ", NF, $0}' dukeofyork.txt
+	
+	
+
+
+Extras:
+
+First find the number of field, then sort them and show the line with the most fields (cut off field 1)	
+1. with the extra help of awk:
+- awk '{print NF, $0}' dukeofyork.txt | sort -n | tail -n1 | awk '{for (i=2; i<=NF; i++) printf $i " "}' 
+  && echo
+2. with the help of cut
+- awk '{print NF, $0}' dukeofyork.txt | sort -n | tail -n1 | cut -f 1 -d ' ' --complement
+
+
+	

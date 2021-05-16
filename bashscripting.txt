@@ -7,6 +7,10 @@ chsh            : change shell if you would like to (ksh, zsh etc)
 set -x          : shows each command that is executed before the execution (debug mode)
 set +x          : switch back to non-debug mode
 
+<ctrl><p>		: recall previous command
+<ctrl><b>		: cursor back
+<ctrl><f>		: cursor forward
+
 add locations to path:   export PATH="<path>:$PATH"
 if multiple separate them with a colon (:); always end with: :$PATH"
 
