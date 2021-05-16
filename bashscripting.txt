@@ -1,8 +1,11 @@
 Bash scripting
 ==============
-bash --version  : check version
+bash --version  : check version (or: echo $BASH_VERSION / $BASH_VERSINFO (only major version nr)
 echo $SHELL     : check current shell
 chsh            : change shell if you would like to (ksh, zsh etc)
+
+set -x          : shows each command that is executed before the execution (debug mode)
+set +x          : switch back to non-debug mode
 
 add locations to path:   export PATH="<path>:$PATH"
 if multiple separate them with a colon (:); always end with: :$PATH"
@@ -16,6 +19,12 @@ Set shell options with: shopt or set command
 Reload bash configuration
 -------------------------
     source ~/.bashrc
+
+Type special chars in terminal
+==============================
+Example: smart quotes (“”) = unicode 201c/201d
+- <Shift><Ctrl>+<u>, then type 201c followed by <space> for “ 
+  or 201d followed by <space> for ”.
 
 piping and redirecting
 ----------------------
@@ -548,6 +557,25 @@ Force a certain format:
 Troubleshooting
 ===============
 - Read errors carefully
+- Observe line nrs in errors (nano -l or less -N to see line nrs)
+- Check quotes and escaping: '' are different than ""
+- Watch out for smart quotes (“”)
+- Check spaces! [[$a-gt3]] does not work, [[ $a -gt 3 ]] does.
+- Case sensitivity: Myvar is not the same as myvar
+
+Portability
+===========
+- Check bash version to see if script can be used:
+  (remove the # at the end if you want to show a success message, or remove everything from '||')
+
+	[[ $BASH_VERSINFO -ge 4 ]] && echo "You'll need to have Bash 4 or higher." && exit || echo 
+	# "You use Bash 4 or higher, good!"
+
+- Check if tools are used that are not available:
+  (remove the # at the end if you want to show a success message, or remove everything from '||')
+
+	[[ ! -a $(which nmap) ]] && echo "This script uses nmap. which was not found on this system." 
+	&& exit || echo # "nmap found on your system."
 
 
 

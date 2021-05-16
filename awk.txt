@@ -1,0 +1,8 @@
+
+
+AWK
+===
+Designed for data filtering and manipulation tasks.
+Named after ist inventors: Al Aho, Peter Weinberger and Brian Kernighan.
+
+
