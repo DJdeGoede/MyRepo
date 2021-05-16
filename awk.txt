@@ -45,7 +45,106 @@ Use filters:
 Combine filters:
 	awk '/up/{print "UP: ", NF, $0} /down/{print "DOWN: ", NF, $0}' dukeofyork.txt
 	
+Flags
+-----
+	-f	use program in a file (no '' around the program needed in the file as it is not in bash
+	-F<sep character>	field separator (if not specified use space)
 	
+		echo 'one two three' | awk -F: '{print $2}    gives no result
+		echo 'one:two:three' | awk -F: '{print $2}    gives: two
+		echo 'one two:three' | awk -F: '{print $2}    gives: three
+		
+		You can also use tab separation like this: awk -F$'\t' '{print $2}'
+	
+	-v	use variable in program
+		
+		awk -v hi=HELLO '{print $1, hi}'
+
+Input and output
+----------------
+- Input from CLI: leave of the files at the end and you can supply input directly after
+  the awk command (end with <ctrl><d>)
+- Take input from one or more files:
+	awk '{print}' <file1> [<file2> ..]	: prints the files one by one as one output
+    awk '{print}' < <file1>
+
+- take input from another command:
+	uptime | awk '{print "System has been up for " $3 "\b hours"}'
+		(not that the \b (backspace) and then " " is used to get rid of the comma at the end of field 3) 
+	
+- output result to new file:
+	awk '{print NF, $0}' dukeofyork.txt > dukeofyork.awkout	
+
+Separators
+----------
+You have separators for fields and for records:
+- default field separator = space (" ") but if not specified it is actually any amount 
+  of white spaces/tabs (can be combined)
+- default record separator = newline ("\n")
+
+To set field separator use -F followed by a separator string (can be ',' but also '^next^'
+Can also be a regular expression; if you want to have a choice of two separator chars use:
+	-F '[,!]'  for checking both , or !
+
+You can also set the field separator by using awk variable FS like this:
+	awk 'BEGIN {FS=","} {print $2}
+	
+You can set the record separator RS like this:
+	awk 'BEGIN {RS="!";FS=","} {print $2}'
+		So: 1,2,3!4,5,6!7,8,9    will give 2,5 and 8	
+
+Special case: RS="" : means an empty line will be read as a record separator.
+This can be used to query on "address label" records:
+Imagine you have a file multiaddress.txt like this:
+
+	Naam1
+	Adres1
+	Plaats1
+	
+	Naam2
+	Adres2
+	Plaats2
+
+Now you can query it by using RS="" and using "]n" (newline) for each field as separator:
+
+- awk 'BEGIN{RS="";FS="\n"} {print $2}   to just print the adres1 field for each record.
+
+Now assign labels to the fields in the records:
+- awk 'BEGIN{RS="";FS="\n"} {naam=$1; adres=$2; plaats=$3; print naam", "adres", "plaats}
+
+This way you have transformed a label style file into a line style :) 
+
+You can set the output FS and RS as well via OFS and ORS variables:
+- awk 'BEGIN{OFS=",";ORS="^"} {print $2, $1}' names.txt
+- awk 'BEGIN{FS=",";OFS="\t"} {print$1,$2,$3}' nameemailavg.csv
+
+Built-in variables
+------------------
+NF 			: number of fields
+NR			: current record number
+FS / RS		: field separator / record separator
+FILENAME	: filename
+FNR         : current file record number
+
+Print the info on two files that are read in a row:
+- awk '{print NR" - file: "FILENAME ", recnr: "FNR ", content: "$0}' dukeofyork.txt names.txt
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
 
 
 Extras:
