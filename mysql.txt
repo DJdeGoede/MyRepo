@@ -1,0 +1,61 @@
+MySQL
+-----
+Check if MySQL is not already installed:
+1. ps ax | grep mysql   	: should return only this command as a process
+2. ls -al /usr/sbin/mysql*	: should return a no such file or directory
+3. ls -al /usr/bin/mysql*	: should return a no such file or directory
+4. ls -al /usr/lib/mysql*	: should return a no such file or directory
+5. ls -al /var/bin/mysql*	: should return a no such file or directory
+
+Install:
+- Got to https://dev.mysql.com/downloads
+- Choose  for MySQL community downloads
+- Select the MySQL APT Repository which is for Debian based Linux systems
+  like Ubuntu
+- Download the deb file to your ~/Desktop or anywhere else.
+- Go to that location in your terminal and type:
+    sudo dpkg -i <name downloaded file>
+- After some file action you get the Package configuration UI screen
+- select the top option: MySQL Server & Cluster
+- select mysql-8.0 
+- select MySQL Tools & Connectors and then Enabled
+- select Ok and you get back to the prompt 
+  (ignore the warning as long as it says OK at the bottom)
+- sudo apt-get update  to get the packages needed for install
+  (based on made choices above)
+- sudo apt-get -y install mysql-server
+- after some file action a UI appears
+- set root password: mysql
+- Use strong password encryption  and file action continues..
+- After some time the prompt returns and you are done :)
+
+To verify the install:
+- ps ax | grep mysql         : should return the /usr/sbin/mysqld process (daemon)
+- sudo service mysql status  : should return status info and Active (running)
+
+- Check if you can stop and start:
+    - sudo service mysql stop
+    - sudo service mysql start
+    - sudo service mysql restart (both in one go)
+    After verify the status with: sudo service mysql status
+    Also check via: ps ax | grep mysql : either gives a daemon or not
+    
+    
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
