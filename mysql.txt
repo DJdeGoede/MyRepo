@@ -40,7 +40,35 @@ To verify the install:
     After verify the status with: sudo service mysql status
     Also check via: ps ax | grep mysql : either gives a daemon or not
     
+Start mysql command prompt with:
+    mysql -u root -p    and enter the password
+    now you see a prompt mysql>
     
+    See if you can run a command:
+        show databases;
+    This should return the four databases: 
+        information_schema, mysql, performance_schema and sys
+    To exit the mysql prompt just type 'quit'.
+        
+Nice! :)
+
+Now install the MySQL workbench:
+    sudo apt-get install mysql-workbench-community
+
+
+    
+    
+
+
+
+        
+        
+        
+        
+        
+        
+    
+        
     
 
     
