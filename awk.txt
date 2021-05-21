@@ -121,11 +121,7 @@ You can set the output FS and RS as well via OFS and ORS variables:
 Built-in variables
 ------------------
 $0          : whole line/record
-<<<<<<< HEAD
 $1..$n      : nth field in the record   ($NF = automatically the last field in a record)
-=======
-$1 .. $n    : field nr
->>>>>>> 3b51d8310c779290277f0b665a85f197fea16ce2
 NF 			: number of fields
 NR			: current record number
 FS / RS		: (input) field separator / record separator
@@ -139,7 +135,7 @@ Print the info on two files that are read in a row:
 Number after $ can be replaced with a variable: $NF = automatically the last field in a record.
 So to print the field before the last field use: $(NF-1)
 - awk '{print $($1)' : the nr in the first field will decide which field will be printed ;-)
-=======
+
 You can use the variables also like this:
 - awk '{print $NF}'         prints the last field of each line/record
 - awk '{print $(NF-1)}'     prints the next to last field of each line/record
