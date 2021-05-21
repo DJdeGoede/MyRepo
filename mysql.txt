@@ -56,32 +56,19 @@ Now install the MySQL workbench:
     sudo apt-get install mysql-workbench-community
 
 
-    
-    
+Creating users and permissions
+------------------------------
+CREATE USER ' Bull'@'saturn.3sn.net' IDENTIFIED BY 'secret';
+
+SELECT CURRENT_USER()   : only user name
+SELECT USER()           : all info
+
+Using wildcards: % : any nr of chars, _ : one char
+           
 
 
-
-        
-        
-        
-        
-        
-        
-    
-        
-    
-
-    
-
-
-
-
-
-
-
-
-
-
+           
+           
 
 
 
