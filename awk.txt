@@ -120,6 +120,8 @@ You can set the output FS and RS as well via OFS and ORS variables:
 
 Built-in variables
 ------------------
+$0          : whole line/record
+$1..$n      : nth field in the record   ($NF = automatically the last field in a record)
 NF 			: number of fields
 NR			: current record number
 FS / RS		: field separator / record separator
@@ -129,7 +131,17 @@ FNR         : current file record number
 Print the info on two files that are read in a row:
 - awk '{print NR" - file: "FILENAME ", recnr: "FNR ", content: "$0}' dukeofyork.txt names.txt
 
+Number after $ can be replaced with a variable: $NF = automatically the last field in a record.
+So to print the field before the last field use: $(NF-1)
+- awk '{print $($1)' : the nr in the first field will decide which field will be printed ;-)
 
+Assign new values to a field:
+- awk '{$2="field2"; print}' dukeofyork.txt
+
+Add extra fields. 
+For each record the nr of fields will be added to reach the new field nr; so if you add field 250 then
+all records will suddenly have 250 fields ;-)
+- awk 'BEGIN{OFS="!"} {$11="Field11"; print NF, $0}' dukeofyork.txt
 
 
 
