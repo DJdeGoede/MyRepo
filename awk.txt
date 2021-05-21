@@ -136,7 +136,6 @@ FNR         : current file record number
 Print the info on two files that are read in a row:
 - awk '{print NR" - file: "FILENAME ", recnr: "FNR ", content: "$0}' dukeofyork.txt names.txt
 
-<<<<<<< HEAD
 Number after $ can be replaced with a variable: $NF = automatically the last field in a record.
 So to print the field before the last field use: $(NF-1)
 - awk '{print $($1)' : the nr in the first field will decide which field will be printed ;-)
