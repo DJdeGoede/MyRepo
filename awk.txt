@@ -146,12 +146,6 @@ You can use the variables also like this:
 - awk '{print $(NF-1)}'     prints the next to last field of each line/record
 - awk '{print $($1)}'       print the n-th field where n is read from the first field :)
 
-
-
-
-
->>>>>>> 3b51d8310c779290277f0b665a85f197fea16ce2
-
 Assign new values to a field:
 - awk '{$2="field2"; print}' dukeofyork.txt
 
