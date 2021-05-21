@@ -15,7 +15,9 @@ Install:
 - Download the deb file to your ~/Desktop or anywhere else.
 - Go to that location in your terminal and type:
     sudo dpkg -i <name downloaded file>
-- After some file action you get the Package configuration UI screen
+
+
+
 - select the top option: MySQL Server & Cluster
 - select mysql-8.0 
 - select MySQL Tools & Connectors and then Enabled
