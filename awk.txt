@@ -149,7 +149,8 @@ For each record the nr of fields will be added to reach the new field nr; so if 
 all records will suddenly have 250 fields ;-)
 - awk 'BEGIN{OFS="!"} {$11="Field11"; print NF, $0}' dukeofyork.txt
 
-
+User variables
+--------------
 
 
 
