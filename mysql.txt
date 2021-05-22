@@ -68,6 +68,28 @@ SELECT USER()           : all info
 Using wildcards: % : any nr of chars, _ : one char
            
 
+How to fully uninstall mysql and workbench
+------------------------------------------
+1. Make sure MySQL is not running:
+	- sudo systemctl stop mysql
+
+2. Purge all MySQL packages:
+	- sudo apt purge mysql-server mysql-client mysql-common mysql-server-core-* mysql-client-core-*
+	
+3. Delete all residual MySQL files:
+	- sudo rm -rf /etc/mysql /var/lib/mysql /var/log/mysql
+
+4. Finally clean all packages that are not needed:
+	- sudo apt autoremoved
+	- sudo apt autoclean
+	
+5. Remove MySQL Workbench:
+	- sudo apt-get remove mysql-workbench-community
+	- rm -r ~/.mysql/workbench/*
+
+
+
+
 
            
            
