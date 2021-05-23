@@ -2,7 +2,7 @@ Git
 ---
 
 Install GIT: 
-   sudo apt install git
+   sudo apt install git 
 
 Clone you remote repo to local and set the correct url:
    git clone git://github.com/DJdeGoede/MyRepo.git
