@@ -1,5 +1,11 @@
 MySQL
 -----
+General remarks
+---------------
+Using wildcards: % : any nr of chars, _ : one char
+
+Install mysql
+-------------
 Check if MySQL is not already installed:
 1. ps ax | grep mysql   	: should return only this command as a process
 2. ls -al /usr/sbin/mysql*	: should return a no such file or directory
@@ -15,9 +21,7 @@ Install:
 - Download the deb file to your ~/Desktop or anywhere else.
 - Go to that location in your terminal and type:
     sudo dpkg -i <name downloaded file>
-
-
-
+  A UI will appear.
 - select the top option: MySQL Server & Cluster
 - select mysql-8.0 
 - select MySQL Tools & Connectors and then Enabled
@@ -61,11 +65,22 @@ Now install the MySQL workbench:
 Creating users and permissions
 ------------------------------
 CREATE USER ' Bull'@'saturn.3sn.net' IDENTIFIED BY 'secret';
-
 SELECT CURRENT_USER()   : only user name
 SELECT USER()           : all info
 
-Using wildcards: % : any nr of chars, _ : one char
+SHOW DATABASES;
+USE <database>';
+
+Assigning access roles to users
+-------------------------------
+There is no UI in workbench for this.
+
+CREATE ROLE ' app_dev', 'app_read', 'app_write';
+CREATE USER 'read1'@'localhost' identified by 'temppass';
+GRANT 'app_read' to 'read1'@'localhost';
+SET DEFAULT ROLE 'app_read' TO 'read1'@'localhost';
+
+
            
 
 How to fully uninstall mysql and workbench
