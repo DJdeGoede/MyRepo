@@ -1,7 +1,7 @@
 Git
 ---
 
-Install GIT: 
+Install GIT:
    sudo apt install git 
 
 Clone you remote repo to local and set the correct url:
