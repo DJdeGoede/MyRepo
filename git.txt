@@ -1,7 +1,7 @@
 Git
 ---
 
-Install GIT: 
+Install GIT:
    sudo apt install git 
 
 Clone you remote repo to local and set the correct url:
@@ -16,8 +16,6 @@ Save your user and password:
       Last one is safer (also has scopes) and required soon!
       To keep active for 2 hours:
         git config --global credential.helper 'cache --timeout 7200'
-
-        current key: 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
 
 Make sure you are in the correct directory (needs to have the hidden .git file)
 Check current status:      git status
