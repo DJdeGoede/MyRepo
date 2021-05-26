@@ -1,0 +1,10 @@
+Linux: Shells and processes
+===========================
+
+Command execution process:
+
+     Keyboard  ->  terminal emulator  -> shell 
+                                          |
+                                          v
+screen <- terminal emulator <- shell <- kernel
+
