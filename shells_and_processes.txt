@@ -1,10 +1,83 @@
 Linux: Shells and processes
 ===========================
 
-Command execution process:
+Command execution process flow
+------------------------------
 
      Keyboard  ->  terminal emulator  -> shell 
                                           |
                                           v
 screen <- terminal emulator <- shell <- kernel
+
+Command execution order
+-----------------------
+For a command:
+1. Shell tries to run the built-in version
+2. Shell tries to run an alias of that command
+3. Shell tries to run the command on hard disk
+
+Shell types
+-----------
+When you use the keyboard to type in commands into a terminal window, such as 
+GNOME Terminal, these commands are translated by the shell into ones and zeroes 
+and sent to the kernel which then processes them. When the kernel finishes, 
+it sends the data back to the shell which translates the output back into text 
+which is displayed in the terminal emulator and output on the screen. 
+
+A shell allows you to execute operating system commands. 
+When a command is entered into the terminal, the shell checks to see 
+- if it's a built-in first, and if so, executes it. 
+- If it's not built-in, it will see if it's an alias of another command, 
+  configured by the OS or another user. 
+- If it's not built-in, or an alias, it will look for the command on the disk 
+  and try to execute it there. 
+- If it doesn't exist, it will say "command not found." 
+
+There is a standard for Unix-like operating systems called POSIX. 
+If you want to write your shell scripts to be portable, it may be advantageous 
+to write your shell scripts in a POSIX-compliant manner. 
+
+One of the first shells was the Bourne Shell, which came in out 1977. 
+It was fairly basic and POSIX-compliant. Bill Joy one of the founders of 
+Sun Microsystems wrote csh or the C Shell, which resembles the C language. 
+The Bourne Shell won out in popularity, and it's not recommended that we write 
+shell scripts in csh anymore. In 1983 ksh or the Korn Shell was introduced 
+adding job control and command history, which we'll talk about later in this course. 
+
+Later, Bash was introduced as a replacement for Bourne. If started with the correct 
+options, Bash is mostly POSIX compliant. Bash includes most of the original 
+functionality of the Bourne Shell, most of the additions of Korn Shell, as well 
+as some additional functionality of its own. 
+Bash is probably the default shell on more Unix systems than any other shell. 
+Most systems now run Bash 4. 
+
+Another popular shell is Dash. Dash is the Debian version of the Ash Shell 
+from NetBSD Unix. Its biggest claim to fame is that it's smaller and uses less 
+memory than Bash. Although it's popular on Debian-based distributions it isn't 
+easily installed on CentOs 7. 
+
+If interactivity is your interest you may want to check out Fish. 
+Fish has some interesting features like syntax highlighting on the command line 
+so you know if you've typed in the correct command. It also suggests commands, 
+options and paths. 
+
+The last shell we'll talk about is Zsh. Zsh has virtually identical features 
+to Bash, but is enhanced in several ways including better command and option 
+completion and better pattern matching. 
+
+Most of these shells can be installed using yum. For instance, to install Zsh, 
+you'd type into a terminal:
+- sudo apt install -y zsh 
+
+to change your shell, run the change shell command and follow the prompts. 
+Be sure to type in the whole path to the desired shell when prompted. 
+You type in 'chsh' and hit Enter. If will prompt you for the desired shell. 
+To use the new shell, you'll have to log out and log back in again. 
+There are a lot of interesting shell options in Linux. For interactive use, 
+you should try out the different shells to see what you like. 
+However, if you create shell scripts to automate tasks, the choice of a shell 
+becomes very important as the syntax of built-in design elements like loops, 
+conditionals and arrays will change depending on which shell you use. 
+Shell scripts written for one shell may not be compatible with another. 
+I would recommend at this time to keep using Bash and later explore other shells.
 
