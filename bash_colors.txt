@@ -1,0 +1,91 @@
+How to set colors in bash shell
+===============================
+
+1. First add the color settings to your bash config file:   
+
+    dircolors -b >> ~/.bashrc
+
+2. Open your bash config file and edit the string for LS_COLORS that has been added at the end.
+3. Configure like this:  
+
+    LS_COLORS="ow=01;90:di=01;90:......."  <key>=<code>;[<code>;<code>]
+    export LS_COLORS
+
+4. Examples (see keys and codes below):
+
+- di=01;90      = normal directories (di) bold and grey
+- ex=1;4;31;42  = executable files appear in bold underlined red text with a green background! (nice)
+
+
+LS_COLORS keys
+==============
+The keys below are assigned a colour pattern which is a semi-colon separated list of colour codes.
+
+Key	/etc/DIR_COLORS name	Notes
+----------------------------------
+no	NORMAL, NORM	        Global default, although everything should be something
+fi	FILE	                Normal file
+di	DIR	                    Directory
+ln	SYMLINK, LINK, LNK	    Symbolic link. If you set this to 'target' instead of a numerical value, the colour is as for the file pointed to.
+pi	FIFO, PIPE	            Named pipe
+do	DOOR	                Door
+bd	BLOCK, BLK	            Block device
+cd	CHAR, CHR	            Character device
+or	ORPHAN	                Symbolic link pointing to a non-existent file
+so	SOCK	                Socket
+su	SETUID	                File that is setuid (u+s)
+sg	SETGID	                File that is setgid (g+s)
+tw	STICKY_OTHER_WRITABLE	Directory that is sticky and other-writable (+t,o+w)
+ow	OTHER_WRITABLE	        Directory that is other-writable (o+w) and not sticky
+st	STICKY	                Directory with the sticky bit set (+t) and not other-writable
+ex	EXEC	                Executable file (i.e. has 'x' set in permissions)
+mi	MISSING	                Non-existent file pointed to by a symbolic link (visible when you type ls -l)
+lc	LEFTCODE, LEFT	        Opening terminal code
+rc	RIGHTCODE, RIGHT	    Closing terminal code
+ec	ENDCODE, END	        Non-filename text
+*.extension	 	            Every file using this extension e.g. *.jpg
+
+LS_COLORS colour codes and effects
+==================================
+Code	Effect/color              
+----------------------------------
+00	    Default colour
+01	    Bold
+04	    Underlined
+05	    Flashing text
+07	    Reversed
+08	    Concealed
+----------------------------------
+30	    Black text
+31	    Red text
+32	    Green text
+33	    Orange text
+34	    Blue text
+35	    Purple text
+36	    Cyan text
+37	    Grey text
+90	    Dark grey text
+91	    Light red text
+92	    Light green text
+93	    Yellow text
+94	    Light blue text
+95	    Light purple text
+96	    Turquoise text
+97	    White text
+----------------------------------
+40	    Black background
+41	    Red background
+42	    Green background
+43	    Orange background
+44	    Blue background
+45	    Purple background
+46	    Cyan background
+47	    Grey background
+100	    Dark grey background
+101	    Light red background
+102	    Light green background
+103	    Yellow background
+104	    Light blue background
+105	    Light purple background
+106	    Turquoise background
+107	    White background
