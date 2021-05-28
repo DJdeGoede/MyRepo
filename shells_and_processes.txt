@@ -93,16 +93,88 @@ and hit Enter.
 
 To see the shell variables we use the set command. Type in 'set' and hit Enter. 
 By default the set command shows shell functions as well as variables, 
-which can be quite long. To change the behavior of set do posix mode, 
-which doesn't show functions. Use the dash O posix option. 
-Type in 'set -o posix' and hit Enter.
-Now type in set again and let's pipe it to less. Here we can see all of the 
-shell variables without the shell functions. 
-To show the difference between environmental variables and shell variables, 
-let's set a variable in our shell. Press q to quit, and then type in 
-'VAR=TEST' and hit Enter. Now let's grep the output of set to view it. 
-Type in 'set | grep VAR' and hit Enter. And there it is. Now let's grep the output 
-of printenv. Type in printenv | grep VAR and hit Enter. And we can see that a variable is not a part of the environment. To turn a shell variable into an environmental variable we can just export it. Let's export the variable we just set. Type in export VAR and hit Enter. Verify with printenv. Type in printenv | grep VAR and hit Enter. And we can that our variable is now part of the environment. It isn't persistent since we didn't save it in a file. If we rebooted, it would disappear. To unset environmental variables, we can use the export command again. Type in export -n VAR and hit Enter. We can verify this by typing in printenv | grep VAR and hit Enter. We can see that the variable is no longer a part of the environment. To unset shell variables, we can use the unset command. Type in unset VAR and hit Enter. Earlier we changed a shell option by turning on posix mode by typing in set -o posix. We can view all shell options by typing in set -o and hit Enter. To unset any shell option, use +o. For instance, to unset posix mode, type in set +o posix and hit Enter. And we can verify this again by typing in set -o. We can change the value of environment and shell variables by setting them. We can also change bash options using the set command. However, these values only survive for the current login session. To make them persistent, we need to add them to one of the bash startup files. Bash stores it's configuration settings in multiple startup files. Different files are processed, depending on how the shell starts. When we log into Linux by typing in a password, Linux first executes the etc profile, which in turn executes scripts in /etc/profile.d These two items are the systemwide file and directories holding our environment and shell variables. Then bash executes the ._profile in the user's home directory, which holds environment and shell variables specific to the user. The local .bash_profile in turn executes the local .bashrc file which holds aliases and bash functions. In CentOS the local .bashrc also executes the systemwide /etc/bashrc file, which holds systemwide aliases and functions. When that is complete, it returns control back to the local .bashrc file in the user's home directory. The local .bashrc file holds aliases and functions specific to the user. Once all of this is done, the user logs in. If a user is already logged in and executes a shell script, it's executed in a shell, but it's not a login shell. Also, if a user is logged into the GUI and starts a shell, it's not a login shell. Generally speaking, a login shell requires entering a password or providing a login key. For non-login shells, only the users .bashrc gets run. Again on CentOS, the local .bashrc file executes the global /etc/bashrc file, which holds systemwide aliases and functions. Then it returns control back to the local .bashrc file again and finishes processing it. This file should contain aliases and functions specific to the user. Once this is all done, the shell starts. In summary, the various bash profile files are for environmental and shell variables useful for interactive logins. If you want to set a variable for all users, set it in either the /etc/profile or a script in /etc/profile.d. If you want to set a variable specific to a user, change it in the user's .bash_profile. If you want to add aliases or functions for all users, add them to the /etc/bashrc. If you want to add aliases or functions specific to a user, add them to the user's .bashrc. It's important to note that when you add aliases or functions to the user's .bashrc file, be sure to add them to the end of the file after /etc/bashrc has been called to override systemwide system aliases and functions.
+which can be quite long. 
+
+To change the behavior of set do posix mode, which doesn't show functions. Use the dash O posix option. 
+Type in 'set -o posix' and hit Enter. Now type in set again and let's pipe it to less. 
+Here we can see all of the shell variables without the shell functions. 
+
+To show the difference between environmental variables and shell variables, let's set a variable in 
+our shell. Press q to quit, and then type in 'VAR=TEST' and hit Enter. 
+Now let's grep the output of set to view it. 
+Type in 'set | grep VAR' and hit Enter. And there it is. Now let's grep the output of printenv. 
+
+Type in 'printenv | grep VAR' and hit Enter. 
+And we can see that a variable is not a part of the environment. 
+To turn a shell variable into an environmental variable we can just export it. 
+Let's export the variable we just set. Type in export VAR and hit Enter. Verify with printenv. 
+Type in printenv | grep VAR and hit Enter. And we can that our variable is now part of the environment. 
+It isn't persistent since we didn't save it in a file. If we rebooted, it would disappear. 
+
+To unset environmental variables, we can use the export command again. 
+Type in 'export -n VAR' and hit Enter. 
+We can verify this by typing in printenv | grep VAR and hit Enter. 
+We can see that the variable is no longer a part of the environment. 
+To unset shell variables, we can use the unset command. 
+Type in 'unset VAR' and hit Enter. 
+
+Earlier we changed a shell option by turning on posix mode by typing in set -o posix. 
+We can view all shell options by typing in set -o and hit Enter. To unset any shell option, 
+use +o. For instance, to unset posix mode, type in 'set +o posix' and hit Enter. 
+And we can verify this again by typing in set -o. We can change the value of environment and 
+shell variables by setting them. 
+
+We can also change bash options using the set command. However, these values only survive for 
+the current login session. To make them persistent, we need to add them to one of the bash startup files. 
+Bash stores it's configuration settings in multiple startup files. Different files are processed, 
+depending on how the shell starts:
+
+1. /etc/profile
+When we log into Linux by typing in a password, Linux first executes the etc profile ..
+
+2. /etc/profile.d
+.. which in turn executes scripts in /etc/profile.d. These two items are the systemwide file and 
+directories holding our environment and shell variables. 
+
+3. ~/.bash_profile
+Then bash executes the ._profile in the user's home directory, which holds environment and shell 
+variables specific to the user. 
+
+4. ~/.bashrc
+The local .bash_profile in turn executes the local .bashrc file which holds aliases and bash functions. 
+In CentOS the local .bashrc also executes the systemwide /etc/bashrc file, which holds systemwide aliases 
+and functions. When that is complete, it returns control back to the local .bashrc file in the user's 
+home directory. The local .bashrc file holds aliases and functions specific to the user. 
+
+Once all of this is done, the user logs in. If a user is already logged in and executes a shell script, 
+it's executed in a shell, but it's not a login shell. Also, if a user is logged into the GUI and starts 
+a shell, it's not a login shell. Generally speaking, a login shell requires entering a password or 
+providing a login key. For non-login shells, only the users .bashrc gets run. Again on CentOS, the local 
+.bashrc file executes the global /etc/bashrc file, which holds systemwide aliases and functions. 
+Then it returns control back to the local .bashrc file again and finishes processing it. This file 
+should contain aliases and functions specific to the user. 
+
+Once this is all done, the shell starts. 
+
+In summary, the various bash profile files are for environmental and shell variables useful for 
+interactive logins:
+- If you want to set a variable for all users, set it in:
+	- /etc/profile    or
+	- /etc/profile.d 
+- If you want to set a variable specific to a user, change it in: 
+	- the user's .bash_profile. 
+- If you want to add aliases or functions for all users:
+	- add them to the /etc/bashrc. 
+- If you want to add aliases or functions specific to a user: 
+	- add them to the user's .bashrc. 
+	
+! - It's important to note that when you add aliases or functions to the user's .bashrc file, be sure 
+to add them to the end of the file after /etc/bashrc has been called to override systemwide 
+system aliases and functions.
+
+Shell tips and tricks
+---------------------
+
 
 
 
