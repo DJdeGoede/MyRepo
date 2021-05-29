@@ -75,7 +75,7 @@ Shell scripts written for one shell may not be compatible with another.
 I would recommend at this time to keep using Bash and later explore other shells.
 
 Variables and shell environment
--------------------------------
+===============================
 There are two types of variables accessible in a shell session. 
 
 - Environmental variables: defined for the current shell and inherited by 
@@ -173,13 +173,127 @@ to add them to the end of the file after /etc/bashrc has been called to override
 system aliases and functions.
 
 Shell tips and tricks
----------------------
+=====================
+It helps to know some tips and tricks when using the Linux shell. 
+Let's talk about some pathname shortcut locations, or pathname expansions. 
 
+pwd 
+To verify where we are in the file system, type in 'pwd' into a terminal. This shows that we're in our home directory. 
 
+cd ..
+Now type in 'cd ..' and type in 'pwd' again to verify. Typing in cd .. takes us to our parent directory 
+which is one higher in the directory tree than where we were. 
 
+cd .
+Another shortcut is cd . Type in cd . and hit Enter. Now type in 'pwd' to verify, and we can see that 
+we are in the same location. The single dot is a shortcut to our current directory. The dot isn't very 
+useful for the cd command, but often we want to copy files to our current directory. 
+Instead of typing in the whole path, we could just use dot. 
 
+cd ~
+Now type in cd ~ and hit Enter, and then type in pwd to verify our path. The tilde takes us to our 
+home directory. 
 
+cd -
+Now type in cd - and hit Enter. We don't have to type pwd after cd - as it tells us where we are. 
+Type in cd - again, and you can see that it takes us back to our home directory. cd - just takes you 
+to the previous directory or the last one you were in. 
 
+Using pathname expansion can be a great time-saver for Linux users. 
+
+clear (or <ctrl><l>)
+If you want to clear the screen, type in clear. 
+
+cmd completion (<tab> once for completion or twice to see choice)
+--------------
+Another productivity trick for Bash is command line completion. To set this up, let's go back to 
+our home directory by typing in cd ~ and then typing in ls to get a directory listing. 
+To use command line completion, we'll use our Tab key. The purpose of the Tab key is to complete the 
+line for us so we don't have to type it in again. Type in cd M and then hit the Tab key, and you'll see 
+that the line is completed for us. If we have one directory starting with a capital m, Bash will complete 
+the line for us. However, if there's more than one possible choice Bash will give us an option, but only 
+after we've pressed Tab twice. Let's backspace our line all the way to the beginning. And then type in 
+cd D and hit your Tab key twice. You see that we have three different choices: Desktop, Documents and 
+Downloads. Bash wants us to type in a unique character, so type in the e and hit your Tab key again. 
+And now it can complete the line. 
+
+moving in a cmd line (<Home>, <End>, <alt><b>, <alt><f>
+--------------------
+To quickly move between the beginning and end of the line, just use the Home and End keys. 
+So, press the Home key, and you can see that your cursor moves to the beginning. End key takes you to 
+the end. If you just want to move one word at a time, you can press alt + b to go backwards and 
+alt + f to go forwards.
+
+Remark:
+<ctrl><u> removes everything before the cursor
+<ctrl><k> removes everything after the cursor
+
+Shell history tricks
+====================
+
+The Shell keeps track of the command history. Useful commands/variables:
+
+up/down : browse through history
+history	: show all commands you used (default set to 500 or 1000 items depending on config)
+!!    	: Bring back the entire last line from the history
+sudo !!	: Run the previous command with prefix 'sudo ' (run previous command as super user)
+!-<nr>  : Show x-th command from the bottom (!-4 : execute the 4th command before the last one)
+!<nr>   : Run a specific command (!73 : run command from history list with nr 73)
+!<text> : find command starting with <text>
+!*		: use arguments from previous line
+			You can use it within a command line as variable:
+			1. printenv HISTCONTROL    (parameter = HISTCONTROL)
+			2. export !*="ignoreboth"  (will run: export HISTCONTROL="ignoreboth")
+
+ctrl+r	: reverse i-search (= history search mode)
+			- type text and command starting with that text show up
+				- enter			  : run line
+				- arrow left/right: edit it
+				- ctrl+r		  : continue search 
+
+Configure shell history
+=======================
+
+Control the history config via shell variables.
+- Use  export <variable>=<value>  to set it
+- Use  export <variable>=""       to unset it
+
+You can use:
+- export HISTCONTROL=ignorespace	: if command line starts with space don't store it in the history
+- export HISTCONTROL=ignoredups 	: ignore new duplicate entries
+- export HISTCONTROL=erasedups 		: remove existing duplicates from history
+- 
+Combine them:  export HISTCONTROL="erasedups:ignorespace"
+
+There are some lines that you might never want to have in the history, such as the history command itself. 
+To keep certain lines from being recorded, we can place them in the hist ignore variable. 
+Type in 'export HISTIGNORE="history*"; this is going to ignore any lines that start with the word history 
+and are followed by any number of characters, hit enter. We can test this by typing in history again, 
+and hit enter. Let's test this by typing in history again, and hit enter. We can see that there's no lines 
+being added for the command history.
+
+We can also add several patterns to the HISTIGNORE variable by separating them with a colon. 
+Type in 'export HISTIGNORE="history*:ls*" and hit enter. Now it should ignore any lines starting with 
+the word history or the word ls. 
+
+If we want a better log of our commands and history, including time stamps, we can change the variable 
+HISTTIMEFORMAT. Type in 'export HISTTIMEFORMAT="%h %d %H:%M:%S> ". What this does is add the date and time 
+to your history items. Type in history and hit enter. To get the list of possible variables, check demand 
+page for strftime, by typing in 'man strftime' and hitting enter. 
+You can see the variables that are available to customize your date and time format. Press q to quit. 
+
+By default our history file's 1,000 lines. If you'd like to increase this, we can change the value of 
+the HISTSIZE variable, type in 'export HISTSIZE=10000' and hit enter. If you wanted it unlimited, 
+we can set it to a negative value, such as -1. 
+
+If we want to turn off recording of our history, we'd set it to zero, when we exit our shell, 
+our history is saved and the file named .bash_history, in our home directory. We can choose how many lines
+are saved in this file by changing the HISTFILESIZE variable, type in 'export HISTFILESIZE equals 10,000. 
+Set this to zero if you want to turn off saving of your command history on the disk. 
+All of these changes we've made so far are just for our current login session, to make them persistent 
+so they're set when we log in, we need to add them to our bash profile using a text editor, I'll use VI for this. Type in vi space tilda, slash dot bash underscore profile and hit enter. We'll want to go down to the bottom of the file, go into insert mode by pressing the i, or the insert key and hit enter, now let's add a few of our variables. Type in HISTCONTROL equals double quote, erase, dups, colon, ignore space, double quote. We can also add a HISTIGNORE in here by typing HISTIGNORE equals double quote, history, asterisk, double quote. You can add the other variables as well if you'd like. Now let's save this file by pressing escape, colon, wq and hit enter. We can change other attributes of the shell by entering them in the bash profile as well.
+
+To undo the changes just send an empty string to the variable, like 'HISTIGNORE=""'
 
 
 
