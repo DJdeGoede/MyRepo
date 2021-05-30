@@ -17,7 +17,8 @@ Use the xrandr tool to do this.
 Check current output: sudo xrandr -q (you will see the Virtual1 as monitor here)
 
 1. Calculate the values for a required resolution and refresh rate.
-    Use command cvt or gtf (cvt is newer than gtf)
+    Use command cvt or gtf (cvt is newer than gtf):
+
     cvt 1920 1080 60
     
     Output:
@@ -45,6 +46,7 @@ Check current output: sudo xrandr -q (you will see the Virtual1 as monitor here)
    Check if HW rendering/acceleration is used: glxinfo | grep "direct rendering"
    You can also quickly see this in the overview from glxinfo -B
    Output should be: direct rendering: Yes
+
 
 
 
