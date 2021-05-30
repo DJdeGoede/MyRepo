@@ -357,4 +357,42 @@ Group patterns:
 - !(+(photo|file)*+(.jpg|.gif)) : grouped two different patterns in one match. Matches all files that 
 								  do not start with photo or file and don't end with .jpg or gif. 
 
+Escape characters and quotes
+============================
+The bash shell has characters called meta-characters that have special meaning:
+<, >, ^, $, ., *, ?, [], |, {}, (), +, \, '', "" 
 
+echo My name is $USER	: My name is <user>
+echo "My name is $USER"	: My name is <user>  (same)
+
+However:
+	echo 'My name is $USER'	: My name is $USER
+
+Single quotes tell the shell to present the characters inside literally. 
+Use them when you want to search for special characters so you don't have to escape them.
+Example: grep '.*/udp' /etc/services 
+
+Escape one character with \ :
+- echo \$USER  gives $USER  
+- echo '\' 		: by surrounding the backslash with single quotes, we escaped it. 
+- echo \'text\'	: 'text'; we used backslashes to escape the single quotes.
+
+Brace and path substitution
+===========================
+In Chapter One of this course we talked about using dot and dot dot as short cuts to the current directory 
+and the parent directory. These short cuts are provided by the file system. We can see these by showing 
+hidden files with LS: ls -la
+
+There is another way of expanding the path to include these directories and more using bash path substitution. 
+The ~ allows us to expand the path to include directories like the users home, the current directory, 
+parent directory, or even the previous directory. 
+
+echo ~  		: show own home dir
+echo ~root		: show homedir of another user (here root)
+echo ~+			: current dir (same as pwd)
+echo ~-			: show previous dir 
+
+Expand to any directory in the list: 
+- use the pushd command to put directories in the list (stack) first:  pushd <directory>
+- Use 'dirs' to list the directories in the stack. 
+Now, use tilde substitution to access them. We have to supply a directory number starting from zero so type in echo space tilde zero and hit enter. The tilde hyphen expansion allows us to bounce between two directories. This allows us to bounce between any number of directories. Type in echo space tilde one and hit enter. We can use these with any command. For instance if we wanted a CD to a directory we type in C D space tilde zero and hit enter. C D space tilde one and hit enter. To remove items from the list use pop D. Let's view our list again using dirs. Type in pop D space plus one and hit enter. This removes the second item from the list, remember that we're counting from zero so the left most item is item zero. Another great tool is brace expansion. By using braces we can provide whole word patterns. For instance, if we type echo space S left curly bracket P E comma P I right curly bracket L L and hit enter, it echos both spell and spill. This works by expanding the characters in the braces. For each character in the brace, it expands the word inserting that character or characters into the word, so we end up with spell and spill. Note: this does not work inside of quotes. Bring your line back and insert quotes before the S and after the last L and hit enter.
