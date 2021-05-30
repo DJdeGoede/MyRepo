@@ -276,7 +276,31 @@ Combine them (use colon):
 - export HISTSIZE=0				: stop keeping track of history
 - export HISTFILESIZE=10000		: set how many lines are saved in the ~/.bash_history file
 
+Pattern matching with globs
+===========================
 
+One of the reasons that manipulating files on the command line can be faster and more efficient than 
+the GUI is pattern matching. In Bash, pattern matching is called file globbing, and all commands can use it. 
+
+File globs allow us to match patterns. For instance, if we wanted to list config files, we could match 
+files ending in .conf by using an asterisk:  ls /etc/*.conf 
+
+- * 	: matches any type of character and any number of them. 
+- ? 	: matches any type of character but only one of them;
+          if you want to match two characters, you're going to have to include two question marks. 
+- [..]  : match a range or a list of characters with a set using square brackets. 
+          Each set matches exactly one character, but that one character can be any of the items in the 
+          range or list. By placing a hyphen (-) between the start and ending characters, we can create 
+          a range. Without the hyphen, the characters are treated as a list. 
+          
+          Examples: 
+          - file[0-9].txt       : match file1.txt, file2.txt. Without the hyphen, it becomes a list. 
+		  - file[abc123].jpg 	: match filea, fileb, and file3, and so on. 
+		  
+		  If we want to match a hyphen, then we need to include the hyphen at the beginning 
+		  or end of the list of characters in the set. 
+- !..	: does NOT match character(s) followingWe can also negate characters to match by placing an exclamation mark inside the set. 
+			For instance, to not match a number that's zero through nine we'd use [!0-9]. Linux also provides us a mechanism for matching certain character classes. With character classes, we have a bit more power than standard sets. To match numbers, use [:digit:]. To match uppercase letters, we can use the [:upper:] character class. For lowercase characters, we can use a [:lower:] character class. If you want to match both upper and lower characters, use the [:alpha:] character class. To match uppercase, lowercase, and digits, use the [:alnum:] character class. The next one is a bit more difficult to do without a character class. To match whitespaces such as spaces, tabs, and newlines, use the [:space:] character class. For printable characters not including spaces, use the [:graph:] character class. And for printable characters including spaces, use the [:print:] character class. To only match punctuation, use the [:punct:] character class and for nonprintable characters, [:cntrl:] character class. And lastly, to match hexadecimal characters, use the [:xdigit:] character class. The character class equivalent to [0-9] is [:digit:]. It's longer to type but more reliable. Keep in mind that you need to place the character class inside additional square brackets of a set. So you'd actually type in [[:digit:]]. To match more than one character class, just include all desired character classes inside the set. For example, to match both digits and spaces, we could place both the digit and space character classes in the set. We can also negate a class. If we want to match everything but digits, place an exclamation mark between the outer square brackets of the set and the inner square brackets of the character class. Note, using the exclamation point inside the outer square brackets negates everything inside of them including multiple character classes. Keep in mind that all sets whether they're ranges, lists, or character classes match exactly one character. We're just determining which character can be in that position. If we want to match whole words instead of just letters, we can use brace expansion. For instance, type in ls {*.jpg,*.gif,*.png} This will match any word ending in .jpg, any that ends in .gif, or any that ends in .png.
 
 
 
