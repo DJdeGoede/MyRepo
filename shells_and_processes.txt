@@ -299,8 +299,62 @@ files ending in .conf by using an asterisk:  ls /etc/*.conf
 		  
 		  If we want to match a hyphen, then we need to include the hyphen at the beginning 
 		  or end of the list of characters in the set. 
-- !..	: does NOT match character(s) followingWe can also negate characters to match by placing an exclamation mark inside the set. 
-			For instance, to not match a number that's zero through nine we'd use [!0-9]. Linux also provides us a mechanism for matching certain character classes. With character classes, we have a bit more power than standard sets. To match numbers, use [:digit:]. To match uppercase letters, we can use the [:upper:] character class. For lowercase characters, we can use a [:lower:] character class. If you want to match both upper and lower characters, use the [:alpha:] character class. To match uppercase, lowercase, and digits, use the [:alnum:] character class. The next one is a bit more difficult to do without a character class. To match whitespaces such as spaces, tabs, and newlines, use the [:space:] character class. For printable characters not including spaces, use the [:graph:] character class. And for printable characters including spaces, use the [:print:] character class. To only match punctuation, use the [:punct:] character class and for nonprintable characters, [:cntrl:] character class. And lastly, to match hexadecimal characters, use the [:xdigit:] character class. The character class equivalent to [0-9] is [:digit:]. It's longer to type but more reliable. Keep in mind that you need to place the character class inside additional square brackets of a set. So you'd actually type in [[:digit:]]. To match more than one character class, just include all desired character classes inside the set. For example, to match both digits and spaces, we could place both the digit and space character classes in the set. We can also negate a class. If we want to match everything but digits, place an exclamation mark between the outer square brackets of the set and the inner square brackets of the character class. Note, using the exclamation point inside the outer square brackets negates everything inside of them including multiple character classes. Keep in mind that all sets whether they're ranges, lists, or character classes match exactly one character. We're just determining which character can be in that position. If we want to match whole words instead of just letters, we can use brace expansion. For instance, type in ls {*.jpg,*.gif,*.png} This will match any word ending in .jpg, any that ends in .gif, or any that ends in .png.
+- !..	: does NOT match character(s) following. We can also negate characters to match by placing an 
+		  exclamation mark inside the set. 
+		  - [!0-9]  : not match a number that's zero through nine
 
+Character classes:
+  Linux also provides us a mechanism for matching certain character classes:
+	- [:digit:] : match numbers
+	- [:upper:] : match uppercase letters
+	- [:lower:] : match lowercase characters 
+    - [:alpha:] : both upper and lower characters. 
+	- [:alnum:] : match uppercase, lowercase, and digits
+	- [:space:] : match whitespaces such as spaces, tabs, and newlines
+	- [:graph:] : printable characters not including spaces
+	- [:print:] : printable characters including spaces 
+	- [:punct:] : match punctuation
+	- [:cntrl:] : match nonprintable characters
+	- [:xdigit:]: to match hexadecimal characters
+
+	Examples:
+	- ls file[0-9].txt    : is the same as: ls file[[:digit:]].txt
+	- ls file[![:digit:]] : will match filea.txt, but not file1.txt
+
+	[![:digit:]]	
+	Note, using the exclamation point inside the outer square brackets negates everything inside of them 
+	including multiple character classes. Keep in mind that all sets whether they're ranges, lists, or 
+	character classes match exactly one character. 
+	
+This is all for SINGLE characters.
+To use RANGES you need to use brace extension: {..}:
+- ls {*.jpg,*.gif,*.png}	: match anything ending in .jpg, .gif, or .png
+
+Pattern matching with extended globs
+====================================
+In addition to standard globs, bash allows us to use extended globs. 
+Extended globs give us more pattern matching power: 
+	- specify nr of occurences to match
+	- grouping matches
+	- patterns can be more than one character
+	- match one pattern or another
+	- zero or one occurences of a match
+
+Manage this as shell option 'extglob' via 'shopt'
+- Turn on : shopt -s extglob   (turn off with shopt -u extglob , but why would you? ;-) )
+	
+To make this persistent, put it in your bash startup file. 
+
+Examples:
+- file?(abc).txt	: match zero or one occurrence of the letters abc: file.jpg, fileabc.jpb
+- file*(abc).jpg	: match zero or more occurrences of the letters abc: file.jpg, fileabc.jpg, fileabcabc.jpg
+- file+(abc).txt	: match one or more occurrence; would match fileabc.txt and also fileabcabc.txt
+					  (so abc, abcabc, abcabcabc etc..)
+- +(*.jpg|*.gif)	: match files that end in .jpg or .gif
+- !(*.jpg|*.gif)	: match all files NOT ending on .jpg or .gif
+
+Group patterns:
+- !(+(photo|file)*+(.jpg|.gif)) : grouped two different patterns in one match. Matches all files that 
+								  do not start with photo or file and don't end with .jpg or gif. 
 
 
