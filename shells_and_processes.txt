@@ -408,13 +408,303 @@ Note: this does not work inside of quotes.
 Bring your line back and insert quotes before the S and after the last L and hit enter.
 
 Command and variable substitution
----------------------------------
-echo "my name is $USER"		: outputs the text my name is followed by the value and the user variable. 
-We can also use it for commands substitution:
+=================================
+echo "my name is $USER" outputs the text my name is followed by the value and the user variable. 
+Examples or variable substitution:
 - pdir="/tmp/files/today"	-> mkdir -p $pdir		(-p = for creating parent dir if needed)
 - ls -d $pdir   : check if it indeed exists 		(-d is for showing a dir, not the contents)
 - fname="report"				-> ls -l $fname			(-l is long listing format, not just the name)
-- touch $pdir/${fname}_january	-> ls -l "$(pdir)/${fname}_
+- touch $pdir/${fname}_january	-> ls -l "$(pdir)/${fname}_January
 
-Placing quotes around our strings and braces around variable names makes Dash variables much more reliable. 
-For instance, typing in LS space dash L, space, double quote, dollar sign, left curly bracket, pdir, right curly bracket, slash, dollar sign, left curly bracket, fname, right curly bracket, _January, double quote, ends up being very reliable. 
+We can also use it for command substutution.
+Put the command between parentheses or backticks:
+
+- echo "my name is $(whoami)"   is the same as
+- echo "my name is `whoami`"
+
+Placing quotes around strings and braces around variables makes dash variables much 
+more reliable. For instance, use:  ls -l "${pdir}/${fname}_January" 
+
+Named and unnamed pipes
+=======================
+A pipe (|) is a way of one program communicating with another. 
+Common use: take the output of one command and send it to the input of another command. 
+
+For instance:  
+- grep tcp /etc/services | less 
+- grep tcp /etc/services | awk '{print $1}' | sort | less 
+
+This type of pipe is considered an unnamed pipe. 
+This is a direct connection between two commands running in the SAME terminal. 
+
+If we want to send output from a command in one terminal to another command in a 
+different terminal, we can use a named pipe or FIFO. 
+FIFO stands for first in, first out. This is a pipe that exists in the file system. 
+The pipe acts like a file on a disc that one process can write to, while another 
+reads from. A named pipe is still a direct connection between programs. It just 
+uses the file system as an interface. 
+
+When one process is writing to the named pipe, its output gets blocked until the 
+receiving process starts reading it. Let's take a look at how this works. To set 
+this up, let's open a second terminal.
+- In the left-hand terminal, type in: mkfifo named_pipe   (can be any name)
+  This makes a pipe called named_pipe. 
+- Now, let's send some data to this pipe using echo and a redirect. 
+  Type in: echo "Hi"'> named_pipe 
+  Notice that we don't get our terminal back. This is because the I/O is being blocked. 
+  The echo command can't finish printing the word Hi until another process reads it 
+  from the named pipe. 
+- Now, in the second terminal, type:  cat named_pipe 
+  We see that as soon as cat reads the output from the named pipe, the echo command 
+  was able to finish. We can use named pipes to send output from one command in 
+  the OS, to another command without them running in the same shell, or even by the 
+  same user. 
+  
+  In the directory you can receignize a named pipe with a 'p' as left-most character.
+  (type in ls -l named_pipe to check). You can remove it with 'rm' like a regular file.
+
+File redirects and tees
+=======================
+To redirect use > to add&replace and >> to append.
+available redirect channels are:
+- stdin    			input	<
+- stdout			output  1>  (or just >)
+- stderr			errors  2>
+- both out and err	both  	&>
+
+To get rid of output redirect it to: /dev/null
+
+Redirect to a file	: echo hello > output.txt
+Append to a file	: echo hello >> output.txt
+Read and add		: sort < output.txt > sorted_output.txt
+
+Use 'tee' to output to a file and use the result to go further.
+This makes it possible to save something without breaking the 'pipe chain'
+Example:
+- sudo find /etc 2> etcerr.txt | sort | tee etcsort.txt | wc -l
+		1. first find all /etc entries and send the errors to file etcerr.txt
+		2. The rest is sorted
+		3. save them to a file etcsort.txt AND pass the result further
+		4. count the lines 
+
+This will:
+- save all error lines to etcerr.txt
+- the successful lines will be sorted and saved to etcsort.txt
+- then ALL lines will be counted and shown
+
+Introduction to processes
+=========================
+On Linux a process is a program loaded into memory:
+- a process is a running instance of a program (which allocates memory)
+- each process gets a process id: PID
+- each process has a parent process (with id PPID) that started it. 
+  Example:  ps -eF  
+
+	UID        PID  PPID  C    SZ   RSS PSR STIME TTY          TIME CMD
+	root         1     0  0   225   584   7 13:55 ?        00:00:00 /init
+	root       111     1  0   225    92   2 14:16 ?        00:00:00 /init
+	root       112   111  0   225    92   4 14:16 ?        00:00:00 /init
+	djdegoed   113   112  0  2708  5964   0 14:16 pts/0    00:00:02 -bash
+	djdegoed   357   113  0  2656  3340   3 16:31 pts/0    00:00:00 ps -eF
+
+- process 357 was started by process 113, 113 by 112, 112 by 111 and so on.
+
+To start a process in the background use '&' behind the command
+It will be created with a process id and a job nr.
+To show running jobs: jobs -l
+
+To activate a background job use    : fg %<job nr>
+To set a job back to the background : ctrl+Z
+
+
+Monitoring processes using PS
+=============================
+
+A Linux system may have hundreds of processes running at any time.
+The first tool we'll look at to monitor processes is the 'ps' command.
+Use it to show a basic overview of processes run by the user executing it:
+
+  PID TTY          TIME CMD
+  113 pts/0    00:00:02 bash
+  392 pts/0    00:00:00 ps
+
+It shows process id, used terminal, aggregated execution time and the command.
+
+Oddly, the ps command has three different types of syntax options: Unix, BSD and GNU.
+
+The Unix options looks as you'd expect with a dash before a single letter. 
+The GNU options are words with two dashes just like other commands. 
+The odd ones are the BSD options which don't have any dashes at all. 
+For this course, we'll focus on the Unix and GNU options. 
+
+Other options for ps:
+-e			: display every process (same columns as ps)
+-H			: hierarchy option; gives us an idea of which processes start at 
+              other processes, We can see with indentation
+
+ps -eH:
+  PID TTY          TIME CMD
+    1 ?        00:00:00 init
+  111 ?        00:00:00   init
+  112 ?        00:00:00     init
+  113 pts/0    00:00:02       bash
+  393 pts/0    00:00:00         ps
+
+-f			: full info
+ps -ef:
+UID        PID  PPID  C STIME TTY          TIME CMD
+root         1     0  0 13:55 ?        00:00:00 /init
+root       111     1  0 14:16 ?        00:00:00 /init
+root       112   111  0 14:16 ?        00:00:00 /init
+djdegoed   113   112  0 14:16 pts/0    00:00:02 -bash
+djdegoed   401   113  0 16:51 pts/0    00:00:00 ps -ef
+
+Shows:
+user id, process id, parent process id, cpu usage, start time, command with args
+
+-F			: adds extra info (-f +)
+
+ps - eF :
+UID        PID  PPID  C    SZ   RSS PSR STIME TTY          TIME CMD
+root         1     0  0   225   584   7 13:55 ?        00:00:00 /init
+root       111     1  0   225    92   2 14:16 ?        00:00:00 /init
+root       112   111  0   225    92   0 14:16 ?        00:00:00 /init
+djdegoed   113   112  0  2720  6064   4 14:16 pts/0    00:00:02 -bash
+djdegoed   402   113  0  2656  3312   6 16:53 pts/0    00:00:00 ps -eF
+
+
+Shows also:
+allocated memory, total memory size and the CPU the process is running on. 
+
+-l 			: long format
+ps -elF : 
+This gives us 17 columns of information. Check the man page for more information 
+on each of these columns. A lot of the information in the ps -elF I don't need 
+on a regular basis. 
+
+-- format	: You can customize what are shown on the screen by passing the 
+			  --format long option. 
+			  Example: ps -e --format uid,pid,ppid,%cpu,cmd 
+
+-- sort		: sort on any field. 
+			  Example: ps -e --format uid,pid,ppid,%cpu,cmd --sort %cpu
+					   ps -e --format uid,pid,ppid,%cpu,cmd --sort pid
+			  Place a hypen (-) before the field to sort descending
+
+-U /-u		: show processes for one or more users (by name)
+			  Example: ps -U root  (or ps -U root,djdegoed)
+			  Use -u for user id's instead of names
+
+-G /-g		: show processes for one or more groups (by name)
+			  Example: ps -G root  (or ps -G root,djdegoed)
+			  Use -g for user id's instead of names
+
+-C 			: show processes by program name
+			  Example: ps -C firefox
+
+Handy examples of ps use:
+- ps -e --format uid,pid,tty,%cpu,cmd --sort %cpu	
+- ps -e --format uid,pid,tty,rss,cmd --sort rss"   (sorted by memory usage)
+- ps -U <username> --format %mem | awk '{memory +=$1};END {print memory}' 
+
+Want to install a really cool monitor app?
+Check out: https://itsfoss.com/linux-system-monitoring-tools/
+
+For instance install bashtop:
+- sudo add-apt-repository ppa:bashtop-monitor/bashtop
+- sudo apt update
+- sudo apt install bashtop
+
+Process priority
+================
+Linux process priorities are handled by a system called nice. 
+Nice levels go from 
+  -1 to -19  for privileged users. 
+   0 to 19   for nonprivileged users. 
+
+The default nice level is zero. 
+When a process is started it has a default nice level. 
+
+The nice level is the number that reflects how nice the process is to the CPU. 
+The nicer a process is to the CPU, the less it interrupts it and the lower it's 
+priority is. Because the process is getting fewer resources from the CPU, it also 
+has lower priority. This means other processes will get more CPU time than it will. 
+
+If the nice level is less than zero then it is less nice to the CPU and demands 
+more resources from it. Thus having a higher priority for CPU time. 
+
+In summary: 
+- the higher the nice number, the lower the CPU priority. 
+- the lower the nice number, the higher the CPU priority. 
+
+If we want to start a process with a predetermined nice level, we can start it 
+with a nice command. 
+
+Example: 
+- nice -2 top		Set the nice level to 2
+- ps -C top 		To check the set nice level
+
+Notice the nice level is positive 2 instead of -2. 
+To set a nice level of -2 you need to set:  nice --2  (extra hyphen)
+
+Remind that only privileged users can set negative nice levels, 
+so we'll need to use sudos, the above would become:  sudo nice --2 top
+
+The niceness of a process can also be changed after the process is running, 
+using the 'renice' command. 
+Example:  sudo renice 5 <process id>
+
+One-time jobs using at and batch
+================================
+There are two different types of scheduled jobs:
+- one time jobs
+- recurring jobs
+
+For one time jobs we use a service called 'at'. 
+The at service runs at jobs at a certain time. 
+Or in the case of a batch job, when the CPU load average drops below 0.8. 
+
+The syntax for at is:  at <time format>
+At supports a wide variety of time formats including simple 12 and 24 hour 
+clock times, like 4:25 am, or 16:45. It also supports general terms like 
+midnight, noon, tomorrow, and now, plus a specified number of minutes, 
+hours or days. It even supports teatime which is apparently at 4 pm. 
+
+If we don't want to schedule one time job today, we can specify a time and date. 
+The time format always has to come before the date. The at services is usually 
+installed by default. Let's be sure by installing it using apt, and if there's a 
+newer version apt will update it. 
+Type into a terminal: sudo apt install -y at  
+
+We'll also want to ensure the service is running and survives a reboot. 
+Type in:  	- sudo systemctl start atd  (or 'sudo service atd start' on WSL)
+			- sudo systemctl enable atd
+			
+To create an at job that will run in five minutes we type in:
+- at now + 5min 
+
+This will give us a prompt where we can type in Linux commands to run. 
+Let's type in 
+- mkdir ~/Documents.bak
+- rsync -a ~/Documents/ ~/Documents.bak. 
+
+Hit Enter and press ctrl+d to save it. 
+To verify our at jobs, type in atq and hit Enter. 
+Starting in the left hand column, we see the at job number, in this case number one. 
+In the second column the time and date, then the que letter and lastly the user name. 
+We can view the at file itself using at-c followed by the at job number. Type in at Space -c and the at job number which is number one in my case. This shows the contents of the at job including the shell environment. The commands we typed in will appear at the bottom. If you'd like to cancel an at job you can use the atrm command. Type in atrm Space, followed by the at job number which in my case is number one and hit Enter. Verify with atq by typing in atq. The at service also allows us to create batch jobs. The difference between an at job and a batch job, is that the at job runs at a specified time. Batch jobs run when the system load average drops below 0.8 ensuring they only get run, when the system isn't busy. To create a batch job type in batch, and hit Enter. Now insert the commands you wish to run. For this example we'll do something simple. Type in touch, space ~/batchfile.txt and hit Enter. Press cntrl+d and type in atq and hit Enter again. If our computer is busy the batch file won't run. If the system load average drops below 0.8, the batch file will run. Atq shows batch jobs. If it doesn't show up then that means the batch job already ran. To verify this we can check to see if the file was created using ls. Type in ls, Space -l, Space, ~/batchfile.txt and hit Enter. If the file exists that means the file ran.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -2,5 +2,17 @@ Nano
 ====
 Popular text editor on linux
 
-Start with line nrs: nano -l <file>
+Handy switches:
+- start with line nrs: nano -l <file>
+
+nano <file> [..<file>] &       Start nano as a job in the background
+fg                             Take job to the foreground / activate nano
+Alt-Z                          Put nano in the background (suspend)
+                               (In Nano: ctrl+Z to switch on or off suspension)
+Alt + > or <                   Switch between documents
+
+Show overview of active jobs if there are more jobs running:
+jobs -l
+
+Now activate nano with: job %<job nr of nano job> 
 
