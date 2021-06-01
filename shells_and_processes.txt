@@ -393,6 +393,28 @@ echo ~+			: current dir (same as pwd)
 echo ~-			: show previous dir 
 
 Expand to any directory in the list: 
-- use the pushd command to put directories in the list (stack) first:  pushd <directory>
+- use the 'pushd' command to put directories in the list (stack) first:  pushd <directory>
 - Use 'dirs' to list the directories in the stack. 
-Now, use tilde substitution to access them. We have to supply a directory number starting from zero so type in echo space tilde zero and hit enter. The tilde hyphen expansion allows us to bounce between two directories. This allows us to bounce between any number of directories. Type in echo space tilde one and hit enter. We can use these with any command. For instance if we wanted a CD to a directory we type in C D space tilde zero and hit enter. C D space tilde one and hit enter. To remove items from the list use pop D. Let's view our list again using dirs. Type in pop D space plus one and hit enter. This removes the second item from the list, remember that we're counting from zero so the left most item is item zero. Another great tool is brace expansion. By using braces we can provide whole word patterns. For instance, if we type echo space S left curly bracket P E comma P I right curly bracket L L and hit enter, it echos both spell and spill. This works by expanding the characters in the braces. For each character in the brace, it expands the word inserting that character or characters into the word, so we end up with spell and spill. Note: this does not work inside of quotes. Bring your line back and insert quotes before the S and after the last L and hit enter.
+- The stack items are numbered from 0 to n
+- To use an item refer to it as ~<nr>, so the 1st item in the stack = ~0
+
+Use it like this: cd ~3  jumps to the 4th item in the dirs stack
+To remove items from the list use 'popd +<stack item nr>', so 'popd +2' will remove the 3rd item.
+
+Using brace expansions for word patterns:
+- echo s{pe,pi}ll  echoes: spell and spill
+
+Note: this does not work inside of quotes. 
+Bring your line back and insert quotes before the S and after the last L and hit enter.
+
+Command and variable substitution
+---------------------------------
+echo "my name is $USER"		: outputs the text my name is followed by the value and the user variable. 
+We can also use it for commands substitution:
+- pdir="/tmp/files/today"	-> mkdir -p $pdir		(-p = for creating parent dir if needed)
+- ls -d $pdir   : check if it indeed exists 		(-d is for showing a dir, not the contents)
+- fname="report"				-> ls -l $fname			(-l is long listing format, not just the name)
+- touch $pdir/${fname}_january	-> ls -l "$(pdir)/${fname}_
+
+Placing quotes around our strings and braces around variable names makes Dash variables much more reliable. 
+For instance, typing in LS space dash L, space, double quote, dollar sign, left curly bracket, pdir, right curly bracket, slash, dollar sign, left curly bracket, fname, right curly bracket, _January, double quote, ends up being very reliable. 
