@@ -687,12 +687,164 @@ This will give us a prompt where we can type in Linux commands to run.
 Let's type in 
 - mkdir ~/Documents.bak
 - rsync -a ~/Documents/ ~/Documents.bak. 
+- enter and ctrl-d to save it. 
 
-Hit Enter and press ctrl+d to save it. 
-To verify our at jobs, type in atq and hit Enter. 
-Starting in the left hand column, we see the at job number, in this case number one. 
-In the second column the time and date, then the que letter and lastly the user name. 
-We can view the at file itself using at-c followed by the at job number. Type in at Space -c and the at job number which is number one in my case. This shows the contents of the at job including the shell environment. The commands we typed in will appear at the bottom. If you'd like to cancel an at job you can use the atrm command. Type in atrm Space, followed by the at job number which in my case is number one and hit Enter. Verify with atq by typing in atq. The at service also allows us to create batch jobs. The difference between an at job and a batch job, is that the at job runs at a specified time. Batch jobs run when the system load average drops below 0.8 ensuring they only get run, when the system isn't busy. To create a batch job type in batch, and hit Enter. Now insert the commands you wish to run. For this example we'll do something simple. Type in touch, space ~/batchfile.txt and hit Enter. Press cntrl+d and type in atq and hit Enter again. If our computer is busy the batch file won't run. If the system load average drops below 0.8, the batch file will run. Atq shows batch jobs. If it doesn't show up then that means the batch job already ran. To verify this we can check to see if the file was created using ls. Type in ls, Space -l, Space, ~/batchfile.txt and hit Enter. If the file exists that means the file ran.
+Show your 'at' jobs    : atq     (At the beginning of the line there is a job number)
+Show specific 'at' job : at -c <job nr>   (shows job including shell env, so only check last 
+                                         lines)
+Remove an 'at' job     : atrm <job nr>
+
+The at service also allows us to create batch jobs. 
+The difference between an at job and a batch job, is that the at job runs at a specified time. Batch jobs run when the system load average drops below 0.8 ensuring they only get run, when the system isn't busy. 
+
+To create a batch job type in: batch
+
+Now insert the commands you wish to run. For this example we'll do something simple. Type in touch, space ~/batchfile.txt and hit Enter. Press cntrl+d and type in atq and hit Enter again. If our computer is busy the batch file won't run. If the system load average drops below 0.8, the batch file will run. Atq shows batch jobs. If it doesn't show up then that means the batch job already ran. 
+
+Recurring user jobs using cron
+==============================
+To store recurring user jobs we use the 'cron' service which stores jobs in cron tables.
+Two types:
+- user cron jobs       : specific to each user, managed by users  /var/spool/cron/<user>
+- system cron jobs     : system wide, managed by root             /etc/cron.d
+
+To install  : sudo apt-get install cron
+To start    : sudo service cron start  / sudo systemctl start cron
+To enable   : sudo service cron enable / sudo systemctl enable cron
+
+To create a crontab entry : crontab -e
+To list you crontab file  : crontab -l
+Help on crontab           : man cron        about the Vixie cronie daemon
+                            man crontab     about maintaining crontab files
+                            man 5 crontab   section 5 for file formats and conventions
+
+A cron tab entry is built up as follows:
+
+1.  2.  3.  4.  5.  6.
+------------------------------------------------------------
+45  23  *   *   6   /home/djdegoed/bin/backup.sh
+0   1   *   *   *   rsync -a ~/Documents/ ~/Documents.bak
+
+1. min:
+    - 45        every 45th min of the hour
+    - 15,30,45  every 15th, 30rd and 45th minute of the hour
+    - 15-45     between 15 and 45 minute each minute
+    - */10      every 10th minute
+    - 1-59/2    every odd minute
+    
+2. hour:
+    - 23        at 23:00
+    - *         every hour
+
+3. day of the month:
+    - 31        on the 31th of each month
+    - *         every day
+
+4. month of the year:
+    - 12        in dec
+    - *         every month
+5. day of the week:
+    - 0-6 (sun - sat)
+    - sun, mon, etc
+    
+6. command to run
+    
+Recurring system jobs using cron
+================================
+To add a cron job on system level you need to add a file to the /etc/cron.d directory
+as an elevated user. For instance:
+
+- sudo nano /etc/cron.d/backupdocs
+
+Difference with user crontab is that you extra need to specify which user.
+Also home (~) needs to be written out: /home/<username>
+
+Difference same job:
+- user crontab   : 0 1 * * * rsync -a ~/Documents/ ~/Documents.bak
+- system crontab : 0 1 * * * root rsync -a /home/djdegoed/Documents/ /home/djdegoed/Documents.bak
+                             ----    
+
+Handy directories under /etc for system cron jobs on specific times:
+- cron.daily
+- cron.hourly
+- cron.monthly
+- cron.weekly
+
+Limit access to AT and cron jobs
+================================
+Control which users can use at or cron via files:
+- /etc/at.allow
+- /etc/cron.allow
+- /etc/at.deny
+- /etc/cron.deny
+
+Access control:  sudo nano /etc/security/access.conf
+
+File has 3 columns: access control (+=allow, -=revoke), username and service.
+Example line:
+-:ALL EXCEPT root:cron
+
+Means: "take permissions away for all except root on service cron"
+
+More info: man access.conf
+
+Introduction to system services
+===============================
+these are process started by the os and waiting to get used in the background.
+They are called 'daemons' in Linux.  (derived from Maxwell's daemon ;-))
+
+Examples:
+- web servers
+- file servers
+- mail servers
+- network servers
+- authentication servers
+
+Daemon services end with d many times: httpd, smbd, sshd, shcpd
+When Linux boots the kernel starts one service: init. That service starts all other processes.
+Init comes from System V and works with run levels.
+These could be switched at any time to create different versions of the os.
+
+System V shortcomings:
+- slow startup
+- no service dependencies
+- no persistent network
+
+Newest replacement of System V init = systemd
+
+Systemd manages services, devices, system timers and targets 
+(targets = systemd equivalent to run levels)
+Systemd objects are called units and for each unit there is a unit file for configuration.
+
+Units are managed via: systemctl
+- systemctl list-unit-files -at service
+- systemctl list-units -at service
+- systemctl list-units -t service --state running
+
+To examine a service    : systemctl cat rsyslog
+To check status         : systemctl status rsyslog
+Only check if active    : systemctl is-active rsyslog
+
+To stop a service       : systemctl stop rsyslog
+To start a service      : systemctl start rsyslog
+To restart a service    : systemctl restart rsyslog
+To deny a service       : systemctl mask rsyslog
+To allow a service again: systemctl unmask rsyslog
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
