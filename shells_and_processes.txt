@@ -824,6 +824,7 @@ Units are managed via: systemctl
 To examine a service    : systemctl cat rsyslog
 To check status         : systemctl status rsyslog
 Only check if active    : systemctl is-active rsyslog
+Only check if enabled   : systemctl is-enabled rsyslog
 
 To stop a service       : systemctl stop rsyslog
 To start a service      : systemctl start rsyslog
@@ -831,6 +832,9 @@ To restart a service    : systemctl restart rsyslog
 To deny a service       : systemctl mask rsyslog
 To allow a service again: systemctl unmask rsyslog
 
+Disable or enable       : systemctl disable rsyslog
+                          systemctl enable rsyslog
+                          
 
 
 
