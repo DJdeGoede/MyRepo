@@ -1,0 +1,52 @@
+Linux system info and directory structure tools
+===============================================
+
+Learn Linux command syntax
+--------------------------
+Learning the Linux command line can be difficult, but understanding the syntax of 
+a Linux command can help. The standard Linux command syntax is 
+
+  command [options] <arguments>
+    
+The "command [options]" and "<arguments>" are separated by blank spaces. 
+A Linux command is usually an executable program residing on the Linux disc. 
+In our example, "ls" is the command name. 
+- If the options are full words, they'll usually be preceded by two dashes. 
+- If the options are single letters, they're usually preceded by one dash. 
+For instance, "ls space --size"  =  "ls space -s". 
+
+There are no real standards in Linux, but most commands follow these rules. 
+You may, however, come across commands that don't. 
+It's also possible to have more than one argument. Arguments are separated by 
+blank spaces. If we have more than one single character option, we can stack them 
+together:
+
+  ls -s -1 /etc  -->  ls -s1 /etc     (will display size of each file)
+
+ We can also mix long options with short options, but they have to be separate. 
+ For instance:  ls --size -1 /etc
+  
+  If you're mixing short options and long options, you'll need to put them on the 
+  command line separated by white space. What we've covered here is standard Linux 
+  syntax. However, due to the nature of Linux and its historical UNIX roots, 
+  there's a lot of exceptions. You may have commands with options that are full 
+  words but don't include hyphens, or even have commands that will allow the options 
+  to go on the end of the command line after the arguments. Most commands, however, 
+  follow the rules.
+
+Get help on the CLI
+-------------------
+Knowing how to get information about commands in Linux is paramount to understanding 
+such a powerful operating system. Let's start by using the built-in --help option. 
+
+ls --help
+
+The --help information is built in to most Linux commands so it will always be 
+available. If the output is too long, use the scroll bar or press Shift + Page Up 
+to scroll up. At the top of the output of ls --help, it shows the command syntax or 
+usage. --help doesn't work for all commands. 
+For those commands built into the bash shell, we can use the help command to get the syntax. Type in help cd and hit Enter. Between the --help option and the help command, we should be able to get quick help on most any command. Let's type clear to clear the screen. Usually the documentation offered by --help or the help command is brief. Most commands have manuals written for them, and we can access those manual pages using the man command. To get the manual page for ls, type man ls and hit Enter. For a simple command like ls, the manual page and the --help look very similar. For more complex commands, the manual pages get quite long and may include abstract explanations, usage and even examples. The quality of man pages vary depending on the specific project creating them. All man pages belong in categories. We can see that our ls man page is in category 1 by looking at the text at the top of the screen. Press q to exit the man page. To see the man page categories, we can view the man page for man pages. Type in man man-pages and hit Enter. Here we see that category 1 is for programs, category 2 is for system calls and so on. If you want more information on any man page category, you can just check the man page for the category. Press q to quit and type in man 1 intro. This will show the intro page for man page category one. You can get the intro pages for other man page categories using the same method. Press q to quit. There may be more than one man page for a command. To demonstrate this, let's use man -f. This is used to find man pages, man -f crontab and hit Enter. We can see that crontab has three man pages in categories 1, 1p and 5. Category 1 is for commands, category 1p is for Posix-compliant commands, and category 5 is for file formats, or, in this case, the crontab configuration file. Posix is a standard that most Linux-like operating systems try to follow. In many cases, Linux may have a non-Posix-compliant command as well as a Posix-compliant one. You can specify a man page category by specifying the category on the command line. For instance, to get the man page for crontab in category 5, type in man 5 crontab and hit Enter. If you want to do a more exhaustive search through the man pages, you can use man -k. Press q to quit, and then type man -k crontab. Now we see five man pages, including one for something called anacrontab. There's one more place we can get documentation on the command line. These are the info pages. Although not all commands have info pages that differ from the man pages. To get the info page for crontab, type info crontab and hit Enter. If we use our Page Down key to scroll to the bottom, we can see that info page for crontab is 611 lines. In contrast, the man page for crontab is 81 lines. Most GNU tools have exhaustive info pages. Info is a better tool for large manuals than man, as it supports hypertext. Press q to quit. To show how to navigate around an info page, let's load a page with hyperlinks. Type info grep and hit Enter. A hyperlink is a name followed by double colons. Move the cursor to the Introduction hyperlink and hit Enter to view the linked page. To go back to the previous or last page, press the l key. If we scroll all the way to the bottom, we'll be taken to the next page in the documentation. Scrolling to the top takes us to the previous page. If you want help on how to use info, you can press ? inside any document. Let's press q to quit. Now we know how to get help on the command line. I recommend as we go through this course, you look up commands with --help, the help command, man, or the info command.
+
+
+
+
