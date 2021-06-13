@@ -191,7 +191,7 @@ After setting ntp you need to restart the timedate daemon:
 	- sudo systemctl restart systemd-timedated
 	- sudo systemctl status systemd-timedated		(to verify activity after restart)
 	
-	
+
 	
 	
 
