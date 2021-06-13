@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Using tmux.txt
 ==============
 install and check
@@ -27,3 +28,49 @@ M-.. means: alt + ..
 
 bind-key + c        : new terminal
 
+=======
+Using tmux.txt
+==============
+install and check
+-----------------
+Install         : sudo apt install tmux
+Check version   : tmux -V
+Github project  : tmux.github.io
+
+Start tmux by just typing 'tmux'
+It will start a new bash session in the same window.
+Below you will see a bar indicating you are using tmux with session info left and
+some other info to the right. 
+* = current window, - = previous window
+The bar is fully configurable (check later on).
+
+bind-key
+--------
+Most commands are given via combination of the 'bind-key' + other key combination
+The 'bind-key' is default set to: <ctrl><b>. First press these, let go and then
+use another key or key combo as described.
+To show help and all combo's:
+    bind-key + ?   --> So that means: ctrl + b, let go and then ?
+
+Some keys are abbreviated:
+C-.. means: ctrl + ..
+M-.. means: alt + ..
+
+commands
+--------
+bind-key + c        : new terminal
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> ed05e6cd1b6ac087318d190914017febacfed644

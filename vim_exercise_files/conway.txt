@@ -1,0 +1,5 @@
+
+
+In every organization there will always be one person who knows what
+is going on. That person must be fired.
+    - Conway's Law

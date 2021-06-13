@@ -1,12 +1,13 @@
-Git
----
+  ________.__  __    
+ /  _____/|__|/  |_  
+/   \  ___|  \   __\  
+\    \_\  \  ||  |    M A N U A L
+ \______  /__||__|   
+        \/          
+
 
 Install GIT:
    sudo apt install git 
-
-Clone you remote repo to local and set the correct url:
-   git clone git://github.com/DJdeGoede/MyRepo.git
-   git remote set-url origin https://github.com/DJdeGoede/MyRepo.git
 
 Save your user and password:
    git config --global credential.helper store
@@ -17,11 +18,18 @@ Save your user and password:
       To keep active for 2 hours:
         git config --global credential.helper 'cache --timeout 7200'
 
+Clone your remote repo to local and set the correct url:
+   git clone git://github.com/DJdeGoede/MyRepo.git
+   git remote set-url origin https://github.com/DJdeGoede/MyRepo.git
+
 Make sure you are in the correct directory (needs to have the hidden .git file)
 Check current status:      git status
 Pulling remote changes:    git pull
 Adding changes to local:   git add .
 Commiting local changes:   git commit
+Combining add and commit   git commit -a (or --all)
+   Warning! Does NOT include unstaged files
+
 Pushing changes to remote: git push
 
 Add, commit and push in one:
@@ -37,6 +45,112 @@ Conditional commit:
            - now combine an add and commit with the given msg
            - push the commit and echo 'Done.'
            
+git log -n 5                    : shows last 5 commits
+git log --since=2021-01-01	: shows commits since certain date
+git log --until=2021-01-01	: shows commits until certain date
+git log --author=Dick	        : shows commits by a certain user
+git log --grep="..."            : search for any kind of string
+
+The three trees
+---------------
+Branch: a set of files
+
+Classic (non-git) with only two branches:
+- checkout: copy repository fileset to a working branch
+- do the changes on the working branch
+- commit: update the files to the repository
+
+ +------------+  --- checkout --->  +-----------+
+ | repository |                     |  working  |
+ +------------+  <--- commit -----  +-----------+
+
+Git uses three branches:
+
+ +------------+                                                             +-----------+
+ |            |  ------------------------ checkout ---------------------->  |           |
+ | repository |                     +-----------------+                     |  working  |
+ |            |  <---- commit ----  |  staging index  |  <---- add -------  |           |
+ +------------+                     +-----------------+                     +-----------+
+
+- Git generates a checksum for each change set
+- Checksum algorithms convert data into a simple number
+- Same data always equals same checksum
+- Git uses SHA-1 algorithm to create checksums (the 'SHA value')
+- 40-character hexadecimal string (0-9, a-f)
+- Example:  e5a5d906507c5b66ba28b20615891548c16e1d7a
+
+Process
+-------
+Add files in working dir, add the changes to staging, commit them to the repository.
+
+Working dir:
+   - git add <file>                    : to add changes to staging index
+   - git restore <file>                : to discard chages in working dir (after a git add)
+
+Staging index:
+   - git reset HEAD <file>             : to unstage (back to working dir)
+     (or: git restore --staged <file>)
+   - git commit -m "<message>"         : to commit ro repository
+
+Check changes
+-------------
+git diff
+   Shows the changes between working directory and staging tree, so the changes
+   to be staged
+
+git diff --staged  (or --cached)
+   Shows the changes between the staging tree and the repository, so the changes
+   to be commited.
+
+a/ ....  = the version in the repository
+b/ ....  = the file in the working dir or staging directory (depending on -- switch)
+
+Deleting files
+--------------
+2 methods:
+1. remove the file manually, then:
+   - git rm <file>
+   - git commit "...."
+
+2. directly give the command git rm <file> which also removes te file
+   and then commit, so conclusion: no need to remove it manually first
+
+Moving and renaming files
+-------------------------
+Remember: moving a file and renaming a file are the same thing
+
+2 methods:
+1. rename file manually, then git log shows two changes: 1 new and one remove
+   - git add <new file name>
+   - git rm <old file name>
+
+2. directly give the command git mv <old filename> <new filename> which does 
+   the above and then commit
+
+Looking at commits
+------------------
+git show <commit id, min 4 chars or more>
+
+Comparing files /looking at changes
+-----------------------------------
+before ready to commit check your changes with:
+git diff --color-words
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

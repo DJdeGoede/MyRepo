@@ -1,0 +1,31 @@
+Useful extra Linux tools
+========================
+
+1. modern-unix tools
+--------------------
+A set of new unix/linux tools
+(GIT: https://github.com/ibraheemdev/modern-unix.git)
+Gives an overview of useful modern Unix/Linux tools.
+
+bat
+---
+GIT: https://github.com/sharkdp/bat.git
+
+install: 
+- sudo apt install bat
+probably will be installed as 'batcat' so make a link to it:
+sudo ln -s /usr/bin/batcat /usr/local/bin/bat
+
+Now just use bat instead of cat
+ 
+
+
+
+
+2. fzf
+   ---
+Finding files easily
+Combine with new tool bat to create a text file previewer :)
+fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'
+
+
