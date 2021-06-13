@@ -175,6 +175,44 @@ Login commands
 
 Time and date
 =============
+timedatectl					: shows date and time info
+timedatectl list-timezones	: shows list of time zones
+To set:
+timedatectl set-timezone <timezone name>
+
+To set time and/or date:
+- timedatectl set-time <hh>:<mm>:<ss>
+- timedatectl set-time <yyyy>-<mm>-<dd>
+
+Combine						: timedatectl set-time '<yyyy>-<mm>-<dd> <hh>:<mm>:<ss>'
+Force update via NTP server	: timedatectl set-ntp true
+
+After setting ntp you need to restart the timedate daemon:
+	- sudo systemctl restart systemd-timedated
+	- sudo systemctl status systemd-timedated		(to verify activity after restart)
+	
+	
+	
+	
+
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
