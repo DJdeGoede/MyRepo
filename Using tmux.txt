@@ -25,20 +25,5 @@ Some keys are abbreviated:
 C-.. means: ctrl + ..
 M-.. means: alt + ..
 
-commands
---------
 bind-key + c        : new terminal
-
-
-
-
-
-
-
-
-
-
-
-
-
 
