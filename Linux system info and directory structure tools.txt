@@ -357,12 +357,9 @@ Examples:
 - locate -A bzip2 man   find files with bzip2 AND man
 
 Using regexp:
-- locate --regexp '^/usr.*pixmaps.*jpg$'
-    find all files beginning with /user, conatining pixmaps and ending with jpg
-    
-
-
-
+- locate --regex '^/usr.*pixmaps.*jpg$'
+    find all files beginning with /user, containing pixmaps and ending with jpg
+- locate --regex '^/usr.*(pixmaps|backgrounds).*jpg'  : find pixmaps or backgrounds
 
 
 
