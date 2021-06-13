@@ -135,27 +135,3 @@ Comparing files /looking at changes
 -----------------------------------
 before ready to commit check your changes with:
 git diff --color-words
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
