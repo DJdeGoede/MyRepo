@@ -361,6 +361,38 @@ Using regexp:
     find all files beginning with /user, containing pixmaps and ending with jpg
 - locate --regex '^/usr.*(pixmaps|backgrounds).*jpg'  : find pixmaps or backgrounds
 
+Check locate db	: locate -S
+Update db		: sudo updatedb
+
+Find files with find
+====================
+Use 'find' instead of locate when you need more powerful search (more options).
+
+- sudo find / -name bzip2
+- sudo find / -user djdegoed
+- sudo find / -group djdegoed
+- sudo find / -size +50k
+- sudo find / -size +5M -exec stat -c "Found size %s for file %n" {} \; | sort -n
+
+- sudo find / -mtime -1 -user djdegoed		: modified within one day ago
+- sudo find / -mtime +1 -user djdegoed		: NOT modified within one day ago
+
+- sudo find /home -mtime -1 -user djdegoed -type f
+	Find all files (-type f) modified within one day ago (mtime -1) for user 
+	djdegoed (-user)
+
+Use -type f for files and -type d for directories
+
+Get familiar with nano
+======================
+
+
+
+
+
+
+
+
 
 
 
