@@ -191,6 +191,24 @@ After setting ntp you need to restart the timedate daemon:
 	- sudo systemctl restart systemd-timedated
 	- sudo systemctl status systemd-timedated		(to verify activity after restart)
 	
+Locale and date tools
+=====================
+- localectl
+- localectl list-locales	: list locales
+- localectl list-keymaps	: list keymaps
+
+find locales: localectl list-locales | grep ^nl  (.. that begins with nl)
+
+To set locale and/or keymap:
+- localectl set-locale <locale name>
+- localectl set-keymap <keymap name>
+
+
+
+
+
+
+
 
 	
 	
