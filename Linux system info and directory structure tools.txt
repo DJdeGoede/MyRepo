@@ -301,6 +301,40 @@ Compress and uncompress files
 
 - unzip file    : gunzip / bunzip2 / unxz <file>
 
+List files
+==========
+- where am I?   pwd
+
+list files : 'ls'
+- ls -1         1 file per line
+- ls -l         long list
+- ls -lh        make it human readable
+- ls -R /       show all flies on the whole system!
+
+Understand file system paths
+============================
+- tree                  : overview of directory contents
+- file <file name>      : show what filetype a file is
+- cd ~      : got to your home dir
+- cd -      : go to the last dir (keeps switching between last two dirs)
+
+Explore the Linux file system
+=============================
+Structure of Linux file system follows the Filesystem Hierarchy Standard (FHS).
+
+    /       root dir
+    /bin    essential comnmand libraries
+
+
+
+
+
+
+
+
+
+
+
 
 
 
