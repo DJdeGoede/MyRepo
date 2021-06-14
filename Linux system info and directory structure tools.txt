@@ -203,6 +203,47 @@ To set locale and/or keymap:
 - localectl set-locale <locale name>
 - localectl set-keymap <keymap name>
 
+Show date and utc date
+- date        : show local date
+- date --utc  : show utc date
+
+Date format:
+- date +"%h %d %Y"  :  jun 14 2021
+- date +"%s"        :  1623674699   (seconds since jan 1st 1970)
+
+From seconds to date:
+- date --date='@<seconds>'
+  Examples: 
+  - date --date='@5'            : 5 seconds after jan 1st 1970 :)
+  - date --date='@@1000000000'  : zo 9 sep 2001  3:46:40 CE(S)T
+  
+  To transfer it to utc add the --utc again:
+  - date --utc --date='@@1000000000'  : zo 9 sep 2001  1:46:40 UTC
+  
+Transfer a certain date to seconds since jan 1st 1970:
+- date --utc --date="1973-01-10" +%s
+
+Playing around: find a date, double the seconds and check what date is that :)
+- date --date="@$(expr $(date --utc --date="1973-01-10" +%s) \* 2)"
+
+Add a period to a date:
+- date --date '+10 days'
+- date --date '+2 months'
+- date --date 'next thursday'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 View files
 ==========
 - Use redirects (>) to pipe output to a file
@@ -263,8 +304,11 @@ Extract to other folder :  tar --xattrs -xvpf etc.tar -C <target folder>
 
 Compress and uncompress files
 =============================
-- zip file      : gzip / bzip2 <file>     (removes the original file)
-- unzip file    : gunzip / bunzip2 <file>
+- zip file      : gzip   / bzip2   / xz   <file>    (removes the original file)
+                : zip <zip filename> <file>         (creates a new zip file next to the 
+                                                     original)
+
+- unzip file    : gunzip / bunzip2 / unxz <file>
 
 
 
