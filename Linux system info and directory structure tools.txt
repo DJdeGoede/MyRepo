@@ -238,6 +238,36 @@ Search:
 Of course you can also use pipes:
 - journalctl | grep Service.$
 
+Archiving
+=========
+Tape archiver (tar):
+- sudo tar --xattrs -cvpf etc.tar /etc
+
+--xattrs : preserves acl info and security info 
+-cvpf    : create (c), verbose (show output, v), save ownership and permissions (p)
+           and f for filename of the archive (here: etc.tar)
+           
+Tar only archives and does not compress.
+To compress add the zip format as option:
+- gzip :  sudo tar --gzip --xattrs -cvpf etc.tar.gz /etc
+- bzip2:  sudo tar --bzip2 --xattrs -cvpf etc.tar.bz2 /etc
+- xz   :  sudo tar --xz --xattrs -cvpf etc.tar.xz /etc
+
+Comnpression rate:
+tar (none) -> bz2 -> gzip -> xz (last till 10% of original!)
+
+tar -tf <archive name>   : list all files in the archive
+
+Extract to here         :  tar --xattrs -xvpf etc.tar
+Extract to other folder :  tar --xattrs -xvpf etc.tar -C <target folder>
+
+Compress and uncompress files
+=============================
+- zip file      : gzip / bzip2 <file>     (removes the original file)
+- unzip file    : gunzip / bunzip2 <file>
+
+
+
 
 
 
