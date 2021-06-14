@@ -231,18 +231,9 @@ Add a period to a date:
 - date --date '+2 months'
 - date --date 'next thursday'
 
-
-
-
-
-
-
-
-
-
-
-
-
+For a calendar use' cal'
+- cal <year>
+- cal -<nr of months>
 
 View files
 ==========
