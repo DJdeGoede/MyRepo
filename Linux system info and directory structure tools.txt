@@ -203,6 +203,52 @@ To set locale and/or keymap:
 - localectl set-locale <locale name>
 - localectl set-keymap <keymap name>
 
+View files
+==========
+- Use redirects (>) to pipe output to a file
+- use cat to show content
+- use tac to show content in reversed order
+- less/more for page
+- use pipes:  journalctl | less
+
+- head <n> journal.txt	: show first n lines
+- tail <n> journal.txt	: show last n lines
+
+Follow a file with tail:
+- sudo tail -f var/log/messages (or syslog depending on distro)
+
+Use 'wc' to count lines, words and/or characters
+wc -l <file name> : counts lines in this file
+or pipe: <file name> | wc -l
+
+journalctl | head -n100 | tac | less :
+This will take the output of journalctl, grabs the first 100 lines using head, 
+then uses tac to reverse the order, and sends it to less to show one page at a time. 
+
+Search within a file
+====================
+We take journal.txt as example (as cpied from journalctl command):
+journalctl > journal.txt
+
+Search:
+- grep kernel journal.txt		: find all lines with 'kernel' in it
+- grep ^Dec journal.txt			: find all lines beginning with 'Dec'
+- grep Service.$ journal.txt	: find all lines ending with 'Service.'
+
+Of course you can also use pipes:
+- journalctl | grep Service.$
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
