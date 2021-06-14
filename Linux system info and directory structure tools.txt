@@ -322,103 +322,49 @@ Explore the Linux file system
 =============================
 Structure of Linux file system follows the Filesystem Hierarchy Standard (FHS).
 
-    /       root dir
-    /bin    essential comnmand libraries
+/       root dir
+/bin    essential comnmand libraries
+/boot   boot loader files including kernels
+/dev    essential device files
+/etc    system config files
+/home   users' home directories
+/lib    32-bit system libraries
+/lib64  64-bit system libraries
+/media  mount points fro removable media
+/mnt    temporarily mounted filesystems
+/opt    optional application software packages
+/proc   virtual filesystem providing process and kernel info as files
+/root   home directory for the root user
+/run    run-time configuration data
+/sbin   essesntial system binaries
+/srv    site-specific data served by this system
+/sys    conatins info about the devices connected to this system
+/tmp    temporary files
+/usr    read-only user data; contains majoroty of utilities and apps
+/var    variable files whose content is expected to change during normal operation
+    
+Find files with locate
+======================
+install mlocate first to use 'locate'
+locate uses a database to store all files
+
+- locate <name>     find all files that contains <name>
+- locate -c <name>  only count the found files
+
+Examples:
+- locate bzip2          find files with bzip2
+- locate bzip2 man      find files with bzip2 or man
+- locate -A bzip2 man   find files with bzip2 AND man
+
+Using regexp:
+- locate --regexp '^/usr.*pixmaps.*jpg$'
+    find all files beginning with /user, conatining pixmaps and ending with jpg
+    
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-	
-
-	
-	
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		
-	
 
 
 
