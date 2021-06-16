@@ -25,9 +25,10 @@ Quiting/saving Vim
     a = all buffers/files
     ! = force
 
-Two modes: insert and normal model
+Three modes: insert, normal and visual mode
 - insert mode: writing text   (-- INSERT -- bottom left)
 - normal mode: manipulating text
+- visual mode is like normal mode but you can visually select text
 
 vim <file>          start vim with this file
 vim <file> +n       start vim with this file and jump to line n
@@ -106,6 +107,31 @@ Spell check
 - :set spell / nospell  : switch spell checking on/off
 - ]s  : browse to next word that has probably spelling error
 - z=  : suggest words to correct (confirm by typing nr)
+
+Visual mode
+-----------
+Select lines : shift-v
+Select blocks: ctrl-v
+
+Make a selection and then use the editing commands on it like in normal mode.
+
+To replace text in a block:
+- ctrl-v
+- select block
+- c  (change) to change at cursor or C to change all text to the right
+- type text to replace every selected line segment in the block
+- ESC (not enter!) to replace
+
+Working example: Delete lines 7-10 in a file
+- open file
+- 7, shift-g    go to line 7
+- shift-v       enter visual mode
+- 4j            yank 4 lines down
+- d             delete the selected lines
+
+
+
+
 
 
 
