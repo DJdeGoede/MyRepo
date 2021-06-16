@@ -1,0 +1,111 @@
+Vim
+===
+set options (Windows version)
+-----------------------------
+set options in c:/program files/vim in '_vimrc' file.
+For a nice readable font and size add this at the end:
+
+    if has('gui_running')
+        set guifont=Consolas:h12
+    endif
+
+For line numbers add:
+    set number
+
+(set/unset line nrs from within vim:
+    :set number
+    :set nonumnber)
+
+Quiting/saving Vim
+------------------
+:qa!  abandon all changes and quit vim
+
+    : = command-line mode
+    q = quit
+    a = all buffers/files
+    ! = force
+
+Two modes: insert and normal model
+- insert mode: writing text   (-- INSERT -- bottom left)
+- normal mode: manipulating text
+
+vim <file>          start vim with this file
+vim <file> +n       start vim with this file and jump to line n
+
+:w                  save changes to file
+:w <file>           writes to a new file (keeps current file open!)
+:e <file>           e(dit) other file (you can use tab to go through files)
+:browse confirm e   open file via the OS file GUI
+
+
+Moving around:
+- h,j,k,l  : h left, j down, k up, l right
+- type 6j to go 6 positions down
+- type 10l to go 10 positions to the right
+- w/e : move to beginning/end of next word
+- 5w  : move 5 words further
+- ()  : go to previous/next sentence
+- {}  : go to previous/next paragraph
+- ctrl f  : page forward
+- ctrl b  : pag backward
+- shift-g : end of text
+- gg  : begin of text
+- 0   : begin of line
+- $   : end of line
+- :8  : jump to line 8 (or 8, shift-g)
+
+Searching:
+- /<text or regex> and enter    : forward search
+- ?<text or regex> and enter    : backward search
+- n/shift n  to go to next result (for ? n and shift-n are reversed :))
+
+- *    While standing on a word type * to find the next same word
+       (you can browse like with / or ? search)
+- #    Same but backwards
+
+Inserting:
+- i     : insert mode: insert before cursor position
+- a     : insert mode: insert after cursor position
+- A     : insert at end of line
+- o     : insert new line after current line
+- ESC   : terminate insert mode
+
+Deleting/changing:
+- x         : delete current character (and store in buffer)
+- dw        : delete current word
+- <x>dw     : delete x words
+- dd        : delete current line
+- <x>dd     : delete x lines
+- d)        : delete current sentence
+- d}        : delete current paragraph
+- D         : delete contents of line after cursor
+- C         : delete content of line after cursor and go into insert mode
+- cw        : delete word and go to insert mode (faster than delete and i)
+- c/<word>  : delete until found <word> and go into insert mode
+
+-d/<word> : delete everything until word <word>
+
+Undo
+- u     : undo last action(s)
+- U     : undo all changes to the entire line
+
+Copy and paste:
+- y     : copy ('yank')
+- yw    : copy word from position to end of current word
+- yy    : copy current line
+
+- p     : paste after the cursor
+- P     : paste before the cursor
+
+Cut and paste to easily switch two characters:
+- x to remove the current char and store it
+- p to paste the stored char after the current position
+
+Spell check
+- :set spell spelllang=<language>  (example: nl, en-us)
+- :set spell / nospell  : switch spell checking on/off
+- ]s  : browse to next word that has probably spelling error
+- z=  : suggest words to correct (confirm by typing nr)
+
+
+
