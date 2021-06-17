@@ -16,6 +16,9 @@ For line numbers add:
     :set number
     :set nonumnber)
 
+To check the status of a setting use the ?
+    :set guifont?
+
 Quiting/saving Vim
 ------------------
 :qa!  abandon all changes and quit vim
@@ -143,6 +146,7 @@ replacing instances of words
 ----------------------------
 :s/<old word>/<new word>        : for first next word
 :s/<old word>/<new word>/g      : for replacing all words
+:s/<old word>/<new word>/gc     : for replacing all words (confirm per word)
 
 
 
