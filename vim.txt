@@ -129,6 +129,21 @@ Working example: Delete lines 7-10 in a file
 - 4j            yank 4 lines down
 - d             delete the selected lines
 
+use registers
+-------------
+When working with copy, paste, you can use registers
+(double quote (") followed by a character a-Z (2 x 26 = 52 registers))
+For instance:
+"a, yy   so first double quote, then a and then yy to yank the whole line
+
+Now the line is stored in register a and can be retrieved by:
+"a, p    to paste it after the cursor (P to pate it before the cursor)
+
+replacing instances of words
+----------------------------
+:s/<old word>/<new word>        : for first next word
+:s/<old word>/<new word>/g      : for replacing all words
+
 
 
 
