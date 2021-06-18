@@ -148,6 +148,39 @@ replacing instances of words
 :s/<old word>/<new word>/g      : for replacing all words
 :s/<old word>/<new word>/gc     : for replacing all words (confirm per word)
 
+Marks
+-----
+Create a mark:   m followed by a character a-z and A-Z (52 options) sets a mark. Examples: ma, mb, mF
+Jump to a mark:  ' (single quote) followed by the character. Example: 'a to jump to mark a (set with ma)
+
+So: ma -> 'a
+To jump to exact location use a backtick (`): `a
+
+
+Automatically existing marks:
+'.  : jump to line with last change
+`.  : jump to exact position in line with last change
+
+
+Jumping through history
+-----------------------
+ctrl + o   : backwards in history (kind of undo without edits)
+ctrl + i   : forwards in history (kind of redo without edits)
+:jumps      : see a historu of the moves you made in the editor (also between multiple files! :))
+
+Windows and buffers
+-------------------
+:split      split current buffer to extra window
+ctrl-w + w  move between the windows
+
+
+
+
+
+
+
+
+
 
 
 
