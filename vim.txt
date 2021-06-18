@@ -12,9 +12,9 @@ For a nice readable font and size add this at the end:
 For line numbers add:
     set number
 
-(set/unset line nrs from within vim:
-    :set number
-    :set nonumnber)
+set/unset line nrs from within vim:
+    :set number     (or :se nu)
+    :set nonumnber  (or: se nonu)
 
 To check the status of a setting use the ?
     :set guifont?
@@ -170,8 +170,87 @@ ctrl + i   : forwards in history (kind of redo without edits)
 
 Windows and buffers
 -------------------
-:split      split current buffer to extra window
+:split      split current buffer/file to extra window
 ctrl-w + w  move between the windows
+:e <file>   open a file (repeat to open more in the same window, only last is shown)
+:e!         reload the file as it was on disk before your changes
+:ls         show open buffers/files (each has its own nr)
+
+:bn/bp      move to next or previous buffer/file
+:b <nr>     switch to that buffer/file
+:b <tab>    switches to the other open buffers/files
+:bd <nr>    close buffer with nr (add spaces and more nrs to remove multiple buf/fils :)
+:bd! ...    force closing of buffer/file even after changes have been made (careful!)
+:bd <tab>   browse through open buffers and close the selected one with enter
+
+Read command
+------------
+:r <file>   insert file content in current file at cursor position
+
+Map keys
+--------
+:noremap <Space> <C-F>      : remap <space> to simulate ctrl-f command
+                              (screen forward)
+
+:noremap <Tab> )            : tab now jumps each time to next sentence
+
+:nnoremap <F5> :buffers<CR>:buffer<Space>
+                            : easy way to browse open buffers/files with F5:
+                              1. shows the buffers list (:buffers)
+                              2. gives a command :buffer .. so you can type
+                                 in the number <enter> and it activates the file
+
+Abbreviations
+-------------
+:abb ddg Dick de Goede     to create an abbreviation
+                           When you now type ddg and hit space it will 
+                           type Dick de Goede
+                           type ctrl-v after the abbrev to ignore it and use ddg
+
+Also useful for major spelling typos:
+:abb recieve receive
+
+Add commands
+------------
+:com! Py ! python %     : add a command Py that runs: python <current file>
+                          (handy for easy testing)
+
+Start vim with a command                          
+------------------------
+vim +8 <file>               open <file> at line 8
+vim +1,2d +wq <file>        delete first 2 lines, and save the result for this <file>
+vim +'colorscheme morning'  start Vim with this colorscheme
+
+Diff mode
+---------
+vim -d <file1> <file2>
+vim +'colorscheme morning'  -d road1.txt road2.txt  : start with colorscheme
+                                                      and compare two files
+
+From existing file:
+:vert diffsplit <file2>     (default is horizontal so need to force vertical)
+
+do:   In a line to obtain the right version (diff obtain)
+dp:   In a line to put the left version to the right (diff put)
+
+Zip files
+---------
+vim weather.zip     opens theis zip file and shows the files in it
+Walk to the file you want to view/change and hit enter.
+Now just edit it as normal and save it with :w
+
+Now it automayically has been updated within the zip file, handy! :)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
