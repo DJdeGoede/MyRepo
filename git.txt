@@ -42,7 +42,7 @@ Conditional commit:
            - now combine an add and commit with the given msg
            - push the commit and echo 'Done.'
            
-git log -n 5  			: shows last 5 commits
+git log -n 5                    : shows last 5 commits
 git log --since=2021-01-01	: shows commits since certain date
 git log --until=2021-01-01	: shows commits until certain date
 git log --author=Dick	        : shows commits by a certain user
@@ -50,11 +50,41 @@ git log --grep="..."            : search for any kind of string
 
 The three trees
 ---------------
-Branches: file sets 
-To move/update files between branches we use commit and checkout
+Branch: a set of files
+
+Classic (non-git) with only two branches:
+- checkout: copy repository fileset to a working branch
+- do the changes on the working branch
+- commit: update the files to the repository
+
+ +------------+  --- checkout --->  +-----------+
+ | repository |                     |  working  |
+ +------------+  <--- commit -----  +-----------+
+
+Git uses three branches:
+
+ +------------+                                                             +-----------+
+ |            |  ------------------------ checkout ---------------------->  |           |
+ | repository |                     +-----------------+                     |  working  |
+ |            |  <---- commit ----  |  staging index  |  <---- add -------  |           |
+ +------------+                     +-----------------+                     +-----------+
+
+- Git generates a checksum for each change set
+- Checksum algorithms convert data into a simple number
+- Same data always equals same checksum
+- Git uses SHA-1 algorithm to create checksums (the 'SHA value')
+- 40-character hexadecimal string (0-9, a-f)
+- Example:  e5a5d906507c5b66ba28b20615891548c16e1d7a
 
 
-  repository
+
+
+
+
+
+
+
+
 
 
 
