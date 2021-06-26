@@ -1,5 +1,10 @@
-Git
----
+  ________.__  __    
+ /  _____/|__|/  |_  
+/   \  ___|  \   __\  
+\    \_\  \  ||  |    M A N U A L
+ \______  /__||__|   
+        \/          
+
 
 Install GIT:
    sudo apt install git 
@@ -37,6 +42,23 @@ Conditional commit:
            - now combine an add and commit with the given msg
            - push the commit and echo 'Done.'
            
+git log -n 5  			: shows last 5 commits
+git log --since=2021-01-01	: shows commits since certain date
+git log --until=2021-01-01	: shows commits until certain date
+git log --author=Dick	        : shows commits by a certain user
+git log --grep="..."            : search for any kind of string
+
+The three trees
+---------------
+Branches: file sets 
+To move/update files between branches we use commit and checkout
+
+
+  repository
+
+
+
+
 
 
 
