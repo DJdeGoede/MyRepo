@@ -76,9 +76,31 @@ Git uses three branches:
 - 40-character hexadecimal string (0-9, a-f)
 - Example:  e5a5d906507c5b66ba28b20615891548c16e1d7a
 
+Process
+-------
+Add files in working dir, add the changes to staging, commit them to the repository.
 
+Working dir:
+   - git add <file>                    : to add changes to staging index
+   - git restore <file>                : to discard chages in working dir (after a git add)
 
+Staging index:
+   - git reset HEAD <file>             : to unstage (back to working dir)
+     (or: git restore --staged <file>)
+   - git commit -m "<message>"         : to commit ro repository
 
+Check changes
+-------------
+git diff
+   Shows the changes between working directory and staging tree, so the changes
+   to be staged
+
+git diff --staged  (or --cached)
+   Shows the changes between the staging tree and the repository, so the changes
+   to be commited.
+
+a/ ....  = the version in the repository
+b/ ....  = the file in the working dir or staging directory (depending on -- switch)
 
 
 
