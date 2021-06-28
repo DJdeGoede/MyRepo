@@ -1,6 +1,18 @@
 Linux: Shells and processes
 ===========================
 
+Set the editing mode for bash:
+
+First check the set variables for emacs and vi (the two editing standards)
+set -o | grep -E "(emacs|vi)"
+
+This will show if bash used emacs like editing or vi like editing.
+Default is emacs editing.
+- To switch to vi like editing set    : set -o vi
+- To switch to emacs like editing set : set -o vi
+- To switch a setting off use +o instead of -o
+
+
 Command execution process flow
 ------------------------------
 
