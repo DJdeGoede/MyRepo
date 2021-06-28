@@ -102,6 +102,30 @@ git diff --staged  (or --cached)
 a/ ....  = the version in the repository
 b/ ....  = the file in the working dir or staging directory (depending on -- switch)
 
+Deleting files
+--------------
+2 methods:
+1. remove the file manually, then:
+   - git rm <file>
+   - git commit "...."
+
+2. directly give the command git rm <file> which also removes te file
+   and then commit, so conclusion: no need to remove it manually first
+
+Moving and renaming files
+-------------------------
+Remember: moving a file and renaming a file are the same thing
+
+2 methods:
+1. rename file manually, then git log shows two changes: 1 new and one remove
+   - git add <new file name>
+   - git rm <old file name>
+
+2. 
+
+
+
+
 
 
 
