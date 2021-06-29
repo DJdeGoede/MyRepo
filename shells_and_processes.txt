@@ -4,7 +4,7 @@ Linux: Shells and processes
 Set the editing mode for bash:
 
 First check the set variables for emacs and vi (the two editing standards)
-set -o | grep -E "(emacs|vi)"
+set -o | grep -Ew "(emacs|vi)"
 
 This will show if bash used emacs like editing or vi like editing.
 Default is emacs editing.
