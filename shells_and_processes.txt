@@ -12,6 +12,9 @@ Default is emacs editing.
 - To switch to emacs like editing set : set -o vi
 - To switch a setting off use +o instead of -o
 
+Undo
+----
+Type  shift-ctrl-_  after you accidently removed it and it magically reappears :)
 
 Command execution process flow
 ------------------------------
