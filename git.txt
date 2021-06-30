@@ -9,10 +9,6 @@
 Install GIT:
    sudo apt install git 
 
-Clone you remote repo to local and set the correct url:
-   git clone git://github.com/DJdeGoede/MyRepo.git
-   git remote set-url origin https://github.com/DJdeGoede/MyRepo.git
-
 Save your user and password:
    git config --global credential.helper store
    git push https://github.com/DJdeGoede/MyRepo.git
@@ -22,11 +18,18 @@ Save your user and password:
       To keep active for 2 hours:
         git config --global credential.helper 'cache --timeout 7200'
 
+Clone your remote repo to local and set the correct url:
+   git clone git://github.com/DJdeGoede/MyRepo.git
+   git remote set-url origin https://github.com/DJdeGoede/MyRepo.git
+
 Make sure you are in the correct directory (needs to have the hidden .git file)
 Check current status:      git status
 Pulling remote changes:    git pull
 Adding changes to local:   git add .
 Commiting local changes:   git commit
+Combining add and commit   git commit -a (or --all)
+   Warning! Does NOT include unstaged files
+
 Pushing changes to remote: git push
 
 Add, commit and push in one:
@@ -121,7 +124,10 @@ Remember: moving a file and renaming a file are the same thing
    - git add <new file name>
    - git rm <old file name>
 
-2. 
+2. directly give the command git mv <old filename> <new filename> which does 
+   the above and then commit
+
+
 
 
 

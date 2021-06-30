@@ -1,0 +1,2 @@
+Zomaar een klein demo hoe het werkt voor mij.
+Het is een mooie tool, dat diff.
