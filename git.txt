@@ -127,6 +127,16 @@ Remember: moving a file and renaming a file are the same thing
 2. directly give the command git mv <old filename> <new filename> which does 
    the above and then commit
 
+Looking at commits
+------------------
+git show <commit id, min 4 chars or more>
+
+Comparing files /looking at changes
+-----------------------------------
+before ready to commit check your changes with:
+git diff --color-words
+
+
 
 
 
