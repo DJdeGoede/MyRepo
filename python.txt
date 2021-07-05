@@ -1,0 +1,16 @@
+Python essential training
+-------------------------
+
+- preferrably use Komodo Edit/IDE as editor
+- Check differences Python 2, 3 and 3.6 and up
+- before 3 not object oriented, so big difference in wat of coding
+
+- First line (shebang): #!/usr/bin/env python3
+- position is important, always make sure you use right indents
+- no case/switch statement avaialble, use if.. elif ..elif .. (etc) ..else statement
+- variables do not need a type declaration
+- variables always available no matter where in the code (always global)
+
+
+
+
