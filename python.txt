@@ -11,6 +11,16 @@ Python essential training
 - variables do not need a type declaration
 - variables always available no matter where in the code (always global)
 
+print
+-   to set eol character that is not \n (newline) use: print(.. , end='..)
+    When it is set to ' ' it will concat print output in a loop
+
+    When you change the end parameter the buffer is no longer being flushed which can cause the output not to be shown.
+    When end is set (like end=' ') then also set Flush=True !
+
+-   to set the separator within a print statement use: print(.. , sep='..'
+
+
 
 
 
